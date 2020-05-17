@@ -20,7 +20,7 @@ namespace FastFood.DAL_DataLayer
             private set { instance = value; }
         }
         //ĐĂNG NHẬP CỦA QUẢN LÝ
-        public bool LoginManager(string userName, string password, int kindAccess = 1)
+        public bool LoginManager(string userName, string password, int kindAccess)
         {
             string query = "USP_LoginManager @tentaikhoan , @matkhau , @loaitruycap";
 
@@ -28,8 +28,8 @@ namespace FastFood.DAL_DataLayer
 
             return result.Rows.Count >0;
         }
-
-        public bool LoginEmployee(string userName, string password, int kindAccess = 2)
+        //ĐĂNG NHẬP CỦA NHÂN VIÊN
+        public bool LoginEmployee(string userName, string password, int kindAccess)
         {
             string query = "USP_LoginEmployee @tentaikhoan , @matkhau , @loaitruycap";
 
@@ -37,12 +37,30 @@ namespace FastFood.DAL_DataLayer
 
             return result.Rows.Count > 0;
         }
-
-        public bool LoginCustomer(string userName, string password, int kindAccess = 2)
+        //ĐĂNG NHẬP CỦA KHÁCH HÀNG
+        public bool LoginCustomer(string userName, string password, int kindAccess)
         {
             string query = "USP_LoginCustomer @tentaikhoan , @matkhau , @loaitruycap";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, password, kindAccess });
+
+            return result.Rows.Count > 0;
+        }
+        //ĐĂNG KÝ TÀI KHOẢN CỦA KHÁCH HÀNG
+        public bool SignUpAccoutCustomer(string accountName, string password, int kindAccess)
+        {
+            string query= "USP_LoginAccountCustomer @tentaikhoan , @matkhau , @loaitruycap";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { accountName, password, kindAccess });
+        
+            return result.Rows.Count > 0;
+        }
+
+        public bool SignUpCustomer( string accountName, string userName)
+        {
+            string query = "USP_SignUptoCustomer@tentaikhoan , @hoten , @mataikhoan";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { accountName, userName, accountName });
 
             return result.Rows.Count > 0;
         }

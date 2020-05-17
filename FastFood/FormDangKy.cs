@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FastFood.DAL_DataLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +76,30 @@ namespace FastFood
             {
                 e.Cancel = true;
             }
+        }
+        //ĐĂNG KÝ KHÁCH HÀNG
+        private void btnRegis_Click(object sender, EventArgs e)
+        {
+            string accountName = txtNumberPhone.Text;
+            string userName = txtName.Text;
+            string password = txtPass.Text;
+            int kindAccess = 3;
+            if (SignUpCustomer(accountName,userName,password,kindAccess))
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+        bool SignUpCustomer(string accountName,
+        string userName,
+        string password,
+        int kindAccess)
+        {
+            return AccountDAO.Instance.SignUpAccoutCustomer(accountName, password, kindAccess)
+                && AccountDAO.Instance.SignUpCustomer(accountName,userName);
         }
     }
 }

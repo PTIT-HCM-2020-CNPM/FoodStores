@@ -198,6 +198,7 @@
             this.btnRegis.TabIndex = 7;
             this.btnRegis.Text = "Đăng ký";
             this.btnRegis.UseVisualStyleBackColor = false;
+            this.btnRegis.Click += new System.EventHandler(this.btnRegis_Click);
             // 
             // FormDangKy
             // 
