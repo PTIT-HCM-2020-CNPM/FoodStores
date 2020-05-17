@@ -8,6 +8,7 @@ namespace FastFood
 {
     static class Program
     {
+        //Hello my friend
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
