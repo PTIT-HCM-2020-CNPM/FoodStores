@@ -86,20 +86,21 @@ namespace FastFood
             int kindAccess = 3;
             if (SignUpCustomer(accountName,userName,password,kindAccess))
             {
+                MessageBox.Show("Đăng ký tài khoản thành công!","Thông báo", MessageBoxButtons.OK);
 
             }
             else
             {
-
+                MessageBox.Show("Tên tài khoản đã có người sử dụng", "Thông báo", MessageBoxButtons.OK);
             }
         }
-        bool SignUpCustomer(string accountName,
-        string userName,
-        string password,
-        int kindAccess)
+        bool SignUpCustomer(string accountName,string userName,string password,int kindAccess)
         {
-            return AccountDAO.Instance.SignUpAccoutCustomer(accountName, password, kindAccess)
-                && AccountDAO.Instance.SignUpCustomer(accountName,userName);
+            if (AccountDAO.Instance.SignUpAccoutCustomer(accountName, password, kindAccess) == true
+             && AccountDAO.Instance.SignUpCustomer(accountName, userName) == true)
+                return true;
+
+            return false;        
         }
     }
 }

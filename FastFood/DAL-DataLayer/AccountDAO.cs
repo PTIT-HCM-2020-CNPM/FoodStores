@@ -58,7 +58,7 @@ namespace FastFood.DAL_DataLayer
 
         public bool SignUpCustomer( string accountName, string userName)
         {
-            string query = "USP_SignUptoCustomer@tentaikhoan , @hoten , @mataikhoan";
+            string query = "USP_SignUptoCustomer @tentaikhoan , @hoten , @mataikhoan";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { accountName, userName, accountName });
 
