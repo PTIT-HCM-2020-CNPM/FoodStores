@@ -49,14 +49,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
             this.thucannhanh1 = new FastFood.Thucannhanh();
             this.douongcoga1 = new FastFood.Douongcoga();
             this.coffee1 = new FastFood.Coffee();
             this.monChinh1 = new FastFood.MonChinh();
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
-            this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             this.pnlDropFood.SuspendLayout();
             this.pnlDropDrink.SuspendLayout();
@@ -366,6 +366,17 @@
             this.panel3.Size = new System.Drawing.Size(943, 486);
             this.panel3.TabIndex = 11;
             // 
+            // hinhtrangchu2
+            // 
+            this.hinhtrangchu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hinhtrangchu2.BackColor = System.Drawing.Color.Red;
+            this.hinhtrangchu2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
+            this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.hinhtrangchu2.Name = "hinhtrangchu2";
+            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
+            this.hinhtrangchu2.TabIndex = 5;
+            // 
             // thucannhanh1
             // 
             this.thucannhanh1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -415,17 +426,6 @@
             this.hinhtrangchu1.Name = "hinhtrangchu1";
             this.hinhtrangchu1.Size = new System.Drawing.Size(943, 486);
             this.hinhtrangchu1.TabIndex = 0;
-            // 
-            // hinhtrangchu2
-            // 
-            this.hinhtrangchu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hinhtrangchu2.BackColor = System.Drawing.Color.Red;
-            this.hinhtrangchu2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
-            this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.hinhtrangchu2.Name = "hinhtrangchu2";
-            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
-            this.hinhtrangchu2.TabIndex = 5;
             // 
             // Trangchu
             // 
