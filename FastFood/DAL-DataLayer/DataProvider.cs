@@ -94,7 +94,7 @@ namespace FastFood.DAL_DataLayer
                 data = command.ExecuteNonQuery();//số lần thêm thành công
 
                 //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
-                connection.Close();
+                //connection.Close();
             }
 
             return data;

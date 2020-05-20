@@ -47,22 +47,22 @@ namespace FastFood.DAL_DataLayer
             return result.Rows.Count > 0;
         }
         //ĐĂNG KÝ TÀI KHOẢN CỦA KHÁCH HÀNG
-        public bool SignUpAccoutCustomer(string accountName, string password, int kindAccess)
+        public bool SignUpAccoutCustomer(string accountName, string password, int kindAccess /*,string userName*/)
         {
-            string query= "USP_LoginAccountCustomer @tentaikhoan , @matkhau , @loaitruycap";
+            string query = String.Format("insert dbo.TAI_KHOAN ([TÊN TÀI KHOẢN],[MẬT KHẨU],[LOẠI TRUY CẬP]) values ('{0}','{1}', {2})", accountName,password,kindAccess);
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { accountName, password, kindAccess });
-        
-            return result.Rows.Count > 0;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
-
+        //THÊM KHÁCH HÀNG
         public bool SignUpCustomer( string accountName, string userName)
         {
-            string query = "USP_SignUptoCustomer @tentaikhoan , @hoten , @mataikhoan";
+            string query = String.Format("insert dbo.KHACH_HANG ([TÊN TÀI KHOẢN(SĐT)],[HỌ TÊN],[MÃ TÀI KHOẢN]) values ('{0}','{1}', '{2}')", accountName, userName, accountName);
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { accountName, userName, accountName });
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-            return result.Rows.Count > 0;
+            return result > 0;
         }
     }
 }
