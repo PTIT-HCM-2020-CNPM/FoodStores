@@ -49,14 +49,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
+            this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.thucannhanh1 = new FastFood.Thucannhanh();
-            this.douongcoga1 = new FastFood.Douongcoga();
-            this.coffee1 = new FastFood.Coffee();
-            this.monChinh1 = new FastFood.MonChinh();
-            this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
-            this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
             this.panel1.SuspendLayout();
             this.pnlDropFood.SuspendLayout();
             this.pnlDropDrink.SuspendLayout();
@@ -283,9 +279,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(752, 0);
+            this.label3.Location = new System.Drawing.Point(787, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 23);
+            this.label3.Size = new System.Drawing.Size(156, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Hotline:0123456789";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -314,7 +310,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label1.Location = new System.Drawing.Point(10, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 50);
+            this.label1.Size = new System.Drawing.Size(150, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "FoodHouse";
             // 
@@ -345,7 +341,7 @@
             this.label2.BackColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(24, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 23);
+            this.label2.Size = new System.Drawing.Size(124, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Food Restaurant";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -356,52 +352,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.hinhtrangchu2);
-            this.panel3.Controls.Add(this.thucannhanh1);
-            this.panel3.Controls.Add(this.douongcoga1);
-            this.panel3.Controls.Add(this.coffee1);
-            this.panel3.Controls.Add(this.monChinh1);
             this.panel3.Controls.Add(this.hinhtrangchu1);
             this.panel3.Location = new System.Drawing.Point(175, 216);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(943, 486);
             this.panel3.TabIndex = 11;
             // 
-            // thucannhanh1
+            // hinhtrangchu2
             // 
-            this.thucannhanh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thucannhanh1.Location = new System.Drawing.Point(0, 0);
-            this.thucannhanh1.Margin = new System.Windows.Forms.Padding(4);
-            this.thucannhanh1.Name = "thucannhanh1";
-            this.thucannhanh1.Size = new System.Drawing.Size(943, 486);
-            this.thucannhanh1.TabIndex = 4;
-            // 
-            // douongcoga1
-            // 
-            this.douongcoga1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.douongcoga1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.douongcoga1.Location = new System.Drawing.Point(0, 0);
-            this.douongcoga1.Margin = new System.Windows.Forms.Padding(4);
-            this.douongcoga1.Name = "douongcoga1";
-            this.douongcoga1.Size = new System.Drawing.Size(943, 486);
-            this.douongcoga1.TabIndex = 3;
-            // 
-            // coffee1
-            // 
-            this.coffee1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.coffee1.Location = new System.Drawing.Point(0, 0);
-            this.coffee1.Margin = new System.Windows.Forms.Padding(4);
-            this.coffee1.Name = "coffee1";
-            this.coffee1.Size = new System.Drawing.Size(943, 486);
-            this.coffee1.TabIndex = 2;
-            // 
-            // monChinh1
-            // 
-            this.monChinh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.monChinh1.Location = new System.Drawing.Point(0, 0);
-            this.monChinh1.Margin = new System.Windows.Forms.Padding(4);
-            this.monChinh1.Name = "monChinh1";
-            this.monChinh1.Size = new System.Drawing.Size(943, 486);
-            this.monChinh1.TabIndex = 1;
+            this.hinhtrangchu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hinhtrangchu2.BackColor = System.Drawing.Color.Red;
+            this.hinhtrangchu2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
+            this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.hinhtrangchu2.Name = "hinhtrangchu2";
+            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
+            this.hinhtrangchu2.TabIndex = 5;
             // 
             // hinhtrangchu1
             // 
@@ -416,20 +382,9 @@
             this.hinhtrangchu1.Size = new System.Drawing.Size(943, 486);
             this.hinhtrangchu1.TabIndex = 0;
             // 
-            // hinhtrangchu2
-            // 
-            this.hinhtrangchu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hinhtrangchu2.BackColor = System.Drawing.Color.Red;
-            this.hinhtrangchu2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
-            this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.hinhtrangchu2.Name = "hinhtrangchu2";
-            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
-            this.hinhtrangchu2.TabIndex = 5;
-            // 
             // Trangchu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
@@ -485,10 +440,6 @@
         private Hinhtrangchu hinhtrangchu1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ColorDialog colorDialog2;
-        private MonChinh monChinh1;
-        private Coffee coffee1;
-        private Thucannhanh thucannhanh1;
-        private Douongcoga douongcoga1;
         private Hinhtrangchu hinhtrangchu2;
     }
 }

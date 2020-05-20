@@ -26,7 +26,7 @@ namespace FastFood
             String query = "select * from dbo.TAI_KHOAN " +
                 "where[LOẠI TRUY CẬP] = 2";
 
-
+            
             //đưa data vào bảng dataGridView qua biến chọn nguồn data
             dataGridView_tài_khoản.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }

@@ -24,40 +24,12 @@ namespace FastFood
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
         //food
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Trangchu_Load(object sender, EventArgs e)
         {
             pnlDropFood.Height = 60;
             pnlDropDrink.Height = 60;
-        }
-
-        private void btnDrink_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDrink_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void btnDrink_Click_2(object sender, EventArgs e)
@@ -93,11 +65,6 @@ namespace FastFood
             formdk.ShowDialog();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -120,22 +87,35 @@ namespace FastFood
 
         private void button_món_chính_Click(object sender, EventArgs e)
         {
-            monChinh1.BringToFront();
+            MonAn monan = new MonAn("MC");
+            panel3.Controls.Add(monan);
+            monan.BringToFront();
+
         }
 
         private void button_cà_phê_Click(object sender, EventArgs e)
         {
-            coffee1.BringToFront();
+            MonAn monan = new MonAn("CF");
+            panel3.Controls.Add(monan);
+            monan.BringToFront();
+
+
         }
 
         private void button_đồ_ăn_nhanh_Click(object sender, EventArgs e)
         {
-            thucannhanh1.BringToFront();
+            MonAn monan = new MonAn("AV");
+            panel3.Controls.Add(monan);
+            monan.BringToFront();
+
         }
 
         private void button_đồ_uống_có_ga_Click(object sender, EventArgs e)
         {
-            douongcoga1.BringToFront();
+            MonAn monan = new MonAn("DU");
+            panel3.Controls.Add(monan);
+            monan.BringToFront();
+
         }
     }
 }

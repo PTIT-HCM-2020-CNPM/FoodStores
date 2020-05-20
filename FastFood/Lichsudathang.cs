@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class Douongcoga : UserControl
+    public partial class Lichsudathang : UserControl
     {
-        public Douongcoga()
+        public Lichsudathang()
         {
             InitializeComponent();
+
+        }
+        private void Lichsudathang_Load(object sender, EventArgs e)
+        {
+
         }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

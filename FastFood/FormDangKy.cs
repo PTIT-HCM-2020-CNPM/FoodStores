@@ -102,5 +102,10 @@ namespace FastFood
 
             return false;        
         }
+
+        private void FormDangKy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
