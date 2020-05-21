@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
+    <Compile Include="DAL-DataLayer\StoresDAO.cs" />
     <Compile Include="Douongcoga.cs">
       <SubType>UserControl</SubType>
     </Compile>

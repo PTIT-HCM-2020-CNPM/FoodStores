@@ -15,7 +15,16 @@ namespace FastFood
         public NVQLDoanhThu()
         {
             InitializeComponent();
+            LoadDateTimePickerBill();
         }
+
+        void LoadDateTimePickerBill()
+        {
+            DateTime today = DateTime.Now;
+            dateTimePicker_bắt_đầu.Value = new DateTime(today.Year, today.Month, 1);
+            dateTimePicker_kết_thúc.Value = dateTimePicker_bắt_đầu.Value.AddMonths(1).AddDays(-1);
+        }
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

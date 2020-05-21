@@ -33,8 +33,8 @@
             this.button_tìm_cửa_hàng = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button_xóa_cửa_hàng = new System.Windows.Forms.Button();
             this.button_thêm_cửa_hàng = new System.Windows.Forms.Button();
+            this.button_xóa_cửa_hàng = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_lưu_cửa_hàng = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -111,22 +111,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button_xóa_cửa_hàng
-            // 
-            this.button_xóa_cửa_hàng.FlatAppearance.BorderSize = 0;
-            this.button_xóa_cửa_hàng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_xóa_cửa_hàng.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_xóa_cửa_hàng.ForeColor = System.Drawing.Color.White;
-            this.button_xóa_cửa_hàng.Image = ((System.Drawing.Image)(resources.GetObject("button_xóa_cửa_hàng.Image")));
-            this.button_xóa_cửa_hàng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_xóa_cửa_hàng.Location = new System.Drawing.Point(908, 0);
-            this.button_xóa_cửa_hàng.Name = "button_xóa_cửa_hàng";
-            this.button_xóa_cửa_hàng.Size = new System.Drawing.Size(147, 42);
-            this.button_xóa_cửa_hàng.TabIndex = 3;
-            this.button_xóa_cửa_hàng.Text = "Xóa";
-            this.button_xóa_cửa_hàng.UseVisualStyleBackColor = true;
-            this.button_xóa_cửa_hàng.Click += new System.EventHandler(this.button_xóa_cửa_hàng_Click);
-            // 
             // button_thêm_cửa_hàng
             // 
             this.button_thêm_cửa_hàng.FlatAppearance.BorderSize = 0;
@@ -142,6 +126,22 @@
             this.button_thêm_cửa_hàng.Text = "Thêm";
             this.button_thêm_cửa_hàng.UseVisualStyleBackColor = true;
             this.button_thêm_cửa_hàng.Click += new System.EventHandler(this.button_thêm_cửa_hàng_Click);
+            // 
+            // button_xóa_cửa_hàng
+            // 
+            this.button_xóa_cửa_hàng.FlatAppearance.BorderSize = 0;
+            this.button_xóa_cửa_hàng.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_xóa_cửa_hàng.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_xóa_cửa_hàng.ForeColor = System.Drawing.Color.White;
+            this.button_xóa_cửa_hàng.Image = ((System.Drawing.Image)(resources.GetObject("button_xóa_cửa_hàng.Image")));
+            this.button_xóa_cửa_hàng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_xóa_cửa_hàng.Location = new System.Drawing.Point(908, 0);
+            this.button_xóa_cửa_hàng.Name = "button_xóa_cửa_hàng";
+            this.button_xóa_cửa_hàng.Size = new System.Drawing.Size(147, 42);
+            this.button_xóa_cửa_hàng.TabIndex = 3;
+            this.button_xóa_cửa_hàng.Text = "Xóa";
+            this.button_xóa_cửa_hàng.UseVisualStyleBackColor = true;
+            this.button_xóa_cửa_hàng.Click += new System.EventHandler(this.button_xóa_cửa_hàng_Click);
             // 
             // panel2
             // 
@@ -280,9 +280,11 @@
             // 
             // dataGridView_cửa_hàng
             // 
+            this.dataGridView_cửa_hàng.AllowUserToOrderColumns = true;
             this.dataGridView_cửa_hàng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_cửa_hàng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_cửa_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_cửa_hàng.Location = new System.Drawing.Point(0, 58);
             this.dataGridView_cửa_hàng.Name = "dataGridView_cửa_hàng";

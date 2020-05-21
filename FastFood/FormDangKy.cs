@@ -86,9 +86,8 @@ namespace FastFood
             string rePassword =txtRePass.Text;
             int kindAccess = 3;
 
-            /*Kiểm tra nhập lại mật khẩu*/
-
             //Thông báo đăng ký
+            /*Kiểm tra nhập lại mật khẩu*/
             if (password != rePassword)
             {
                 MessageBox.Show("Đăng ký tài khoản thành công!","Thông báo", MessageBoxButtons.OK);

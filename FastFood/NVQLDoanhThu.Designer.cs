@@ -56,6 +56,7 @@
             // 
             // dataGridView_doanh_thu
             // 
+            this.dataGridView_doanh_thu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_doanh_thu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_doanh_thu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_doanh_thu.Location = new System.Drawing.Point(0, 0);

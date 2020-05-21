@@ -64,5 +64,34 @@ namespace FastFood.DAL_DataLayer
 
             return result > 0;
         }
+
+        //THÊM TÀI KHOẢN NHÂN VIÊN
+        public bool InsertAccoutEmployee(string accountName, string password, int kindAccess)
+        {
+            string query = String.Format("insert dbo.TAI_KHOAN ([TÊN TÀI KHOẢN],[MẬT KHẨU],[LOẠI TRUY CẬP]) values ('{0}','{1}', {2})", accountName, password, kindAccess);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result>0;
+        }
+        //THÊM NHÂN VIÊN
+        public bool InsertEmployee(string accountNumber, string numberStore, string name, int birthYear, string gender, string address, string numberPhone)
+        {
+            string query = String.Format("insert dbo.NHAN_VIEN ([MÃ NHÂN VIÊN],[MÃ CỬA HÀNG],[HỌ TÊN NHÂN VIÊN],[NĂM SINH],[GIỚI TÍNH],[ĐỊA CHỈ],[SỐ ĐIỆN THOẠI],[MÃ TÀI KHOẢN]) values ('{0}', '{1}', N'{2}' , {3} , N'{4}' , N'{5}' , '{6}' , '{7}' )", accountNumber , numberStore , name , birthYear , gender , address , numberPhone , accountNumber);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        //KIỂM TRA MÃ TÀI KHOẢN CÓ TRÙNG KHI THÊM
+        public bool CheckDuplicateAccount(string accountNumber)
+        {
+            string query = "USP_CheckDuplicateAcount @accountNumber";
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { accountNumber });
+
+            return result > 0;
+        }
+
     }
 }
