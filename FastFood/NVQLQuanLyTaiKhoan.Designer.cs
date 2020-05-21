@@ -57,11 +57,13 @@
             this.textBox_số_điện_thoại = new System.Windows.Forms.TextBox();
             this.label_số_điện_thoại = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_xóa = new System.Windows.Forms.Button();
+            this.button_sửa = new System.Windows.Forms.Button();
             this.button_thêm_tài_khoản = new System.Windows.Forms.Button();
+            this.button_reset = new System.Windows.Forms.Button();
             this.textBox_tìm_tài_khoản = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_tìm_tài_khoản = new System.Windows.Forms.Button();
-            this.button_reset = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_tài_khoản)).BeginInit();
             this.panel4.SuspendLayout();
@@ -89,6 +91,7 @@
             resources.ApplyResources(this.dataGridView_tài_khoản, "dataGridView_tài_khoản");
             this.dataGridView_tài_khoản.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_tài_khoản.Name = "dataGridView_tài_khoản";
+            this.dataGridView_tài_khoản.ReadOnly = true;
             this.dataGridView_tài_khoản.RowTemplate.Height = 24;
             this.dataGridView_tài_khoản.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_tài_khoản_CellContentClick);
             this.dataGridView_tài_khoản.SelectionChanged += new System.EventHandler(this.dataGridView_tài_khoản_SelectionChanged);
@@ -252,8 +255,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button_reset);
+            this.panel2.Controls.Add(this.button_xóa);
+            this.panel2.Controls.Add(this.button_sửa);
             this.panel2.Controls.Add(this.button_thêm_tài_khoản);
+            this.panel2.Controls.Add(this.button_reset);
             this.panel2.Controls.Add(this.panel11);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel9);
@@ -265,6 +270,24 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // button_xóa
+            // 
+            this.button_xóa.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button_xóa, "button_xóa");
+            this.button_xóa.ForeColor = System.Drawing.Color.White;
+            this.button_xóa.Name = "button_xóa";
+            this.button_xóa.UseVisualStyleBackColor = true;
+            this.button_xóa.Click += new System.EventHandler(this.button_xóa_Click);
+            // 
+            // button_sửa
+            // 
+            this.button_sửa.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button_sửa, "button_sửa");
+            this.button_sửa.ForeColor = System.Drawing.Color.White;
+            this.button_sửa.Name = "button_sửa";
+            this.button_sửa.UseVisualStyleBackColor = true;
+            this.button_sửa.Click += new System.EventHandler(this.button_sửa_Click);
+            // 
             // button_thêm_tài_khoản
             // 
             this.button_thêm_tài_khoản.FlatAppearance.BorderSize = 0;
@@ -273,6 +296,15 @@
             this.button_thêm_tài_khoản.Name = "button_thêm_tài_khoản";
             this.button_thêm_tài_khoản.UseVisualStyleBackColor = true;
             this.button_thêm_tài_khoản.Click += new System.EventHandler(this.button_thêm_tài_khoản_Click);
+            // 
+            // button_reset
+            // 
+            this.button_reset.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.button_reset, "button_reset");
+            this.button_reset.ForeColor = System.Drawing.Color.White;
+            this.button_reset.Name = "button_reset";
+            this.button_reset.UseVisualStyleBackColor = true;
+            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
             // 
             // textBox_tìm_tài_khoản
             // 
@@ -292,15 +324,7 @@
             this.button_tìm_tài_khoản.ForeColor = System.Drawing.Color.White;
             this.button_tìm_tài_khoản.Name = "button_tìm_tài_khoản";
             this.button_tìm_tài_khoản.UseVisualStyleBackColor = true;
-            // 
-            // button_reset
-            // 
-            this.button_reset.FlatAppearance.BorderSize = 0;
-            resources.ApplyResources(this.button_reset, "button_reset");
-            this.button_reset.ForeColor = System.Drawing.Color.White;
-            this.button_reset.Name = "button_reset";
-            this.button_reset.UseVisualStyleBackColor = true;
-            this.button_reset.Click += new System.EventHandler(this.button_reset_Click);
+            this.button_tìm_tài_khoản.Click += new System.EventHandler(this.button_tìm_tài_khoản_Click);
             // 
             // NVQLQuanLyTaiKhoan
             // 
@@ -370,5 +394,7 @@
         private System.Windows.Forms.TextBox textBox_năm_sinh;
         private System.Windows.Forms.DataGridView dataGridView_tài_khoản;
         private System.Windows.Forms.Button button_reset;
+        private System.Windows.Forms.Button button_sửa;
+        private System.Windows.Forms.Button button_xóa;
     }
 }

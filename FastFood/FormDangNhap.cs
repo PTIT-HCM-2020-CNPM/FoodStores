@@ -21,6 +21,8 @@ namespace FastFood
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Trangchu trangchu = new Trangchu();
+            trangchu.ShowDialog();
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
@@ -50,6 +52,7 @@ namespace FastFood
         //Điều kiện đăng nhập
         private void button_đăng_nhập_Click(object sender, EventArgs e)
         {
+            
             
             string userName = txtUser.Text;
             string password = txtPass.Text;

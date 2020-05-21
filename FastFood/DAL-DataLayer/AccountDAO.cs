@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using FastFood.DTO_DataTranferObject;
+
 namespace FastFood.DAL_DataLayer
 {
     public class AccountDAO
@@ -92,6 +94,57 @@ namespace FastFood.DAL_DataLayer
 
             return result > 0;
         }
+        //SỬA TÀI KHOẢN NHÂN VIÊN
+        public bool UpdateAccountEmployee(string accountNumber, string password)
+        {
+            string query = String.Format("Update dbo.TAI_KHOAN set [MẬT KHẨU] = '{0}' where [TÊN TÀI KHOẢN] = '{1}'", password, accountNumber);
 
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        //SỬA THÔNG TIN NHÂN VIÊN
+        public bool UpdateEmployee(string accountNumber, string numberStore, string name, int birthYear, string gender, string address, string numberPhone)
+        {
+            string query = String.Format("Update dbo.NHAN_VIEN set [MÃ CỬA HÀNG] = '{0}' , [HỌ TÊN NHÂN VIÊN] = N'{1}'," +
+               " [NĂM SINH] = {2}, [GIỚI TÍNH] = N'{3}', [ĐỊA CHỈ] = N'{4}', [SỐ ĐIỆN THOẠI] = '{5}' " +
+               "where [MÃ NHÂN VIÊN] = '{6}'", numberStore, name, birthYear, gender, address, numberPhone, accountNumber);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        //XÓA TÀI KHOẢN NHÂN VIÊN: XÓA NHÂN VIÊN-> XÓA TÀI KHOẢN NHÂN VIÊN
+        public bool DeleteEmployee(string employeeNumber)
+        {
+            string query= String.Format("Delete dbo.NHAN_VIEN where [MÃ TÀI KHOẢN]='{0}'", employeeNumber);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteAccountEmployee(string employeeNumber)
+        {
+            DeleteEmployee(employeeNumber);
+            string query = String.Format("Delete dbo.TAI_KHOAN where [TÊN TÀI KHOẢN]='{0}'", employeeNumber);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        //TÌM KIẾM TÀI KHOẢN
+        public List<EmployeeAccount> SearchAccountByName(string employeeNumber)
+        {
+            List<EmployeeAccount> list = new List<EmployeeAccount>();
+            string query = String.Format("select t.[TÊN TÀI KHOẢN] as [TÊN TÀI KHOẢN(MÃ NHÂN VIÊN)],t.[MẬT KHẨU] as [MẬT KHẨU],n.[MÃ CỬA HÀNG] as [MÃ CỬA HÀNG],n.[HỌ TÊN NHÂN VIÊN] as [HỌ TÊN NHÂN VIÊN]," +
+                "n.[NĂM SINH] as [NĂM SINH],n.[GIỚI TÍNH] as [GIỚI TÍNH],n.[ĐỊA CHỈ] as [ĐỊA CHỈ],n.[SỐ ĐIỆN THOẠI] as [SỐ ĐIỆN THOẠI]" +
+                "from TAI_KHOAN as t , NHAN_VIEN as n " +
+                "where t.[TÊN TÀI KHOẢN] = n.[MÃ NHÂN VIÊN]" +
+                "and t.[TÊN TÀI KHOẢN] like '{0}%'", employeeNumber);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow item in data.Rows)
+            {
+                EmployeeAccount employeeAccount = new EmployeeAccount(item);
+                list.Add(employeeAccount);
+            }
+            return list;
+        }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FastFood.DAL_DataLayer;
+using FastFood.DTO_DataTranferObject;
 
 namespace FastFood
 {
@@ -42,20 +43,106 @@ namespace FastFood
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        //2.THÊM CỬA HÀNG
 
         private void button_thêm_cửa_hàng_Click(object sender, EventArgs e)
         {
+            string storeNumber = textBox_mã_cửa_hàng.Text;
+            string address = textBox_địa_chỉ.Text;
+            int status = 0;
+            if (radioButton_hoạt_động.Checked == true)
+            {
+                status = 1;
+            }
+            else if (radioButton_ngừng_hoạt_động.Checked == true)
+            {
+                status = 0;
+            }
 
+            if (StoresDAO.Instance.InsertStore(storeNumber,address,status))//Kiểm tra trùng mã nhân viên
+            {
+                MessageBox.Show("Thêm mới thành công!", "Thông báo", MessageBoxButtons.OK);
+                LoadStoreList();   
+            }
+            else
+            {
+                MessageBox.Show("Mã cửa hàng vừa nhập bị trùng lặp! Vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
+            }
         }
 
-        private void button_xóa_cửa_hàng_Click(object sender, EventArgs e)
+
+        //3.RESET TRƯỜNG DỮ LIỆU + LOAD BẢNG
+        private void button_reset_Click(object sender, EventArgs e)
         {
+            textBox_mã_cửa_hàng.Text = null;
+            textBox_địa_chỉ.Text = null;
+            radioButton_hoạt_động.Checked = false; radioButton_ngừng_hoạt_động.Checked = false;
 
+            LoadStoreList();
         }
+
+        //4.SỬA CỬA HÀNG
+        private void button_sửa_Click(object sender, EventArgs e)
+        {
+            string storeNumber = textBox_mã_cửa_hàng.Text;
+            string address = textBox_địa_chỉ.Text;
+            int status = 0;
+            if (radioButton_hoạt_động.Checked == true)
+            {
+                status = 1;
+            }
+            else if (radioButton_ngừng_hoạt_động.Checked == true)
+            {
+                status = 0;
+            }
+            if (StoresDAO.Instance.UpdateStore(storeNumber, address, status))
+            {
+                MessageBox.Show("Chỉnh sửa thành công!", "Thông báo", MessageBoxButtons.OK);
+                LoadStoreList();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi xảy ra khi chỉnh sửa", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+        //5. TÌM KIẾM CỬA HÀNG
+        List<Store> SearchStore(string searchString)
+        {
+            List<Store> listStore = StoresDAO.Instance.SearchStore(searchString, searchString);
+            return listStore;
+        }
+
+        private void button_tìm_cửa_hàng_Click(object sender, EventArgs e)
+        {
+            dataGridView_cửa_hàng.DataSource = SearchStore(textBox_tìm_cửa_hàng.Text);
+        }
+
+        //BINDING: CHỌN DÒNG TÀI KHOẢN HIỆN THỊ VÀO TRƯỜNG CÓ SẴN
+        private void dataGridView_cửa_hàng_SelectionChanged(object sender, EventArgs e)
+        {
+            DataGridViewCell cell = null;
+            foreach (DataGridViewCell selectedCell in dataGridView_cửa_hàng.SelectedCells)
+            {
+                cell = selectedCell;
+                break;
+            }
+            if (cell != null)
+            {
+                DataGridViewRow row = cell.OwningRow;
+                textBox_mã_cửa_hàng.Text = row.Cells[0].Value.ToString();
+                textBox_địa_chỉ.Text = row.Cells[1].Value.ToString();
+
+                int status = (int)row.Cells[2].Value;
+                if (status == 1)
+                {
+                    radioButton_hoạt_động.Checked = true;
+                }
+                else if (status == 0)
+                {
+                    radioButton_ngừng_hoạt_động.Checked = true;
+                }
+            }
+        }
+        
     }
 }

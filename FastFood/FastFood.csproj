@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
+    <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\StoresDAO.cs" />
     <Compile Include="Douongcoga.cs">
       <SubType>UserControl</SubType>
@@ -69,6 +70,8 @@
     <Compile Include="Douongcoga.Designer.cs">
       <DependentUpon>Douongcoga.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
+    <Compile Include="DTO-DataTranferObject\Store.cs" />
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,8 +222,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO-DataTranferObject\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
