@@ -29,5 +29,10 @@ namespace FastFood
             // đưa data vào bảng dataGridView qua biến chọn nguồn data
             dataGridView_đơn_hàng.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
+
+        private void DataGridView_đơn_hàng_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

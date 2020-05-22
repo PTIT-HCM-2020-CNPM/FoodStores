@@ -13,7 +13,7 @@ namespace FastFood.DAL_DataLayer
         private static DataProvider instance;//thể hiện của class DataProvider(gọi tới sẽ là duy nhất)
 
         //chuỗi kết nối
-        private String connectionStr = "Data Source=DESKTOP-4KQ12ML;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
+        private String connectionStr = "Data Source=DESKTOP-PGRM0OK;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
 
         public static DataProvider Instance {
             get {

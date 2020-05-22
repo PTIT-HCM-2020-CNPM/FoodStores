@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_đăng_xuất = new System.Windows.Forms.Button();
             this.button_góp_ý = new System.Windows.Forms.Button();
             this.button_lịch_sử_hóa_đơn = new System.Windows.Forms.Button();
             this.pnlDropFood = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_đăng_xuất = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlDropFood.SuspendLayout();
             this.pnlDropDrink.SuspendLayout();
@@ -74,6 +74,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 726);
             this.panel1.TabIndex = 1;
+            // 
+            // button_đăng_xuất
+            // 
+            this.button_đăng_xuất.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_đăng_xuất.FlatAppearance.BorderSize = 0;
+            this.button_đăng_xuất.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_đăng_xuất.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_đăng_xuất.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_đăng_xuất.Image = ((System.Drawing.Image)(resources.GetObject("button_đăng_xuất.Image")));
+            this.button_đăng_xuất.Location = new System.Drawing.Point(0, 546);
+            this.button_đăng_xuất.Name = "button_đăng_xuất";
+            this.button_đăng_xuất.Size = new System.Drawing.Size(205, 60);
+            this.button_đăng_xuất.TabIndex = 7;
+            this.button_đăng_xuất.Text = " Đăng xuất";
+            this.button_đăng_xuất.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_đăng_xuất.UseVisualStyleBackColor = true;
             // 
             // button_góp_ý
             // 
@@ -287,6 +303,7 @@
             // 
             this.hinhtrangchu1.AllowDrop = true;
             this.hinhtrangchu1.AutoSize = true;
+            this.hinhtrangchu1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hinhtrangchu1.BackColor = System.Drawing.Color.Red;
             this.hinhtrangchu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hinhtrangchu1.Location = new System.Drawing.Point(0, 0);
@@ -337,22 +354,6 @@
             this.label1.Size = new System.Drawing.Size(187, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "FoodHouse";
-            // 
-            // button_đăng_xuất
-            // 
-            this.button_đăng_xuất.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_đăng_xuất.FlatAppearance.BorderSize = 0;
-            this.button_đăng_xuất.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_đăng_xuất.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_đăng_xuất.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_đăng_xuất.Image = ((System.Drawing.Image)(resources.GetObject("button_đăng_xuất.Image")));
-            this.button_đăng_xuất.Location = new System.Drawing.Point(0, 546);
-            this.button_đăng_xuất.Name = "button_đăng_xuất";
-            this.button_đăng_xuất.Size = new System.Drawing.Size(205, 60);
-            this.button_đăng_xuất.TabIndex = 7;
-            this.button_đăng_xuất.Text = " Đăng xuất";
-            this.button_đăng_xuất.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_đăng_xuất.UseVisualStyleBackColor = true;
             // 
             // FormKhachHang
             // 

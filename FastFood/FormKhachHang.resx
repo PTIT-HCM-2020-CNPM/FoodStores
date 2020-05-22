@@ -120,16 +120,16 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button_đăng_xuất.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAHsSURBVFhH7ZY9S1xBFIY3KSRgIMTOT1TWFP4Q2yiKooVtgllYksYlnYKNhUkbGwsLxa90Qf+B
-        v8DCQJp0CSgkigmJjs/ZfQdW0b0z4y3vAw+455737DK7zkypoCAG51wnzuEBHuFPPMHv+AVrOKT2/GBo
-        D67iP8ziEndwQPGHwaBxPEPjD67jGA7ic1nGCVxD6zHOcVZj0mDAO7yyabCF/Xp0L/T0qtczr0dxEBxF
-        W87/WFU5GDIV5Y1plcMgYN/5r3qUVVA5GrKv8Qe+VCkMAvZdGnsqJcOMZ/ozDAL9aEv3FwdVjoZsB77R
-        y3AIVdHYUCkaso/xsD7FuSWVwyCw38i5KZWSID+CF/VJzn1QORuavzYyrqxSMsxo/hArKreGxt+NfvdU
-        pRvoWSoLGnM/NPldr12lG+hZKh/xkUbdDQ3H9VbnXqiUDDNm0DYyY1Hl1tCY14+w+c2zl95Ds22hRl7/
-        hssqh0HAtmE7dvPYiCp6GQfBT2h8xtY/mgzIx23FBqEu9IfRe5WjIZt2GBmE/HFs94GaysGQ8cex5cdV
-        joNg84VkG0MuJH3oLySWfaVHaTDg9pVsA2dxGJ9gG9qVbBJ30d8bTzF+6e+CQTGXUuvZxG7F84Ohzdfy
-        b2grYm/or+VvsUvtBQUBlErXhFdTlBkgIB0AAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAexJREFUWEft
+        lj1LXEEUhjcpJGAgxM5PVNYU/hDbKIqihW2CWViSxiWdgo2FSRsbCwvFr3RB/4G/wMJAmnQJKCSKCYmO
+        z9l9B1bRvTPjLe8DD7jnnvfsMrvOTKmgIAbnXCfO4QEe4U88we/4BWs4pPb8YGgPruI/zOISd3BA8YfB
+        oHE8Q+MPruMYDuJzWcYJXEPrMc5xVmPSYMA7vLJpsIX9enQv9PSq1zOvR3EQHEVbzv9YVTkYMhXljWmV
+        wyBg3/mvepRVUDkasq/xB75UKQwC9l0aeyolw4xn+jMMAv1oS/cXB1WOhmwHvtHLcAhV0dhQKRqyj/Gw
+        PsW5JZXDILDfyLkplZIgP4IX9UnOfVA5G5q/NjKurFIyzGj+ECsqt4bG341+91SlG+hZKgsacz80+V2v
+        XaUb6FkqH/GRRt0NDcf1VudeqJQMM2bQNjJjUeXW0JjXj7D5zbOX3kOzbaFGXv+GyyqHQcC2YTt289iI
+        KnoZB8FPaHzG1j+aDMjHbcUGoS70h9F7laMhm3YYGYT8cWz3gZrKwZDxx7Hlx1WOg2DzhWQbQy4kfegv
+        JJZ9pUdpMOD2lWwDZ3EYn2Ab2pVsEnfR3xtPMX7p74JBMZdS69nEbsXzg6HN1/JvaCtib+iv5W+xS+0F
+        BQGUSteEV1OUGSAgHQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="button_góp_ý.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
