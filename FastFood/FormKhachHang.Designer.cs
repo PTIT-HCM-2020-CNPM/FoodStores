@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKhachHang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_đăng_xuất = new System.Windows.Forms.Button();
-            this.button_góp_ý = new System.Windows.Forms.Button();
             this.button_lịch_sử_hóa_đơn = new System.Windows.Forms.Button();
             this.pnlDropFood = new System.Windows.Forms.Panel();
             this.button_đồ_ăn_nhanh = new System.Windows.Forms.Button();
@@ -45,6 +44,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.douongcoga1 = new FastFood.Douongcoga();
+            this.thucannhanh1 = new FastFood.Thucannhanh();
+            this.monChinh1 = new FastFood.MonChinh();
+            this.coffee1 = new FastFood.Coffee();
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,7 +66,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.button_đăng_xuất);
-            this.panel1.Controls.Add(this.button_góp_ý);
             this.panel1.Controls.Add(this.button_lịch_sử_hóa_đơn);
             this.panel1.Controls.Add(this.pnlDropFood);
             this.panel1.Controls.Add(this.pnlDropDrink);
@@ -83,30 +85,13 @@
             this.button_đăng_xuất.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đăng_xuất.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đăng_xuất.Image = ((System.Drawing.Image)(resources.GetObject("button_đăng_xuất.Image")));
-            this.button_đăng_xuất.Location = new System.Drawing.Point(0, 546);
+            this.button_đăng_xuất.Location = new System.Drawing.Point(0, 486);
             this.button_đăng_xuất.Name = "button_đăng_xuất";
             this.button_đăng_xuất.Size = new System.Drawing.Size(205, 60);
             this.button_đăng_xuất.TabIndex = 7;
             this.button_đăng_xuất.Text = " Đăng xuất";
             this.button_đăng_xuất.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_đăng_xuất.UseVisualStyleBackColor = true;
-            // 
-            // button_góp_ý
-            // 
-            this.button_góp_ý.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_góp_ý.FlatAppearance.BorderSize = 0;
-            this.button_góp_ý.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_góp_ý.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_góp_ý.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_góp_ý.Image = ((System.Drawing.Image)(resources.GetObject("button_góp_ý.Image")));
-            this.button_góp_ý.Location = new System.Drawing.Point(0, 486);
-            this.button_góp_ý.Name = "button_góp_ý";
-            this.button_góp_ý.Size = new System.Drawing.Size(205, 60);
-            this.button_góp_ý.TabIndex = 6;
-            this.button_góp_ý.Text = "    Góp ý";
-            this.button_góp_ý.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_góp_ý.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_góp_ý.UseVisualStyleBackColor = true;
             // 
             // button_lịch_sử_hóa_đơn
             // 
@@ -152,8 +137,9 @@
             this.button_đồ_ăn_nhanh.Name = "button_đồ_ăn_nhanh";
             this.button_đồ_ăn_nhanh.Size = new System.Drawing.Size(175, 56);
             this.button_đồ_ăn_nhanh.TabIndex = 8;
-            this.button_đồ_ăn_nhanh.Text = "Ăn vặt";
+            this.button_đồ_ăn_nhanh.Text = "Thức ăn nhanh";
             this.button_đồ_ăn_nhanh.UseVisualStyleBackColor = true;
+            this.button_đồ_ăn_nhanh.Click += new System.EventHandler(this.button_đồ_ăn_nhanh_Click);
             // 
             // button_món_chính
             // 
@@ -170,6 +156,7 @@
             this.button_món_chính.TabIndex = 7;
             this.button_món_chính.Text = "Món chính";
             this.button_món_chính.UseVisualStyleBackColor = true;
+            this.button_món_chính.Click += new System.EventHandler(this.button_món_chính_Click);
             // 
             // button_đồ_ăn
             // 
@@ -231,8 +218,9 @@
             this.button_đồ_uống_có_ga.Name = "button_đồ_uống_có_ga";
             this.button_đồ_uống_có_ga.Size = new System.Drawing.Size(205, 59);
             this.button_đồ_uống_có_ga.TabIndex = 6;
-            this.button_đồ_uống_có_ga.Text = "Trà sữa";
+            this.button_đồ_uống_có_ga.Text = "Đồ uống có ga";
             this.button_đồ_uống_có_ga.UseVisualStyleBackColor = true;
+            this.button_đồ_uống_có_ga.Click += new System.EventHandler(this.button_đồ_uống_có_ga_Click);
             // 
             // button_cà_phê
             // 
@@ -246,6 +234,7 @@
             this.button_cà_phê.TabIndex = 5;
             this.button_cà_phê.Text = "Cà phê";
             this.button_cà_phê.UseVisualStyleBackColor = true;
+            this.button_cà_phê.Click += new System.EventHandler(this.button_cà_phê_Click);
             // 
             // button_trang_chủ
             // 
@@ -265,6 +254,7 @@
             this.button_trang_chủ.Text = "  Trang chủ";
             this.button_trang_chủ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_trang_chủ.UseVisualStyleBackColor = true;
+            this.button_trang_chủ.Click += new System.EventHandler(this.button_trang_chủ_Click);
             // 
             // panel2
             // 
@@ -292,12 +282,51 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.douongcoga1);
+            this.panel3.Controls.Add(this.thucannhanh1);
+            this.panel3.Controls.Add(this.monChinh1);
+            this.panel3.Controls.Add(this.coffee1);
             this.panel3.Controls.Add(this.hinhtrangchu1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(205, 243);
+            this.panel3.Location = new System.Drawing.Point(205, 188);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1004, 483);
+            this.panel3.Size = new System.Drawing.Size(1004, 538);
             this.panel3.TabIndex = 3;
+            // 
+            // douongcoga1
+            // 
+            this.douongcoga1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.douongcoga1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.douongcoga1.Location = new System.Drawing.Point(0, 0);
+            this.douongcoga1.Name = "douongcoga1";
+            this.douongcoga1.Size = new System.Drawing.Size(1004, 538);
+            this.douongcoga1.TabIndex = 5;
+            // 
+            // thucannhanh1
+            // 
+            this.thucannhanh1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thucannhanh1.Location = new System.Drawing.Point(0, 0);
+            this.thucannhanh1.Name = "thucannhanh1";
+            this.thucannhanh1.Size = new System.Drawing.Size(1004, 538);
+            this.thucannhanh1.TabIndex = 4;
+            // 
+            // monChinh1
+            // 
+            this.monChinh1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monChinh1.Location = new System.Drawing.Point(0, 0);
+            this.monChinh1.Name = "monChinh1";
+            this.monChinh1.Size = new System.Drawing.Size(1004, 538);
+            this.monChinh1.TabIndex = 3;
+            // 
+            // coffee1
+            // 
+            this.coffee1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.coffee1.Location = new System.Drawing.Point(0, 0);
+            this.coffee1.Name = "coffee1";
+            this.coffee1.Size = new System.Drawing.Size(1004, 538);
+            this.coffee1.TabIndex = 2;
             // 
             // hinhtrangchu1
             // 
@@ -309,7 +338,7 @@
             this.hinhtrangchu1.Location = new System.Drawing.Point(0, 0);
             this.hinhtrangchu1.Margin = new System.Windows.Forms.Padding(6);
             this.hinhtrangchu1.Name = "hinhtrangchu1";
-            this.hinhtrangchu1.Size = new System.Drawing.Size(1004, 483);
+            this.hinhtrangchu1.Size = new System.Drawing.Size(1004, 538);
             this.hinhtrangchu1.TabIndex = 1;
             // 
             // panel4
@@ -401,8 +430,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_góp_ý;
         private System.Windows.Forms.Button button_lịch_sử_hóa_đơn;
         private System.Windows.Forms.Button button_đăng_xuất;
+        private Douongcoga douongcoga1;
+        private Thucannhanh thucannhanh1;
+        private MonChinh monChinh1;
+        private Coffee coffee1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FastFood.DAL_DataLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,5 +77,42 @@ namespace FastFood
                 e.Cancel = true;
             }
         }
+        //ĐĂNG KÝ KHÁCH HÀNG
+        private void btnRegis_Click(object sender, EventArgs e)
+        {
+            string accountName = txtNumberPhone.Text;
+            string userName = txtName.Text;
+            string password = txtPass.Text;
+            string rePassword =txtRePass.Text;
+            int kindAccess = 3;
+
+            //Thông báo đăng ký
+            /*Kiểm tra nhập lại mật khẩu*/
+            if (password != rePassword)
+            {
+                MessageBox.Show("Đăng ký tài khoản thành công!","Thông báo", MessageBoxButtons.OK);
+
+            }
+            else if (SignUpCustomer(accountName, userName, password, kindAccess) && password == rePassword /*Kiểm tra nhập lại mật khẩu*/) 
+            {
+                MessageBox.Show("Nhập lại mật khẩu không trùng khớp! Xin kiểm tra lại", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Tên tài khoản đã có người sử dụng", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
+        bool SignUpCustomer(string accountName, string userName, string password, int kindAccess)
+        {
+            bool result1 = AccountDAO.Instance.SignUpAccoutCustomer(accountName, password, kindAccess);
+            bool result2 = false;
+            if (result1 == true)
+            {
+                result2 = AccountDAO.Instance.SignUpCustomer(accountName, userName);
+            }
+            return result2;
+        }
+        
+
     }
 }

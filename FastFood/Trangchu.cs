@@ -15,8 +15,7 @@ namespace FastFood
         public Trangchu()
         {
             InitializeComponent();
-            
-            //hinhtrangchu1.BringToFront();
+            hinhtrangchu1.BringToFront();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -83,8 +82,10 @@ namespace FastFood
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormDangNhap formdn = new FormDangNhap();
             formdn.ShowDialog();
+            
         }
 
         private void button6_Click_1(object sender, EventArgs e)
@@ -106,7 +107,7 @@ namespace FastFood
         private void button_trang_chủ_Click(object sender, EventArgs e)
         {
             
-            //hinhtrangchu1.BringToFront();
+            hinhtrangchu1.BringToFront();
         }
 
         private void button_đồ_ăn_Click(object sender, EventArgs e)
@@ -116,6 +117,26 @@ namespace FastFood
                 pnlDropFood.Height = 60;
             }
             else { pnlDropFood.Height = 170; }
+        }
+
+        private void button_món_chính_Click(object sender, EventArgs e)
+        {
+            monChinh1.BringToFront();
+        }
+
+        private void button_cà_phê_Click(object sender, EventArgs e)
+        {
+            coffee1.BringToFront();
+        }
+
+        private void button_đồ_ăn_nhanh_Click(object sender, EventArgs e)
+        {
+            thucannhanh1.BringToFront();
+        }
+
+        private void button_đồ_uống_có_ga_Click(object sender, EventArgs e)
+        {
+            douongcoga1.BringToFront();
         }
     }
 }

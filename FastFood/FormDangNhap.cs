@@ -21,6 +21,8 @@ namespace FastFood
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            Trangchu trangchu = new Trangchu();
+            trangchu.ShowDialog();
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
@@ -48,8 +50,10 @@ namespace FastFood
             }
         }
         //Điều kiện đăng nhập
-        public void button_đăng_nhập_Click(object sender, EventArgs e)
-        {            
+        private void button_đăng_nhập_Click(object sender, EventArgs e)
+        {
+            
+            
             string userName = txtUser.Text;
             string password = txtPass.Text;
             int managerAccess = 1, employeeAccess = 2, customerAccess = 3;
@@ -63,14 +67,9 @@ namespace FastFood
             else if (LoginManager(userName, password, employeeAccess))
             {
                 FormNVCH formNVCH = new FormNVCH();
-                // lay cua hang nao dang dang nhap
-                formNVCH.nhan = txtUser.Text;
-                
-                //
                 this.Hide();
                 formNVCH.ShowDialog();
                 this.Show();
-                
             }
             //khách hàng
             else if (LoginCustomer(userName, password, customerAccess))
@@ -97,6 +96,5 @@ namespace FastFood
         {
             return AccountDAO.Instance.LoginCustomer(userName, password, kindAccess);
         }
-        
     }
 }

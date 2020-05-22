@@ -10,6 +10,7 @@ namespace FastFood
     {
         //Hello my friend
         //Hi. How are you?
+        
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

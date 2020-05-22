@@ -55,8 +55,24 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Coffee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Coffee.Designer.cs">
+      <DependentUpon>Coffee.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
+    <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
+    <Compile Include="DAL-DataLayer\StoresDAO.cs" />
+    <Compile Include="Douongcoga.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Douongcoga.Designer.cs">
+      <DependentUpon>Douongcoga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
+    <Compile Include="DTO-DataTranferObject\Store.cs" />
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +102,12 @@
     </Compile>
     <Compile Include="FormNVCH.Designer.cs">
       <DependentUpon>FormNVCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonChinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonChinh.Designer.cs">
+      <DependentUpon>MonChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="NVQLCuaHang.cs">
       <SubType>UserControl</SubType>
@@ -117,6 +139,12 @@
     <Compile Include="NVQLQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thucannhanh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Thucannhanh.Designer.cs">
+      <DependentUpon>Thucannhanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +159,12 @@
     <Compile Include="Hinhtrangchu.Designer.cs">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Coffee.resx">
+      <DependentUpon>Coffee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Douongcoga.resx">
+      <DependentUpon>Douongcoga.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNVQL.resx">
       <DependentUpon>FormNVQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonChinh.resx">
+      <DependentUpon>MonChinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLCuaHang.resx">
       <DependentUpon>NVQLCuaHang.cs</DependentUpon>
@@ -163,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLQuanLyTaiKhoan.vi-VN.resx">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thucannhanh.resx">
+      <DependentUpon>Thucannhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
@@ -193,8 +233,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO-DataTranferObject\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
