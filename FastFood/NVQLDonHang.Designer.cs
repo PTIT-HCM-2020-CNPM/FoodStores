@@ -130,9 +130,11 @@
             this.dataGridView_đơn_hàng.Location = new System.Drawing.Point(-1, 58);
             this.dataGridView_đơn_hàng.Name = "dataGridView_đơn_hàng";
             this.dataGridView_đơn_hàng.ReadOnly = true;
+            this.dataGridView_đơn_hàng.RowHeadersWidth = 51;
             this.dataGridView_đơn_hàng.RowTemplate.Height = 24;
             this.dataGridView_đơn_hàng.Size = new System.Drawing.Size(302, 507);
             this.dataGridView_đơn_hàng.TabIndex = 0;
+            this.dataGridView_đơn_hàng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_đơn_hàng_CellContentClick);
             // 
             // panel2
             // 
