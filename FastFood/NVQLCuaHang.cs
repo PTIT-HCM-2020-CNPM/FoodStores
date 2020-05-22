@@ -74,10 +74,9 @@ namespace FastFood
         //3.RESET TRƯỜNG DỮ LIỆU + LOAD BẢNG
         private void button_reset_Click(object sender, EventArgs e)
         {
-            textBox_mã_cửa_hàng.Text = null;
-            textBox_địa_chỉ.Text = null;
+            textBox_mã_cửa_hàng.Text = "";
+            textBox_địa_chỉ.Text = "";
             radioButton_hoạt_động.Checked = false; radioButton_ngừng_hoạt_động.Checked = false;
-
             LoadStoreList();
         }
 
