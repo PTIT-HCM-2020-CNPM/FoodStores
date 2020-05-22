@@ -37,7 +37,7 @@ namespace FastFood.DAL_DataLayer
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
-                try { 
+               // try { 
                 if(parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -50,7 +50,7 @@ namespace FastFood.DAL_DataLayer
                             i++;
                         }
                     }
-                }
+                //}
 
 
                 //trung gian để lấy data
@@ -59,10 +59,10 @@ namespace FastFood.DAL_DataLayer
                 //đưa dữ liệu vào datatable
                 adapter.Fill(data);
                 }
-                catch
-                {
-                    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
-                }
+                //catch
+                //{
+                //    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
+                //}
 
                 //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
                 connection.Close();

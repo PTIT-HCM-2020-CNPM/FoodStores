@@ -21,8 +21,6 @@ namespace FastFood
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Trangchu trangchu = new Trangchu();
-            trangchu.ShowDialog();
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
@@ -64,13 +62,21 @@ namespace FastFood
                 formNVQL.ShowDialog();
                 this.Show();
             }
-            else if (LoginManager(userName, password, employeeAccess))
+            //Nhân viên
+            else if (LoginEmployee(userName, password, employeeAccess))
             {
-                FormNVCH formNVCH = new FormNVCH();
-                this.Hide();
-                formNVCH.ShowDialog();
-                this.Show();
+                if (AccountDAO.Instance.CheckLoginStopStore(userName))//check tài khoản thuộc cửa hàng ngừng hoạt động
+                {
+                    MessageBox.Show("Không thể đăng nhập vì tài khoản thuộc cửa hàng ngừng hoạt đông", "Thông báo", MessageBoxButtons.OK);
+                }         
+                else {
+                    FormNVCH formNVCH = new FormNVCH();
+                    this.Hide();
+                    formNVCH.ShowDialog();
+                    this.Show();
+                }
             }
+
             //khách hàng
             else if (LoginCustomer(userName, password, customerAccess))
             {
@@ -96,5 +102,6 @@ namespace FastFood
         {
             return AccountDAO.Instance.LoginCustomer(userName, password, kindAccess);
         }
+        
     }
 }
