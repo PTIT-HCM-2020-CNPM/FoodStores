@@ -125,6 +125,12 @@
     <Compile Include="NVCHDonHang.Designer.cs">
       <DependentUpon>NVCHDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVCHTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHTaiKhoan.Designer.cs">
+      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVQLCuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NVCHDonHang.resx">
       <DependentUpon>NVCHDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCHTaiKhoan.resx">
+      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLCuaHang.resx">
       <DependentUpon>NVQLCuaHang.cs</DependentUpon>

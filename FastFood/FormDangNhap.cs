@@ -71,6 +71,7 @@ namespace FastFood
                 }         
                 else {
                     FormNVCH formNVCH = new FormNVCH();
+                    formNVCH.nhan = txtUser.Text;
                     this.Hide();
                     formNVCH.ShowDialog();
                     this.Show();

@@ -12,7 +12,7 @@ namespace FastFood
 {
     public partial class FormNVCH : Form
     {
-        
+
         public FormNVCH()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace FastFood
             get { return taiKhoan; }
             set { taiKhoan = value; }
         }
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -39,12 +39,12 @@ namespace FastFood
             panel_chọn.Top = button_trang_chủ.Top;
             hinhtrangchu1.Show();
             hinhtrangchu1.BringToFront();
-            
+
         }
 
         private void button_tạo_tài_khoản_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button_món_ăn_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace FastFood
             panel_chọn.Top = button_món_ăn.Top;
             nvchDanhSachMonAn1.Show();
             // lay cua hang hien tai dang dang nhap qua usercontrol danhsachmonan
-            nvchDanhSachMonAn1.layCuaHangHienTai = taiKhoan.Substring(0,3);
+            nvchDanhSachMonAn1.layCuaHangHienTai = taiKhoan.Substring(0, 3);
             nvchDanhSachMonAn1.BringToFront();
         }
 
