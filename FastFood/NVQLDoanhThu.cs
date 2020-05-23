@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FastFood.DAL_DataLayer;
 
 namespace FastFood
 {
@@ -40,20 +41,37 @@ namespace FastFood
         {
 
         }
-
-        private void label1_Click_1(object sender, EventArgs e)
+        //TỔNG TIỀN ALL BILL
+        private string itemSelectedCBDoanhThu;
+        private void comboBox_doanh_thu_SelectedValueChanged(object sender, EventArgs e)
         {
+            itemSelectedCBDoanhThu = comboBox_doanh_thu.SelectedItem.ToString();
 
         }
 
         private void button_thống_kê_Click(object sender, EventArgs e)
         {
+            DateTime dateTo = dateTimePicker_bắt_đầu.Value;
+            DateTime dateFrom = dateTimePicker_kết_thúc.Value;
 
+            if (itemSelectedCBDoanhThu == null)
+            {
+                MessageBox.Show("Vui lòng chọn loại thống kê!", "Thông báo", MessageBoxButtons.OK);
+            }
+            else if (itemSelectedCBDoanhThu == "Doanh thu mỗi cửa hàng")
+            {
+                dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyStoreBill(dateTo, dateFrom);
+            }
+            else if (itemSelectedCBDoanhThu == "Số lượng mỗi món ăn bán ra")
+            {
+
+            }
+            else if (itemSelectedCBDoanhThu == "Tổng số tiền đơn hàng của chuỗi cửa hàng")
+            {
+                dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyBill(dateTo, dateFrom);
+            }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

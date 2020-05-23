@@ -85,6 +85,7 @@ namespace FastFood
             this.Hide();
             FormDangNhap formdn = new FormDangNhap();
             formdn.ShowDialog();
+            this.Show();
             
         }
 

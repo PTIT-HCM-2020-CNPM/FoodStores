@@ -14,7 +14,7 @@ namespace FastFood.DAL_DataLayer
         private static DataProvider instance;//thể hiện của class DataProvider(gọi tới sẽ là duy nhất)
 
         //chuỗi kết nối
-        private String connectionStr = "Data Source=DESKTOP-PGRM0OK;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
+        private String connectionStr = "Data Source=DESKTOP-4KQ12ML;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
 
         public static DataProvider Instance {
             get {
@@ -30,46 +30,46 @@ namespace FastFood.DAL_DataLayer
         public DataTable ExecuteQuery(String query, object[] parameter = null)
         {
             DataTable data = new DataTable();//chứa talble tài khoản
-             
-            using (SqlConnection connection = new SqlConnection(connectionStr)) { //using: sau khi khối lệnh phía trong chạy xong biến connection tự giải phóng
+            using (SqlConnection connection = new SqlConnection(connectionStr))
+            { //using: sau khi khối lệnh phía trong chạy xong biến connection tự giải phóng
 
                 //mở kết nối để lấy dữ liệu
                 connection.Open();
+                //try
+                //{
+                    SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
 
-                SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
-                try { 
-                if(parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach(string item in listPara)
+                    if (parameter != null)
                     {
-                        if (item.Contains('@'))
+                        string[] listPara = query.Split(' ');
+                        int i = 0;
+                        foreach (string item in listPara)
                         {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
+                            if (item.Contains('@'))
+                            {
+                                command.Parameters.AddWithValue(item, parameter[i]);
+                                i++;
+                            }
                         }
                     }
-                }
 
 
-                //trung gian để lấy data
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    //trung gian để lấy data
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
 
-                //đưa dữ liệu vào datatable
-                adapter.Fill(data);
-                }
-                catch
-                {
-                    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
-                }
-
+                    //đưa dữ liệu vào datatable
+                    adapter.Fill(data);
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
+                //}
                 //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
                 connection.Close();
             }
-            
+
             return data;
-            
+
         }
 
         //trả về số lượng dòng thành công khi thêm data

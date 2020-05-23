@@ -55,6 +55,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CHUOICUAHANGDOANDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Coffee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,8 +67,7 @@
       <DependentUpon>Coffee.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
-    <Compile Include="DAL-DataLayer\DanhSachDonHangDAO.cs" />
-    <Compile Include="DAL-DataLayer\DanhSachMonAnDAO.cs" />
+    <Compile Include="DAL-DataLayer\BillDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
     <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\StoresDAO.cs" />
@@ -73,6 +77,8 @@
     <Compile Include="Douongcoga.Designer.cs">
       <DependentUpon>Douongcoga.cs</DependentUpon>
     </Compile>
+    <Compile Include="DTO-DataTranferObject\Bill.cs" />
+    <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
     <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
     <Compile Include="FormDangKy.cs">
@@ -110,18 +116,6 @@
     </Compile>
     <Compile Include="MonChinh.Designer.cs">
       <DependentUpon>MonChinh.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NVCHDonHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NVCHDonHang.Designer.cs">
-      <DependentUpon>NVCHDonHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NVCHTaiKhoan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NVCHTaiKhoan.Designer.cs">
-      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="NVQLCuaHang.cs">
       <SubType>UserControl</SubType>
@@ -197,12 +191,6 @@
     <EmbeddedResource Include="MonChinh.resx">
       <DependentUpon>MonChinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NVCHDonHang.resx">
-      <DependentUpon>NVCHDonHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NVCHTaiKhoan.resx">
-      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="NVQLCuaHang.resx">
       <DependentUpon>NVQLCuaHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +228,17 @@
     <EmbeddedResource Include="Hinhtrangchu.resx">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CHUOICUAHANGDOANDataSet.xsc">
+      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CHUOICUAHANGDOANDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CHUOICUAHANGDOANDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CHUOICUAHANGDOANDataSet.xss">
+      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

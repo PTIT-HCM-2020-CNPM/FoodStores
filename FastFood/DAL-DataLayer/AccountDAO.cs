@@ -48,6 +48,14 @@ namespace FastFood.DAL_DataLayer
 
             return result.Rows.Count > 0;
         }
+        //Ràng buộc không đăng nhập bằng tài khoản nhân viên nếu cửa hàng ngừng hoạt động
+        public bool CheckLoginStopStore(string employee)
+        {
+            string query= "USP_CheckLoginStopStore @manhanvien";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query,new object[] { employee });
+            return result.Rows.Count > 0;
+        }
+        
         //ĐĂNG KÝ TÀI KHOẢN CỦA KHÁCH HÀNG
         public bool SignUpAccoutCustomer(string accountName, string password, int kindAccess /*,string userName*/)
         {

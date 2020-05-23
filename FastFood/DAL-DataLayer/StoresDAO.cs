@@ -48,7 +48,7 @@ namespace FastFood.DAL_DataLayer
         public List<Store> SearchStore(string storeNumber, string address)
         {
             List<Store> list = new List<Store>();
-            string query = String.Format("select * from dbo.CUA_HANG where [MÃ CỬA HÀNG] = '{0}' or [ĐỊA CHỈ] = N'{1}'", storeNumber, address);
+            string query = String.Format("select * from dbo.CUA_HANG where [MÃ CỬA HÀNG] like '{0}%' or [ĐỊA CHỈ] like N'{1}%'", storeNumber, address);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in data.Rows)
