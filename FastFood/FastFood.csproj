@@ -68,6 +68,8 @@
     </Compile>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
     <Compile Include="DAL-DataLayer\BillDAO.cs" />
+    <Compile Include="DAL-DataLayer\DanhSachDonHangDAO.cs" />
+    <Compile Include="DAL-DataLayer\DanhSachMonAnDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
     <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\StoresDAO.cs" />
@@ -116,6 +118,12 @@
     </Compile>
     <Compile Include="MonChinh.Designer.cs">
       <DependentUpon>MonChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCHDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHDonHang.Designer.cs">
+      <DependentUpon>NVCHDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="NVQLCuaHang.cs">
       <SubType>UserControl</SubType>
@@ -190,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonChinh.resx">
       <DependentUpon>MonChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCHDonHang.resx">
+      <DependentUpon>NVCHDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLCuaHang.resx">
       <DependentUpon>NVQLCuaHang.cs</DependentUpon>

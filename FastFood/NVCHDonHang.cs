@@ -29,7 +29,7 @@ namespace FastFood
 
             string cuaHangHienTai = cuaHang;
             //câu truy vấn chọn toàn bộ tài khoản nvch
-            String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ CỬA HÀNG]='"+cuaHangHienTai+"' ";
+            String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ CỬA HÀNG]='" + cuaHangHienTai + "' ";
             // đưa data vào bảng dataGridView qua biến chọn nguồn data
             dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
         }
@@ -49,7 +49,7 @@ namespace FastFood
             int numrow;
             numrow = e.RowIndex;
             textBox_MaDonHang.Text = dataGridView_DanhSachDonHang.Rows[numrow].Cells[0].Value.ToString();
-            if (dataGridView_DanhSachDonHang.Rows[numrow].Cells[7].Value.ToString()== "1")
+            if (dataGridView_DanhSachDonHang.Rows[numrow].Cells[7].Value.ToString() == "1")
             {
                 trangThaiDau = 1;
                 radioButton_DangGiaoHang.Checked = true;
@@ -74,7 +74,7 @@ namespace FastFood
             if (timDonHang != "")
             {
                 string maCuaHang = dataGridView_DanhSachDonHang.Rows[0].Cells[0].Value.ToString();
-                String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='"+timDonHang+"' ";
+                String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='" + timDonHang + "' ";
                 dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
             }
             else
@@ -91,7 +91,7 @@ namespace FastFood
             if (timDonHang != "")
             {
                 string maCuaHang = dataGridView_DanhSachDonHang.Rows[0].Cells[0].Value.ToString();
-                String query = "select CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG],CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + timDonHang+ "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
+                String query = "select CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG],CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + timDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
                 dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
             }
             else
