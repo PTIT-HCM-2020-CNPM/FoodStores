@@ -91,16 +91,50 @@ namespace FastFood
 
         private void Button_ThemMonAn_Click(object sender, EventArgs e)
         {
+            string maCuaHang = layCuaHangHienTai;
             string maMonAn = textBox_MaMonAn.Text;
-
+            string tenMonAn = textBox_TenMonAn.Text;
+            // cai mac dinh cho gia tien va so luong bang 0 neu chua nhap gi tren textboxt
+            int giaTien = 0;
+            int soLuong = 0;
+            // lay chuoi tren textbox de thu 
+            if (int.TryParse(textBox_GiaTien.Text,out giaTien))
+            {
+                giaTien = Convert.ToInt32(textBox_GiaTien.Text);
+            }
+            else
+                MessageBox.Show("Gía tiền phải là số Và Không được để trống. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
+            if (int.TryParse(textBox_SoLuong.Text, out soLuong))
+            {
+                soLuong = Convert.ToInt32(textBox_SoLuong.Text);
+            }
+            else
+                MessageBox.Show("Số lượng phải là số và không được để trống. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
 
             if (maMonAn == "")
             {
-                MessageBox.Show("Mã món ăn chưa được điền", "Thông Báo", MessageBoxButtons.OK);
+                MessageBox.Show("Mã món không được để trống. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
             }
+            else if (tenMonAn == "")
+            {
+                MessageBox.Show("Tên món ăn không được để trống. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
+            }
+            else if (giaTien == 0)
+            {
+                return;         
+            }
+            else if (soLuong == 0)
+            {
+                return;
+            }
+            else if (DanhSachMonAnDAO.Instance.themMonAn(maCuaHang, maMonAn, tenMonAn, giaTien, soLuong))
+            {
+                MessageBox.Show("Thêm món ăn thành công", "Thông Báo", MessageBoxButtons.OK);
+                hienDanhSachMonAn(layCuaHangHienTai);
+            }           
             else
             {
-                
+                MessageBox.Show("Mã món ăn bị trùng. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
             }
         }
 
@@ -110,6 +144,31 @@ namespace FastFood
             {
                 textBox_TimMonAn.Clear();
             }
+        }
+
+        private void Button_XoaMonAn_Click(object sender, EventArgs e)
+        {
+            string maCuaHang = layCuaHangHienTai;
+            string maMonAn = textBox_MaMonAn.Text;
+
+            if (maMonAn == "")
+            {
+                MessageBox.Show("Mã món không được để trống. vui lòng nhập lại!", "Thông Báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                if (MessageBox.Show("Bạn Chắc chắn muốn xóa !", "Thông Báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    if (DanhSachMonAnDAO.Instance.xoaMonAn(maCuaHang, maMonAn))
+                    {
+                        MessageBox.Show("Xóa món ăn thành công", "Thông Báo", MessageBoxButtons.OK);
+                        hienDanhSachMonAn(maCuaHang);
+                    }
+                    else
+                        MessageBox.Show("Mã Món Ăn không có trong danh sách !", "Thông Báo", MessageBoxButtons.OK);
+                }
+            }
+
         }
     }
 }

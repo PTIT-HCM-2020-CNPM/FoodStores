@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nvchTaiKhoan1 = new FastFood.NVCHTaiKhoan();
+            this.nvchDonHang1 = new FastFood.NVCHDonHang();
             this.nvchDanhSachMonAn1 = new FastFood.NVCHDanhSachMonAn();
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.panel2.SuspendLayout();
@@ -63,7 +65,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 625);
+            this.panel2.Size = new System.Drawing.Size(212, 696);
             this.panel2.TabIndex = 3;
             // 
             // panel_chọn
@@ -231,13 +233,36 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.nvchTaiKhoan1);
+            this.panel3.Controls.Add(this.nvchDonHang1);
             this.panel3.Controls.Add(this.nvchDanhSachMonAn1);
             this.panel3.Controls.Add(this.hinhtrangchu1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(212, 139);
+            this.panel3.Location = new System.Drawing.Point(212, 210);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(962, 486);
             this.panel3.TabIndex = 6;
+            // 
+            // nvchTaiKhoan1
+            // 
+            this.nvchTaiKhoan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvchTaiKhoan1.Location = new System.Drawing.Point(0, 23);
+            this.nvchTaiKhoan1.Name = "nvchTaiKhoan1";
+            this.nvchTaiKhoan1.Size = new System.Drawing.Size(615, 463);
+            this.nvchTaiKhoan1.TabIndex = 3;
+            // 
+            // nvchDonHang1
+            // 
+            this.nvchDonHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nvchDonHang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvchDonHang1.layCuaHangHienTai = "";
+            this.nvchDonHang1.Location = new System.Drawing.Point(0, 0);
+            this.nvchDonHang1.Name = "nvchDonHang1";
+            this.nvchDonHang1.Size = new System.Drawing.Size(962, 487);
+            this.nvchDonHang1.TabIndex = 2;
+            this.nvchDonHang1.Load += new System.EventHandler(this.NvchDonHang1_Load);
             // 
             // nvchDanhSachMonAn1
             // 
@@ -269,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 625);
+            this.ClientSize = new System.Drawing.Size(1174, 696);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -307,5 +332,7 @@
         private Hinhtrangchu hinhtrangchu1;
         private System.Windows.Forms.Button button_tài_khoản;
         private NVCHDanhSachMonAn nvchDanhSachMonAn1;
+        private NVCHDonHang nvchDonHang1;
+        private NVCHTaiKhoan nvchTaiKhoan1;
     }
 }

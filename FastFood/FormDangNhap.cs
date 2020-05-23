@@ -67,6 +67,7 @@ namespace FastFood
             else if (LoginManager(userName, password, employeeAccess))
             {
                 FormNVCH formNVCH = new FormNVCH();
+                formNVCH.nhan = txtUser.Text;
                 this.Hide();
                 formNVCH.ShowDialog();
                 this.Show();

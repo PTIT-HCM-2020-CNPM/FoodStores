@@ -62,7 +62,7 @@ namespace FastFood
             if (StoresDAO.Instance.InsertStore(storeNumber,address,status))//Kiểm tra trùng mã nhân viên
             {
                 MessageBox.Show("Thêm mới thành công!", "Thông báo", MessageBoxButtons.OK);
-                LoadStoreList();   
+                LoadStoreList();
             }
             else
             {

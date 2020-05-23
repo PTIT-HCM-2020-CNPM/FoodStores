@@ -128,6 +128,7 @@
             this.button_XoaMonAn.TabIndex = 12;
             this.button_XoaMonAn.Text = "Xóa";
             this.button_XoaMonAn.UseVisualStyleBackColor = true;
+            this.button_XoaMonAn.Click += new System.EventHandler(this.Button_XoaMonAn_Click);
             // 
             // button_ThemMonAn
             // 
@@ -264,7 +265,7 @@
             this.button_CapNhatMonAn.Image = ((System.Drawing.Image)(resources.GetObject("button_CapNhatMonAn.Image")));
             this.button_CapNhatMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_CapNhatMonAn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_CapNhatMonAn.Location = new System.Drawing.Point(446, 505);
+            this.button_CapNhatMonAn.Location = new System.Drawing.Point(432, 505);
             this.button_CapNhatMonAn.Name = "button_CapNhatMonAn";
             this.button_CapNhatMonAn.Size = new System.Drawing.Size(147, 42);
             this.button_CapNhatMonAn.TabIndex = 12;

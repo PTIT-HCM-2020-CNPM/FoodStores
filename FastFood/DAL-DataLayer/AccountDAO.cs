@@ -146,5 +146,15 @@ namespace FastFood.DAL_DataLayer
             }
             return list;
         }
+        //DOI MAT KHAU TAI KHOAN NHAN VIEN CUA HANG DO NHAN VIEN CUA HANG DOI DOI
+        public bool doiMatKhauNhanVienCuaHang(string taiKhoan,string matKhauMoi)
+        {
+            string query = String.Format("update TAI_KHOAN set [MẬT KHẨU] = '"+matKhauMoi+"' where TAI_KHOAN.[TÊN TÀI KHOẢN] = '"+taiKhoan+"'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+
     }
 }
