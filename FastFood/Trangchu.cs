@@ -15,7 +15,6 @@ namespace FastFood
         public Trangchu()
         {
             InitializeComponent();
-            
             hinhtrangchu1.BringToFront();
         }
 
@@ -55,8 +54,11 @@ namespace FastFood
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            this.Hide();
             FormDangNhap formdn = new FormDangNhap();
             formdn.ShowDialog();
+            this.Show();
+            
         }
 
         private void button6_Click_1(object sender, EventArgs e)

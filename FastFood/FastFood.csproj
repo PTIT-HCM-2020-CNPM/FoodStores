@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,8 +56,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL-DataLayer\AccountDAO.cs" />
+    <Compile Include="DAL-DataLayer\BillDAO.cs" />
+    <Compile Include="DAL-DataLayer\DanhSachDonHangDAO.cs" />
+    <Compile Include="DAL-DataLayer\DanhSachMonAnDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
+
     <Compile Include="DAL-DataLayer\LichsuDAO.cs" />
+
+    <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
+    <Compile Include="DAL-DataLayer\StoresDAO.cs" />
+    <Compile Include="Douongcoga.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Douongcoga.Designer.cs">
+      <DependentUpon>Douongcoga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO-DataTranferObject\Bill.cs" />
+    <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
+    <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
+    <Compile Include="DTO-DataTranferObject\Store.cs" />
+
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +124,18 @@
     <Compile Include="MonAn.Designer.cs">
       <DependentUpon>MonAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVCHDonHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHDonHang.Designer.cs">
+      <DependentUpon>NVCHDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCHTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHTaiKhoan.Designer.cs">
+      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVQLCuaHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +147,12 @@
     </Compile>
     <Compile Include="NVQLDoanhThu.Designer.cs">
       <DependentUpon>NVQLDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCHDanhSachMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHDanhSachMonAn.Designer.cs">
+      <DependentUpon>NVCHDanhSachMonAn.cs</DependentUpon>
     </Compile>
     <Compile Include="NVQLDonHang.cs">
       <SubType>UserControl</SubType>
@@ -167,11 +204,20 @@
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NVCHDonHang.resx">
+      <DependentUpon>NVCHDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCHTaiKhoan.resx">
+      <DependentUpon>NVCHTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NVQLCuaHang.resx">
       <DependentUpon>NVQLCuaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLDoanhThu.resx">
       <DependentUpon>NVQLDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCHDanhSachMonAn.resx">
+      <DependentUpon>NVCHDanhSachMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLDonHang.resx">
       <DependentUpon>NVQLDonHang.cs</DependentUpon>
@@ -193,6 +239,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Hinhtrangchu.resx">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
@@ -210,8 +257,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO-DataTranferObject\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

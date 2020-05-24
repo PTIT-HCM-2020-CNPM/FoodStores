@@ -129,7 +129,7 @@
     <value>-1, 58</value>
   </data>
   <data name="dataGridView_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 507</value>
+    <value>302, 483</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dataGridView_tài_khoản.TabIndex" type="System.Int32, mscorlib">
@@ -148,10 +148,10 @@
     <value>0</value>
   </data>
   <data name="panel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 48</value>
+    <value>3, 72</value>
   </data>
   <data name="panel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 568</value>
+    <value>301, 544</value>
   </data>
   <data name="panel3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -193,7 +193,7 @@
     <value>1</value>
   </data>
   <data name="panel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 22</value>
+    <value>19, 90</value>
   </data>
   <data name="panel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -211,16 +211,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel4.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
+  </data>
+  <data name="textBox__qltk_tên_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox__qltk_tên_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox__qltk_tên_tài_khoản.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox__qltk_tên_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox__qltk_tên_tài_khoản.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -295,7 +295,7 @@
     <value>1</value>
   </data>
   <data name="panel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 79</value>
+    <value>19, 147</value>
   </data>
   <data name="panel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -313,16 +313,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel5.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
+  </data>
+  <data name="textBox_mật_khẩu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_mật_khẩu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_mật_khẩu.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_mật_khẩu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_mật_khẩu.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -397,7 +397,7 @@
     <value>1</value>
   </data>
   <data name="panel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 136</value>
+    <value>19, 204</value>
   </data>
   <data name="panel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -415,16 +415,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel6.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
+  </data>
+  <data name="textBox_mã_cửa_hàng_tk.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_mã_cửa_hàng_tk.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_mã_cửa_hàng_tk.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_mã_cửa_hàng_tk.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_mã_cửa_hàng_tk.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -499,7 +499,7 @@
     <value>1</value>
   </data>
   <data name="panel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 250</value>
+    <value>19, 318</value>
   </data>
   <data name="panel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -517,16 +517,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel8.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
+  </data>
+  <data name="textBox_năm_sinh.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_năm_sinh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_năm_sinh.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_năm_sinh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_năm_sinh.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -601,7 +601,7 @@
     <value>1</value>
   </data>
   <data name="panel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 193</value>
+    <value>19, 261</value>
   </data>
   <data name="panel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -619,16 +619,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
+  </data>
+  <data name="textBox_họ_tên_nhân_viên.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_họ_tên_nhân_viên.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_họ_tên_nhân_viên.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_họ_tên_nhân_viên.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_họ_tên_nhân_viên.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -715,7 +715,7 @@
     <value>2</value>
   </data>
   <data name="panel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 307</value>
+    <value>19, 375</value>
   </data>
   <data name="panel9.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -733,7 +733,7 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel9.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="radioButton_nữ.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -859,7 +859,7 @@
     <value>1</value>
   </data>
   <data name="panel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 364</value>
+    <value>19, 432</value>
   </data>
   <data name="panel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -877,16 +877,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel10.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
+  </data>
+  <data name="textBox_địa_chỉ.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_địa_chỉ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_địa_chỉ.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_địa_chỉ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_địa_chỉ.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -961,7 +961,7 @@
     <value>1</value>
   </data>
   <data name="panel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 421</value>
+    <value>19, 489</value>
   </data>
   <data name="panel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>578, 51</value>
@@ -979,16 +979,16 @@
     <value>panel2</value>
   </data>
   <data name="&gt;&gt;panel11.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
+  </data>
+  <data name="textBox_số_điện_thoại.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt</value>
   </data>
   <data name="textBox_số_điện_thoại.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 8</value>
-  </data>
-  <data name="textBox_số_điện_thoại.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>167, 11</value>
   </data>
   <data name="textBox_số_điện_thoại.Size" type="System.Drawing.Size, System.Drawing">
-    <value>397, 33</value>
+    <value>397, 27</value>
   </data>
   <data name="textBox_số_điện_thoại.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -1038,62 +1038,62 @@
   <data name="&gt;&gt;label_số_điện_thoại.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="button_lưu_tài_khoản.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+  <data name="&gt;&gt;button_xóa.Name" xml:space="preserve">
+    <value>button_xóa</value>
   </data>
-  <data name="button_lưu_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="button_lưu_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 10.2pt, style=Bold</value>
-  </data>
-  <data name="button_lưu_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAKlJREFUWEft
-        jlEKwkAMRPcIBdsfvf9l/JBSEPQ0MZt9ChVhU3c/quRB2GY6EyYFwS6RPlx0DpzcRsl3YdYZOeunZEVY
-        DaSVlkF+6ayZM+9N58hvHyXXXGDQeZa465yw1CkZX4F3sJlPn0lnMUHkagYPBJoLZPQzlzCQ6uD/WMAL
-        MQPpxwu0wLko8H0B1s0Q/6MCrFWwR4EoEAXaC/SG83Xwd4fzQbAnUnoA2mwQUIdm2VAAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="button_lưu_tài_khoản.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="button_lưu_tài_khoản.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button_lưu_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 478</value>
-  </data>
-  <data name="button_lưu_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 42</value>
-  </data>
-  <data name="button_lưu_tài_khoản.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="button_lưu_tài_khoản.Text" xml:space="preserve">
-    <value>Lưu</value>
-  </data>
-  <data name="&gt;&gt;button_lưu_tài_khoản.Name" xml:space="preserve">
-    <value>button_lưu_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_lưu_tài_khoản.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_xóa.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_lưu_tài_khoản.Parent" xml:space="preserve">
+  <data name="&gt;&gt;button_xóa.Parent" xml:space="preserve">
     <value>panel2</value>
   </data>
-  <data name="&gt;&gt;button_lưu_tài_khoản.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;button_xóa.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;button_sửa.Name" xml:space="preserve">
+    <value>button_sửa</value>
+  </data>
+  <data name="&gt;&gt;button_sửa.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_sửa.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button_sửa.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button_thêm_tài_khoản.Name" xml:space="preserve">
+    <value>button_thêm_tài_khoản</value>
+  </data>
+  <data name="&gt;&gt;button_thêm_tài_khoản.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_thêm_tài_khoản.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button_thêm_tài_khoản.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Name" xml:space="preserve">
+    <value>button_reset</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button_reset.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="panel2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>365, 42</value>
+    <value>365, 0</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>615, 574</value>
+    <value>615, 616</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1110,157 +1110,13 @@
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox_tìm_tài_khoản.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="textBox_tìm_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="textBox_tìm_tài_khoản.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox_tìm_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 42</value>
-  </data>
-  <data name="textBox_tìm_tài_khoản.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBox_tìm_tài_khoản.Name" xml:space="preserve">
-    <value>textBox_tìm_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;textBox_tìm_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox_tìm_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;textBox_tìm_tài_khoản.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Name" xml:space="preserve">
-    <value>button_tìm_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Name" xml:space="preserve">
-    <value>button_xóa_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Name" xml:space="preserve">
-    <value>button_sửa_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;button_thêm_tài_khoản.Name" xml:space="preserve">
-    <value>button_thêm_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_thêm_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_thêm_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button_thêm_tài_khoản.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>980, 42</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="button_tìm_tài_khoản.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="button_tìm_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="button_tìm_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 10.2pt, style=Bold</value>
-  </data>
-  <data name="button_tìm_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
-        TUUH5AUHBAwqZDFq+wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAG3SURBVEhL
-        3ZTNLkNRFEaN1AsoRb0D4S2Ut0HSmDfiNaQ8RknEgAkDIz8TPAIlcqyVuysu7a0jRlbypey9v3Pu+dln
-        YhgppUW0jY7RA+qje3SEtlAzSvPAOIX20DOq4gntolpYx0NxHZ0ieUP7aA010GT8tlAXmZcTNB1DjIYi
-        v3ww+DVaitRQyC+jG4vBSapXQoHbIg4+/ouAOlc8mKQT4e+Q9EDdc5dd+eVfoX4lfJ7JQoTLkPC2yH6E
-        ssB3UNjTZoTKkPAqylqEssC3XthTL0JlSDwW+TQboSzwzRX2dB+hMiRsIpmMUBb4aoU99SNUhoQdKo0I
-        ZYFvvrCnxwiVIWH7SytCWeDbKOyjz2Bwi7oRygLfYWFP7QiVIdFE3mPv83KEfwT1q+Gzj0ZvMUkfLrEz
-        6xGuhLoZdKcJRneyUOBN8E0RJ1mJ1FDI++W3FsMrGv98UzSNBpO4bF9Nm8h77mvqrwfqnpsXB5dLNH7l
-        FLmSDvJMqnDPrfP8HFx+NolQuIA2UQ/ZJy/Ijvf/Nvo4UP72Vc2fJAcGdXsvnAGu0K+enUoY9P9M8vlM
-        ziL8tzCwk5ynlHbeASru1wULXt3jAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="button_tìm_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 0</value>
-  </data>
-  <data name="button_tìm_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 42</value>
-  </data>
-  <data name="button_tìm_tài_khoản.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Name" xml:space="preserve">
-    <value>button_tìm_tài_khoản</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;button_tìm_tài_khoản.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="button_xóa_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="button_xóa.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="button_xóa_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 10.2pt, style=Bold</value>
+  <data name="button_xóa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt, style=Bold</value>
   </data>
-  <data name="button_xóa_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button_xóa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAZhJREFUWEft
         lrtKxEAUhkWwULyjuDa6sNY2VoLgI4i+lA+yz6CFFoIXUERFvFW6oIhgJ1jZjN+Z/FnG3ehmQhabfPCT
@@ -1273,40 +1129,43 @@
         gg==
 </value>
   </data>
-  <data name="button_xóa_tài_khoản.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="button_xóa.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="button_xóa_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>815, 0</value>
+  <data name="button_xóa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="button_xóa_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 42</value>
+  <data name="button_xóa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>399, 24</value>
   </data>
-  <data name="button_xóa_tài_khoản.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="button_xóa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 54</value>
   </data>
-  <data name="button_xóa_tài_khoản.Text" xml:space="preserve">
+  <data name="button_xóa.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="button_xóa.Text" xml:space="preserve">
     <value>Xóa</value>
   </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Name" xml:space="preserve">
-    <value>button_xóa_tài_khoản</value>
+  <data name="&gt;&gt;button_xóa.Name" xml:space="preserve">
+    <value>button_xóa</value>
   </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_xóa.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;button_xóa.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="&gt;&gt;button_xóa_tài_khoản.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;button_xóa.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="button_sửa_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="button_sửa.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <data name="button_sửa_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 10.2pt, style=Bold</value>
+  <data name="button_sửa.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt, style=Bold</value>
   </data>
-  <data name="button_sửa_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button_sửa.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAaJJREFUWEft
         lrtKA1EQhhNEBG2sohFtBGsL30IFRdDEeHkQK0EttBQM+AR2NoIBIWDhI6jvIF4LEe/Hb+bMhhUUiz1H
@@ -1319,38 +1178,41 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button_sửa_tài_khoản.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="button_sửa.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="button_sửa_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>617, -3</value>
+  <data name="button_sửa.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="button_sửa_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 42</value>
+  <data name="button_sửa.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 24</value>
   </data>
-  <data name="button_sửa_tài_khoản.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="button_sửa.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 54</value>
   </data>
-  <data name="button_sửa_tài_khoản.Text" xml:space="preserve">
+  <data name="button_sửa.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="button_sửa.Text" xml:space="preserve">
     <value>Sửa</value>
   </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Name" xml:space="preserve">
-    <value>button_sửa_tài_khoản</value>
+  <data name="&gt;&gt;button_sửa.Name" xml:space="preserve">
+    <value>button_sửa</value>
   </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Type" xml:space="preserve">
+  <data name="&gt;&gt;button_sửa.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;button_sửa.Parent" xml:space="preserve">
+    <value>panel2</value>
   </data>
-  <data name="&gt;&gt;button_sửa_tài_khoản.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;button_sửa.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="button_thêm_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
   <data name="button_thêm_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cambria, 10.2pt, style=Bold</value>
+    <value>Cambria, 12pt, style=Bold</value>
   </data>
   <data name="button_thêm_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1371,11 +1233,14 @@
   <data name="button_thêm_tài_khoản.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="button_thêm_tài_khoản.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="button_thêm_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
-    <value>412, -3</value>
+    <value>19, 24</value>
   </data>
   <data name="button_thêm_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 42</value>
+    <value>183, 54</value>
   </data>
   <data name="button_thêm_tài_khoản.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1390,10 +1255,148 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;button_thêm_tài_khoản.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>panel2</value>
   </data>
   <data name="&gt;&gt;button_thêm_tài_khoản.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="button_reset.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button_reset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt, style=Bold</value>
+  </data>
+  <data name="button_reset.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAiBJREFUWEft
+        l0tLVGEchwcxEtJMLHBRrUqDCDNiFu1010aK+iSBm6IWLVpJl1XkImiRHyBdVHYBg76CdFlE0SIoAu26
+        qH/P77y/AWnO0TPjcUDwgQeP/9s7znlnzmttmy1FRIzgRXyBr/AzfsG3OI+XccTl1cHQE7iAZXmOp9ye
+        kcIR/rUc1HfjLfyjZviEM3gGj+I+HMAhPI038Ss2uI07PSsjG1wGavfg46wr4hdewz6nC6GmF6/gDxS6
+        XbvTZckXQN0OfJZ1RHzEulOloecYam+Il/5Z+gXobRYfcL/DLUPvQXynQQ2cKoaaOv7F7zjmcNtoBv7E
+        DIeLoeZJKo2rDrWEewtxWT7k9TkX+nyvu+HySO3FuCwf8pdSWdxxqLOw8NO0fkw61FlY+E1aPw451FlY
+        eCWtH70OdRYW/pbWj10OVQYz+9LoWHaoGZKvU00cdqgymHkkjY4lh5ohuWmbkJln0+hYcKgZklOpJu46
+        VBnMvJdGxwWHmiG54S+iPJjVjzq4iLVvLwWNg0dbX8V5MEuPcvHQoWIo0sNDB5CqHkYnUQ8jzRx1eG0o
+        vIFio4/jA6jzhJh2eH0o7sK5rC3th3GnSkPPhHvFA+xyqhw0aOOsPpJN46DThVCzF6/jbxSPsN/p1qDx
+        /0PpMt7HcziMPVbX53EWVSPUo1vZ7XHtw5BWj+X6q4+7vToYuvofk/eot1nqehGVG3b5NluBWu0fW+5z
+        PMX0K40AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="button_reset.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="button_reset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button_reset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 559</value>
+  </data>
+  <data name="button_reset.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 54</value>
+  </data>
+  <data name="button_reset.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="button_reset.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Name" xml:space="preserve">
+    <value>button_reset</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_reset.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;button_reset.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="textBox_tìm_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="textBox_tìm_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 14</value>
+  </data>
+  <data name="textBox_tìm_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 31</value>
+  </data>
+  <data name="textBox_tìm_tài_khoản.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBox_tìm_tài_khoản.Name" xml:space="preserve">
+    <value>textBox_tìm_tài_khoản</value>
+  </data>
+  <data name="&gt;&gt;textBox_tìm_tài_khoản.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_tìm_tài_khoản.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;textBox_tìm_tài_khoản.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button_tìm_tài_khoản.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="button_tìm_tài_khoản.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 10.2pt, style=Bold</value>
+  </data>
+  <data name="button_tìm_tài_khoản.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAB3RJ
+        TUUH5AUHBAwqZDFq+wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAG3SURBVEhL
+        3ZTNLkNRFEaN1AsoRb0D4S2Ut0HSmDfiNaQ8RknEgAkDIz8TPAIlcqyVuysu7a0jRlbypey9v3Pu+dln
+        YhgppUW0jY7RA+qje3SEtlAzSvPAOIX20DOq4gntolpYx0NxHZ0ieUP7aA010GT8tlAXmZcTNB1DjIYi
+        v3ww+DVaitRQyC+jG4vBSapXQoHbIg4+/ouAOlc8mKQT4e+Q9EDdc5dd+eVfoX4lfJ7JQoTLkPC2yH6E
+        ssB3UNjTZoTKkPAqylqEssC3XthTL0JlSDwW+TQboSzwzRX2dB+hMiRsIpmMUBb4aoU99SNUhoQdKo0I
+        ZYFvvrCnxwiVIWH7SytCWeDbKOyjz2Bwi7oRygLfYWFP7QiVIdFE3mPv83KEfwT1q+Gzj0ZvMUkfLrEz
+        6xGuhLoZdKcJRneyUOBN8E0RJ1mJ1FDI++W3FsMrGv98UzSNBpO4bF9Nm8h77mvqrwfqnpsXB5dLNH7l
+        FLmSDvJMqnDPrfP8HFx+NolQuIA2UQ/ZJy/Ijvf/Nvo4UP72Vc2fJAcGdXsvnAGu0K+enUoY9P9M8vlM
+        ziL8tzCwk5ynlHbeASru1wULXt3jAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button_tìm_tài_khoản.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 0</value>
+  </data>
+  <data name="button_tìm_tài_khoản.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 60</value>
+  </data>
+  <data name="button_tìm_tài_khoản.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;button_tìm_tài_khoản.Name" xml:space="preserve">
+    <value>button_tìm_tài_khoản</value>
+  </data>
+  <data name="&gt;&gt;button_tìm_tài_khoản.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_tìm_tài_khoản.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;button_tìm_tài_khoản.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 60</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

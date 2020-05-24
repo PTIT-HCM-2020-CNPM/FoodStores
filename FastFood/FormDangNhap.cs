@@ -51,6 +51,7 @@ namespace FastFood
         private void button_đăng_nhập_Click(object sender, EventArgs e)
         {
             
+            
             string userName = txtUser.Text;
             string password = txtPass.Text;
             int managerAccess = 1, employeeAccess = 2, customerAccess = 3;
@@ -61,13 +62,22 @@ namespace FastFood
                 formNVQL.ShowDialog();
                 this.Show();
             }
-            else if (LoginManager(userName, password, employeeAccess))
+            //Nhân viên
+            else if (LoginEmployee(userName, password, employeeAccess))
             {
-                FormNVCH formNVCH = new FormNVCH();
-                this.Hide();
-                formNVCH.ShowDialog();
-                this.Show();
+                if (AccountDAO.Instance.CheckLoginStopStore(userName))//check tài khoản thuộc cửa hàng ngừng hoạt động
+                {
+                    MessageBox.Show("Không thể đăng nhập vì tài khoản thuộc cửa hàng ngừng hoạt đông", "Thông báo", MessageBoxButtons.OK);
+                }         
+                else {
+                    FormNVCH formNVCH = new FormNVCH();
+                    formNVCH.nhan = txtUser.Text;
+                    this.Hide();
+                    formNVCH.ShowDialog();
+                    this.Show();
+                }
             }
+
             //khách hàng
             else if (LoginCustomer(userName, password, customerAccess))
             {
@@ -98,5 +108,6 @@ namespace FastFood
         {
 
         }
+        
     }
 }

@@ -74,6 +74,11 @@
             this.label1.Location = new System.Drawing.Point(199, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 19);
+            this.label1.Font = new System.Drawing.Font("Cambria", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(277, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên tài khoản";
             // 
@@ -84,6 +89,11 @@
             this.label2.Location = new System.Drawing.Point(199, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 19);
+            this.label2.Font = new System.Drawing.Font("Cambria", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(277, 258);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Mật khẩu";
             // 
@@ -93,6 +103,11 @@
             this.txtPass.Location = new System.Drawing.Point(322, 206);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(253, 13);
+            this.txtPass.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(458, 265);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(337, 26);
             this.txtPass.TabIndex = 2;
             this.txtPass.UseSystemPasswordChar = true;
             this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
@@ -103,6 +118,11 @@
             this.txtUser.Location = new System.Drawing.Point(322, 110);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(253, 13);
+            this.txtUser.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(458, 146);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(337, 26);
             this.txtUser.TabIndex = 1;
             this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
@@ -113,6 +133,7 @@
             this.button_đăng_nhập.ForeColor = System.Drawing.Color.White;
             this.button_đăng_nhập.Location = new System.Drawing.Point(274, 275);
             this.button_đăng_nhập.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_đăng_nhập.Location = new System.Drawing.Point(388, 347);
             this.button_đăng_nhập.Name = "button_đăng_nhập";
             this.button_đăng_nhập.Size = new System.Drawing.Size(151, 38);
             this.button_đăng_nhập.TabIndex = 3;

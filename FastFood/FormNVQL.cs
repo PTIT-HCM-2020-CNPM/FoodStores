@@ -57,7 +57,7 @@ namespace FastFood
 
         private void label3_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel_chọn_Paint(object sender, PaintEventArgs e)
