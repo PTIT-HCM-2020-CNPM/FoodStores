@@ -60,22 +60,13 @@
     <Compile Include="DAL-DataLayer\DanhSachDonHangDAO.cs" />
     <Compile Include="DAL-DataLayer\DanhSachMonAnDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
-
     <Compile Include="DAL-DataLayer\LichsuDAO.cs" />
-
     <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\StoresDAO.cs" />
-    <Compile Include="Douongcoga.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Douongcoga.Designer.cs">
-      <DependentUpon>Douongcoga.cs</DependentUpon>
-    </Compile>
     <Compile Include="DTO-DataTranferObject\Bill.cs" />
     <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
     <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
-
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -27,10 +27,6 @@ namespace FastFood
         void LoadAcountList()
         {
             //câu truy vấn chọn toàn bộ tài khoản nvch
-            String query = "select * from dbo.TAI_KHOAN " +
-                "where[LOẠI TRUY CẬP] = 2";
-
-            
             String query = "select t.[TÊN TÀI KHOẢN] as [TÊN TÀI KHOẢN(MÃ NHÂN VIÊN)],t.[MẬT KHẨU] as [MẬT KHẨU],n.[MÃ CỬA HÀNG] as [MÃ CỬA HÀNG],n.[HỌ TÊN NHÂN VIÊN] as [HỌ TÊN NHÂN VIÊN]," +
                 "n.[NĂM SINH] as [NĂM SINH],n.[GIỚI TÍNH] as [GIỚI TÍNH],n.[ĐỊA CHỈ] as [ĐỊA CHỈ],n.[SỐ ĐIỆN THOẠI] as [SỐ ĐIỆN THOẠI]" +
                 "from TAI_KHOAN as t , NHAN_VIEN as n " +
