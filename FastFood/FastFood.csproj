@@ -55,11 +55,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CHUOICUAHANGDOANDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Coffee.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,17 +243,6 @@
     <EmbeddedResource Include="Hinhtrangchu.resx">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CHUOICUAHANGDOANDataSet.xsc">
-      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CHUOICUAHANGDOANDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CHUOICUAHANGDOANDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CHUOICUAHANGDOANDataSet.xss">
-      <DependentUpon>CHUOICUAHANGDOANDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

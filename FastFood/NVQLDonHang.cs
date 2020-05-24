@@ -17,6 +17,7 @@ namespace FastFood
         public NVQLDonHang()
         {
             InitializeComponent();
+            timer_thời_gian_reload.Start();
             LoadBillList();
         }
 
@@ -96,6 +97,15 @@ namespace FastFood
 
         ///
 
+        ///LIÊN TỤC CẬP NHẬT DỮ LIỆU  SAU 2 PHÚT 
+        int i = 0;
+        private void timer_thời_gian_reload_Tick(object sender, EventArgs e)
+        {
+            LoadBillList();
+            i++;
+            label1.Text = i.ToString();
+        }
 
+        ///
     }
 }
