@@ -55,7 +55,7 @@ namespace FastFood
         private void button_giỏ_hàng_Click(object sender, EventArgs e)
         {
             giohang1.BringToFront();
-            giohang1.Giohang_Load(null, EventArgs.Empty);
+            giohang1.Giohang_Load(null, EventArgs.Empty);           
         }
 
         private void button1_Click(object sender, EventArgs e)

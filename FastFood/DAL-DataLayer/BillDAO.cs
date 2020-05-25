@@ -75,5 +75,18 @@ namespace FastFood.DAL_DataLayer
             return result;
 
         }
+        //THÊM ĐƠN HÀNG BỞI KHÁCH HÀNG
+        public bool InsertBillByCustomer(string billNumber, string storeNumber, string customerNumber, int totalBill, string date, int kindBill)
+        {
+
+            
+            string query = string.Format("insert dbo.DON_DAT_HANG([MÃ ĐƠN HÀNG],[MÃ CỬA HÀNG], [MÃ KHÁCH HÀNG(SĐT)],[TỔNG TIỀN], NGÀY, [ĐỊA CHỈ], [TRẠNG THÁI ĐƠN HÀNG] ) " +
+                "values('{0}', '{1}', '{2}', {3}, '{4}', N'{5}', {6})",
+                billNumber, storeNumber, customerNumber, totalBill, date, kindBill);
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result>0;
+        }
+        //
     }
 }
