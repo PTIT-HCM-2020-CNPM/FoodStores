@@ -51,9 +51,8 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 32);
+            this.panel1.Size = new System.Drawing.Size(737, 26);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -61,10 +60,9 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(898, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(673, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 32);
+            this.button1.Size = new System.Drawing.Size(64, 26);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -121,7 +119,7 @@
             this.button_đăng_nhập.ForeColor = System.Drawing.Color.White;
             this.button_đăng_nhập.Location = new System.Drawing.Point(388, 347);
             this.button_đăng_nhập.Name = "button_đăng_nhập";
-            this.button_đăng_nhập.Size = new System.Drawing.Size(201, 47);
+            this.button_đăng_nhập.Size = new System.Drawing.Size(151, 38);
             this.button_đăng_nhập.TabIndex = 3;
             this.button_đăng_nhập.Text = "Đăng nhập";
             this.button_đăng_nhập.UseVisualStyleBackColor = false;
@@ -133,17 +131,19 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(3, 39);
+            this.panel4.Location = new System.Drawing.Point(2, 32);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 165);
+            this.panel4.Size = new System.Drawing.Size(152, 134);
             this.panel4.TabIndex = 4;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(61, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -152,9 +152,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(49, 134);
+            this.label3.Location = new System.Drawing.Point(37, 109);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 17);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Food Restaurant";
             // 
@@ -164,20 +165,21 @@
             this.label4.BackColor = System.Drawing.Color.Red;
             this.label4.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(10, 84);
+            this.label4.Location = new System.Drawing.Point(8, 68);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 50);
+            this.label4.Size = new System.Drawing.Size(150, 40);
             this.label4.TabIndex = 0;
             this.label4.Text = "FoodHouse";
             // 
             // FormDangNhap
             // 
             this.AcceptButton = this.button_đăng_nhập;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.CancelButton = this.button1;
-            this.ClientSize = new System.Drawing.Size(983, 443);
+            this.ClientSize = new System.Drawing.Size(737, 360);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.button_đăng_nhập);
             this.Controls.Add(this.txtPass);
@@ -186,11 +188,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangNhap";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangNhap_FormClosing);
+            this.Load += new System.EventHandler(this.FormDangNhap_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

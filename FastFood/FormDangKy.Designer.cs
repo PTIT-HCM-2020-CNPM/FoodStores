@@ -111,19 +111,17 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 32);
+            this.panel1.Size = new System.Drawing.Size(737, 26);
             this.panel1.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Location = new System.Drawing.Point(440, 9);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(330, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 17);
+            this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 1;
             // 
             // button1
@@ -131,10 +129,9 @@
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(884, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(663, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 32);
+            this.button1.Size = new System.Drawing.Size(74, 26);
             this.button1.TabIndex = 6;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -180,9 +177,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(61, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -192,9 +190,10 @@
             this.btnRegis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRegis.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegis.ForeColor = System.Drawing.Color.White;
-            this.btnRegis.Location = new System.Drawing.Point(389, 363);
+            this.btnRegis.Location = new System.Drawing.Point(292, 295);
+            this.btnRegis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRegis.Name = "btnRegis";
-            this.btnRegis.Size = new System.Drawing.Size(201, 47);
+            this.btnRegis.Size = new System.Drawing.Size(151, 38);
             this.btnRegis.TabIndex = 7;
             this.btnRegis.Text = "Đăng ký";
             this.btnRegis.UseVisualStyleBackColor = false;
@@ -203,7 +202,7 @@
             // FormDangKy
             // 
             this.AcceptButton = this.btnRegis;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -221,11 +220,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangKy";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangKy_FormClosing);
+            this.Load += new System.EventHandler(this.FormDangKy_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

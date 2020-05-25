@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button_đăng_xuất.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Dangxuat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAexJREFUWEft
         lj1LXEEUhjcpJGAgxM5PVNYU/hDbKIqihW2CWViSxiWdgo2FSRsbCwvFr3RB/4G/wMJAmnQJKCSKCYmO
@@ -130,6 +130,18 @@
         KnoZB8FPaHzG1j+aDMjHbcUGoS70h9F7laMhm3YYGYT8cWz3gZrKwZDxx7Hlx1WOg2DzhWQbQy4kfegv
         JJZ9pUdpMOD2lWwDZ3EYn2Ab2pVsEnfR3xtPMX7p74JBMZdS69nEbsXzg6HN1/JvaCtib+iv5W+xS+0F
         BQGUSteEV1OUGSAgHQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="button_giỏ_hàng.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAWtJREFUSEvt
+        lb1KxEAUhQOCYKk21hY+gNiKvWgZIb/EF9gXEKws9h3sLHwBwV5ZELS1VWRdOwsVLNT4842chZBNyGzi
+        pnE/OCxM7jmXuZPNOP+TIAjO0Tf6RPfI16PJkmk8VBrH8YoetwNNj9R8X0vt4Hnetmns+/6VltrBdd05
+        Gr+iryRJlrTcDjQ9NbsOw3BXS+3AmDum8QR0phbF0Hi5wPQX6qtFORRd50yNxYYOFV8O59stMjcRmTuK
+        L4eidRnes+YGStnxvOLL4W81Q/FjztxEl4quhuLjnLmJDhRbDaOh/tf0pt/a4ou4odhqGPcCpg+UZkNq
+        6IWsWcXagamXC6mjE8XZg2nPmBm72XlRaKXwdhRnj7koMD/nw8bQE3f7ouLGI4qiNQIu0DhnbWp7fA9W
+        FTPFDsa2hW7RDS/LppZHsK2zhqA+Gp7fnZZHsK2zhpBBJrD0XrWts4YQM8IHNLAYdWXdlJZwnB8Ur3Nr
+        iORreQAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="button_lịch_sử_hóa_đơn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

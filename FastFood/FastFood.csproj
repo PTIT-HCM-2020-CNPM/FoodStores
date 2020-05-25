@@ -83,6 +83,7 @@
     <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
     <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
+    <Compile Include="DAL-DataLayer\LichsuDAO.cs" />
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,11 +114,23 @@
     <Compile Include="FormNVCH.Designer.cs">
       <DependentUpon>FormNVCH.cs</DependentUpon>
     </Compile>
-    <Compile Include="MonChinh.cs">
+    <Compile Include="Giohang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MonChinh.Designer.cs">
-      <DependentUpon>MonChinh.cs</DependentUpon>
+    <Compile Include="Giohang.Designer.cs">
+      <DependentUpon>Giohang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lichsudathang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lichsudathang.Designer.cs">
+      <DependentUpon>Lichsudathang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MonAn.Designer.cs">
+      <DependentUpon>MonAn.cs</DependentUpon>
     </Compile>
     <Compile Include="NVCHDonHang.cs">
       <SubType>UserControl</SubType>
@@ -161,12 +174,6 @@
     <Compile Include="NVQLQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thucannhanh.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Thucannhanh.Designer.cs">
-      <DependentUpon>Thucannhanh.cs</DependentUpon>
-    </Compile>
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,12 +188,6 @@
     <Compile Include="Hinhtrangchu.Designer.cs">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Coffee.resx">
-      <DependentUpon>Coffee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Douongcoga.resx">
-      <DependentUpon>Douongcoga.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,8 +203,14 @@
     <EmbeddedResource Include="FormNVQL.resx">
       <DependentUpon>FormNVQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MonChinh.resx">
-      <DependentUpon>MonChinh.cs</DependentUpon>
+    <EmbeddedResource Include="Giohang.resx">
+      <DependentUpon>Giohang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lichsudathang.resx">
+      <DependentUpon>Lichsudathang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonAn.resx">
+      <DependentUpon>MonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVCHDonHang.resx">
       <DependentUpon>NVCHDonHang.cs</DependentUpon>
@@ -228,9 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLQuanLyTaiKhoan.vi-VN.resx">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Thucannhanh.resx">
-      <DependentUpon>Thucannhanh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>

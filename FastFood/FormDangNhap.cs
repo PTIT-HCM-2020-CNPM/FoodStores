@@ -103,6 +103,10 @@ namespace FastFood
         {
             return AccountDAO.Instance.LoginCustomer(userName, password, kindAccess);
         }
-        
+
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
