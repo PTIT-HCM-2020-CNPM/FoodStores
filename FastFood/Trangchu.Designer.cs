@@ -50,6 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
+         
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();

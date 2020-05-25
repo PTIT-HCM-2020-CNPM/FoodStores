@@ -17,10 +17,7 @@ namespace FastFood
         public Giohang()
         {
             InitializeComponent();
-            // nguồn cái giỏ hàng ở đâu m
-            //khi nhan cai dat hang no them vao cai datagrid luon a h muon load cai datagrid do len database
-            // thế thì m phải viết code xử lý đa chứ lấy datagridbill
-            //còn cái data grird view mày đưa vào bằng lệnh
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
