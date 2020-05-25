@@ -50,10 +50,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
-            this.thucannhanh1 = new FastFood.Thucannhanh();
-            this.douongcoga1 = new FastFood.Douongcoga();
-            this.coffee1 = new FastFood.Coffee();
-            this.monChinh1 = new FastFood.MonChinh();
+         
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
@@ -375,31 +372,14 @@
             // 
             // thucannhanh1
             // 
-            this.thucannhanh1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thucannhanh1.Location = new System.Drawing.Point(0, 0);
-            this.thucannhanh1.Margin = new System.Windows.Forms.Padding(4);
-            this.thucannhanh1.Name = "thucannhanh1";
-            this.thucannhanh1.Size = new System.Drawing.Size(943, 486);
-            this.thucannhanh1.TabIndex = 4;
+        
             // 
             // douongcoga1
             // 
-            this.douongcoga1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.douongcoga1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.douongcoga1.Location = new System.Drawing.Point(0, 0);
-            this.douongcoga1.Margin = new System.Windows.Forms.Padding(4);
-            this.douongcoga1.Name = "douongcoga1";
-            this.douongcoga1.Size = new System.Drawing.Size(943, 486);
-            this.douongcoga1.TabIndex = 3;
-            // 
+     
             // coffee1
             // 
-            this.coffee1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.coffee1.Location = new System.Drawing.Point(0, 0);
-            this.coffee1.Margin = new System.Windows.Forms.Padding(4);
-            this.coffee1.Name = "coffee1";
-            this.coffee1.Size = new System.Drawing.Size(943, 486);
-            this.coffee1.TabIndex = 2;
+  
             // 
             // monChinh1
             // 
