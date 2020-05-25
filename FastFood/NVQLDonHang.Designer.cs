@@ -496,6 +496,11 @@
             this.label_mã_đơn_hàng.TabIndex = 0;
             this.label_mã_đơn_hàng.Text = "Mã đơn hàng";
             // 
+            // cHUOICUAHANGDOANDataSet
+            // 
+            this.cHUOICUAHANGDOANDataSet.DataSetName = "CHUOICUAHANGDOANDataSet";
+            this.cHUOICUAHANGDOANDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dONDATHANGBindingSource
             // 
             this.dONDATHANGBindingSource.DataMember = "DON_DAT_HANG";

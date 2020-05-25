@@ -169,6 +169,8 @@
             // 
             // dataGridView_DanhSachMonAn
             // 
+            this.dataGridView_DanhSachMonAn.AllowUserToAddRows = false;
+            this.dataGridView_DanhSachMonAn.AllowUserToDeleteRows = false;
             this.dataGridView_DanhSachMonAn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

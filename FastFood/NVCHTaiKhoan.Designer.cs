@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NVCHTaiKhoan));
             this.button_Luu = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox_MatKhauMoi = new System.Windows.Forms.TextBox();
@@ -45,7 +44,6 @@
             this.button_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Luu.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
             this.button_Luu.ForeColor = System.Drawing.Color.White;
-            this.button_Luu.Image = ((System.Drawing.Image)(resources.GetObject("button_Luu.Image")));
             this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Luu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button_Luu.Location = new System.Drawing.Point(485, 272);
@@ -60,7 +58,7 @@
             // 
             this.panel5.Controls.Add(this.textBox_MatKhauMoi);
             this.panel5.Controls.Add(this.label_MatKhauMoi);
-            this.panel5.Location = new System.Drawing.Point(19, 31);
+            this.panel5.Location = new System.Drawing.Point(19, 107);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(578, 51);
             this.panel5.TabIndex = 14;
@@ -90,7 +88,7 @@
             // 
             this.panel1.Controls.Add(this.textBox_NhapLaiMatKhaiMoi);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(19, 103);
+            this.panel1.Location = new System.Drawing.Point(19, 176);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(578, 51);
             this.panel1.TabIndex = 9;
