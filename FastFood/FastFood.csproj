@@ -67,6 +67,12 @@
     <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
     <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
+    <Compile Include="FormKHDiaChiGiaoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKHDiaChiGiaoHang.Designer.cs">
+      <DependentUpon>FormKHDiaChiGiaoHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     <Compile Include="Hinhtrangchu.Designer.cs">
       <DependentUpon>Hinhtrangchu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormKHDiaChiGiaoHang.resx">
+      <DependentUpon>FormKHDiaChiGiaoHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
     </EmbeddedResource>

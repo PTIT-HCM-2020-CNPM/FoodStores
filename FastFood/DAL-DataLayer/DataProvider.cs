@@ -16,9 +16,9 @@ namespace FastFood.DAL_DataLayer
 
         //chuỗi kết nối
         //
-        //DESKTOP-4KQ12ML: VA
+        //DESKTOP-4KQM12ML: VA
         //DESKTOP-MUJKC6P: HẢI
-        private String connectionStr = "Data Source=DESKTOP-4KQ12ML;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
+        private string connectionStr = "Data Source=DESKTOP-MUJKC6P;Initial Catalog=CHUOICUAHANGDOAN-new;Integrated Security=True";
 
         public static DataProvider Instance {
             get {

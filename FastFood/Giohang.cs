@@ -20,11 +20,6 @@ namespace FastFood
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         public void Giohang_Load(object sender, EventArgs e)
         {
             foreach (DataRow item in FormKhachHang.GioHang)
@@ -42,6 +37,12 @@ namespace FastFood
         private void Giohang_Load_1(object sender, EventArgs e)
         {
            
+        }
+
+        private void button_thanh_toán_Click(object sender, EventArgs e)
+        {
+            FormKHDiaChiGiaoHang formKHDiaChiGiao = new FormKHDiaChiGiaoHang();
+            formKHDiaChiGiao.ShowDialog();
         }
     }
 }
