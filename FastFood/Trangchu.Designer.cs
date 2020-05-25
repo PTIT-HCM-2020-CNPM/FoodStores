@@ -370,28 +370,6 @@
             this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
             this.hinhtrangchu2.TabIndex = 5;
             // 
-            // thucannhanh1
-            // 
-        
-            // 
-            // douongcoga1
-            // 
-     
-            // coffee1
-            // 
-  
-            // 
-            // monChinh1
-            // 
-            this.hinhtrangchu2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hinhtrangchu2.BackColor = System.Drawing.Color.Red;
-            this.hinhtrangchu2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
-            this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.hinhtrangchu2.Name = "hinhtrangchu2";
-            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
-            this.hinhtrangchu2.TabIndex = 5;
-            // 
             // hinhtrangchu1
             // 
             this.hinhtrangchu1.AllowDrop = true;

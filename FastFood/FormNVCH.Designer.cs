@@ -36,7 +36,6 @@
             this.button_đơn_hàng = new System.Windows.Forms.Button();
             this.button_trang_chủ = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(212, 696);
+            this.panel2.Size = new System.Drawing.Size(212, 784);
             this.panel2.TabIndex = 3;
             // 
             // panel_chọn
@@ -159,7 +158,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(212, 0);
@@ -167,22 +165,12 @@
             this.panel1.Size = new System.Drawing.Size(962, 63);
             this.panel1.TabIndex = 4;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(879, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 35);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(721, 0);
+            this.label3.Location = new System.Drawing.Point(768, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(194, 22);
             this.label3.TabIndex = 0;
@@ -233,34 +221,38 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.nvchTaiKhoan1);
             this.panel3.Controls.Add(this.nvchDonHang1);
             this.panel3.Controls.Add(this.nvchDanhSachMonAn1);
             this.panel3.Controls.Add(this.hinhtrangchu1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(212, 210);
+            this.panel3.Location = new System.Drawing.Point(212, 234);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(962, 486);
+            this.panel3.Size = new System.Drawing.Size(962, 550);
             this.panel3.TabIndex = 6;
             // 
             // nvchTaiKhoan1
             // 
             this.nvchTaiKhoan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nvchTaiKhoan1.Location = new System.Drawing.Point(0, 23);
+            this.nvchTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvchTaiKhoan1.layTaiKhoanHienTai = null;
+            this.nvchTaiKhoan1.Location = new System.Drawing.Point(0, 0);
             this.nvchTaiKhoan1.Name = "nvchTaiKhoan1";
-            this.nvchTaiKhoan1.Size = new System.Drawing.Size(615, 463);
+            this.nvchTaiKhoan1.Size = new System.Drawing.Size(962, 550);
             this.nvchTaiKhoan1.TabIndex = 3;
             // 
             // nvchDonHang1
             // 
-            this.nvchDonHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.nvchDonHang1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.nvchDonHang1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nvchDonHang1.layCuaHangHienTai = "";
             this.nvchDonHang1.Location = new System.Drawing.Point(0, 0);
             this.nvchDonHang1.Name = "nvchDonHang1";
-            this.nvchDonHang1.Size = new System.Drawing.Size(962, 487);
+            this.nvchDonHang1.Size = new System.Drawing.Size(962, 551);
             this.nvchDonHang1.TabIndex = 2;
             this.nvchDonHang1.Load += new System.EventHandler(this.NvchDonHang1_Load);
             // 
@@ -271,22 +263,22 @@
             this.nvchDanhSachMonAn1.layCuaHangHienTai = "";
             this.nvchDanhSachMonAn1.Location = new System.Drawing.Point(0, 0);
             this.nvchDanhSachMonAn1.Name = "nvchDanhSachMonAn1";
-            this.nvchDanhSachMonAn1.Size = new System.Drawing.Size(962, 486);
+            this.nvchDanhSachMonAn1.Size = new System.Drawing.Size(962, 550);
             this.nvchDanhSachMonAn1.TabIndex = 1;
             this.nvchDanhSachMonAn1.Load += new System.EventHandler(this.NvchDanhSachMonAn1_Load);
             // 
             // hinhtrangchu1
             // 
             this.hinhtrangchu1.AllowDrop = true;
-            this.hinhtrangchu1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.hinhtrangchu1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hinhtrangchu1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hinhtrangchu1.BackColor = System.Drawing.Color.Red;
             this.hinhtrangchu1.Location = new System.Drawing.Point(0, 0);
             this.hinhtrangchu1.Margin = new System.Windows.Forms.Padding(4);
             this.hinhtrangchu1.Name = "hinhtrangchu1";
-            this.hinhtrangchu1.Size = new System.Drawing.Size(962, 486);
+            this.hinhtrangchu1.Size = new System.Drawing.Size(962, 550);
             this.hinhtrangchu1.TabIndex = 0;
             this.hinhtrangchu1.Load += new System.EventHandler(this.Hinhtrangchu1_Load);
             // 
@@ -294,7 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1174, 696);
+            this.ClientSize = new System.Drawing.Size(1174, 784);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
@@ -328,7 +320,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
         private Hinhtrangchu hinhtrangchu1;
         private System.Windows.Forms.Button button_tài_khoản;
         private NVCHDanhSachMonAn nvchDanhSachMonAn1;

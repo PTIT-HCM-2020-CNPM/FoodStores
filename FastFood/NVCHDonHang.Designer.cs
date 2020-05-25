@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NVCHDonHang));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_sửa = new System.Windows.Forms.Button();
@@ -47,12 +48,16 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox_MaDonHang = new System.Windows.Forms.TextBox();
             this.label_MaDonHang = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
+            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -143,7 +148,7 @@
             // label_hienCuaHangUC
             // 
             this.label_hienCuaHangUC.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label_hienCuaHangUC.Location = new System.Drawing.Point(0, 28);
+            this.label_hienCuaHangUC.Location = new System.Drawing.Point(0, 6);
             this.label_hienCuaHangUC.Name = "label_hienCuaHangUC";
             this.label_hienCuaHangUC.Size = new System.Drawing.Size(66, 23);
             this.label_hienCuaHangUC.TabIndex = 14;
@@ -157,32 +162,36 @@
             this.panel3.Controls.Add(this.dataGridView_DanhSachDonHang);
             this.panel3.Location = new System.Drawing.Point(3, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(328, 522);
+            this.panel3.Size = new System.Drawing.Size(294, 630);
             this.panel3.TabIndex = 4;
             // 
             // dataGridView_DanhSachDonHang
             // 
+            this.dataGridView_DanhSachDonHang.AllowUserToAddRows = false;
+            this.dataGridView_DanhSachDonHang.AllowUserToDeleteRows = false;
             this.dataGridView_DanhSachDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_DanhSachDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_DanhSachDonHang.Location = new System.Drawing.Point(-1, 58);
+            this.dataGridView_DanhSachDonHang.Location = new System.Drawing.Point(-3, 49);
             this.dataGridView_DanhSachDonHang.Name = "dataGridView_DanhSachDonHang";
             this.dataGridView_DanhSachDonHang.ReadOnly = true;
             this.dataGridView_DanhSachDonHang.RowHeadersWidth = 51;
             this.dataGridView_DanhSachDonHang.RowTemplate.Height = 24;
-            this.dataGridView_DanhSachDonHang.Size = new System.Drawing.Size(329, 461);
+            this.dataGridView_DanhSachDonHang.Size = new System.Drawing.Size(282, 569);
             this.dataGridView_DanhSachDonHang.TabIndex = 0;
             this.dataGridView_DanhSachDonHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_DanhSachDonHang_CellContentClick);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label_chi_tiết_hóa_đơn);
+            this.panel2.Controls.Add(this.dataGridView_ChiTietDonHang);
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(414, 51);
+            this.panel2.Location = new System.Drawing.Point(356, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(593, 519);
+            this.panel2.Size = new System.Drawing.Size(651, 627);
             this.panel2.TabIndex = 5;
             // 
             // panel10
@@ -191,7 +200,7 @@
             this.panel10.Controls.Add(this.radioButton_DaGiaoHang);
             this.panel10.Controls.Add(this.radioButton_DangGiaoHang);
             this.panel10.Controls.Add(this.label_TrangThai);
-            this.panel10.Location = new System.Drawing.Point(53, 63);
+            this.panel10.Location = new System.Drawing.Point(53, 495);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(499, 85);
             this.panel10.TabIndex = 11;
@@ -204,10 +213,10 @@
             this.radioButton_LayTrucTiep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_LayTrucTiep.Location = new System.Drawing.Point(167, 49);
             this.radioButton_LayTrucTiep.Name = "radioButton_LayTrucTiep";
-            this.radioButton_LayTrucTiep.Size = new System.Drawing.Size(124, 24);
+            this.radioButton_LayTrucTiep.Size = new System.Drawing.Size(137, 24);
             this.radioButton_LayTrucTiep.TabIndex = 9;
             this.radioButton_LayTrucTiep.TabStop = true;
-            this.radioButton_LayTrucTiep.Text = "Lấy trực tiếp";
+            this.radioButton_LayTrucTiep.Text = "3:Lấy trực tiếp";
             this.radioButton_LayTrucTiep.UseVisualStyleBackColor = true;
             this.radioButton_LayTrucTiep.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
             // 
@@ -219,10 +228,10 @@
             this.radioButton_DaGiaoHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_DaGiaoHang.Location = new System.Drawing.Point(341, 14);
             this.radioButton_DaGiaoHang.Name = "radioButton_DaGiaoHang";
-            this.radioButton_DaGiaoHang.Size = new System.Drawing.Size(121, 24);
+            this.radioButton_DaGiaoHang.Size = new System.Drawing.Size(134, 24);
             this.radioButton_DaGiaoHang.TabIndex = 8;
             this.radioButton_DaGiaoHang.TabStop = true;
-            this.radioButton_DaGiaoHang.Text = "Đã giao hàng";
+            this.radioButton_DaGiaoHang.Text = "2:Đã giao hàng";
             this.radioButton_DaGiaoHang.UseVisualStyleBackColor = true;
             this.radioButton_DaGiaoHang.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
@@ -234,10 +243,10 @@
             this.radioButton_DangGiaoHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.radioButton_DangGiaoHang.Location = new System.Drawing.Point(167, 10);
             this.radioButton_DangGiaoHang.Name = "radioButton_DangGiaoHang";
-            this.radioButton_DangGiaoHang.Size = new System.Drawing.Size(138, 24);
+            this.radioButton_DangGiaoHang.Size = new System.Drawing.Size(151, 24);
             this.radioButton_DangGiaoHang.TabIndex = 7;
             this.radioButton_DangGiaoHang.TabStop = true;
-            this.radioButton_DangGiaoHang.Text = "Đang giao hàng";
+            this.radioButton_DangGiaoHang.Text = "1:Đang giao hàng";
             this.radioButton_DangGiaoHang.UseVisualStyleBackColor = true;
             // 
             // label_TrangThai
@@ -256,7 +265,7 @@
             // 
             this.panel5.Controls.Add(this.textBox_MaDonHang);
             this.panel5.Controls.Add(this.label_MaDonHang);
-            this.panel5.Location = new System.Drawing.Point(53, 6);
+            this.panel5.Location = new System.Drawing.Point(53, 427);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(499, 51);
             this.panel5.TabIndex = 8;
@@ -282,6 +291,39 @@
             this.label_MaDonHang.TabIndex = 0;
             this.label_MaDonHang.Text = "Mã Đơn Hàng";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 10000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // dataGridView_ChiTietDonHang
+            // 
+            this.dataGridView_ChiTietDonHang.AllowUserToAddRows = false;
+            this.dataGridView_ChiTietDonHang.AllowUserToDeleteRows = false;
+            this.dataGridView_ChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_ChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ChiTietDonHang.Location = new System.Drawing.Point(3, 46);
+            this.dataGridView_ChiTietDonHang.Name = "dataGridView_ChiTietDonHang";
+            this.dataGridView_ChiTietDonHang.ReadOnly = true;
+            this.dataGridView_ChiTietDonHang.RowHeadersWidth = 51;
+            this.dataGridView_ChiTietDonHang.RowTemplate.Height = 24;
+            this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(645, 248);
+            this.dataGridView_ChiTietDonHang.TabIndex = 12;
+            // 
+            // label_chi_tiết_hóa_đơn
+            // 
+            this.label_chi_tiết_hóa_đơn.AutoSize = true;
+            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
+            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(11, 3);
+            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
+            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
+            this.label_chi_tiết_hóa_đơn.TabIndex = 13;
+            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
+            // 
             // NVCHDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,16 +334,18 @@
             this.Controls.Add(this.panel1);
             this.Location = new System.Drawing.Point(3, 48);
             this.Name = "NVCHDonHang";
-            this.Size = new System.Drawing.Size(1007, 570);
+            this.Size = new System.Drawing.Size(1007, 678);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -326,5 +370,8 @@
         private System.Windows.Forms.RadioButton radioButton_DaGiaoHang;
         private System.Windows.Forms.RadioButton radioButton_DangGiaoHang;
         private System.Windows.Forms.Button button_sửa;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridView dataGridView_ChiTietDonHang;
+        private System.Windows.Forms.Label label_chi_tiết_hóa_đơn;
     }
 }

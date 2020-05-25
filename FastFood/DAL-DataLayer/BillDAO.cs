@@ -75,5 +75,16 @@ namespace FastFood.DAL_DataLayer
             return result;
 
         }
+        ///
+        //ĐẾM SỐ LƯỢNG DÒNG TRONG BẢNG ĐƠN ĐẶT HÀNG
+        public int GetNumberOfRowSQLData(string storeNumber)
+        {
+            string query = "ESP_GetNumberBillByStore @macuahang";
+                
+            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] { storeNumber });
+            
+            return data.Rows.Count;
+        } 
+        ///
     }
 }

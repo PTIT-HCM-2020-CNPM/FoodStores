@@ -17,6 +17,7 @@ namespace FastFood
         {
             InitializeComponent();
             hienDanhSachDonHang(layCuaHangHienTai);
+            timer1.Start();
         }
         public string layCuaHangHienTai
         {
@@ -64,6 +65,12 @@ namespace FastFood
                 trangThaiDau = 3;
                 radioButton_LayTrucTiep.Checked = true;
             }
+            // chi tiet don hang 
+            string timDonHang = dataGridView_DanhSachDonHang.Rows[numrow].Cells[0].Value.ToString();
+            String query = "select CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + timDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
+            dataGridView_ChiTietDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
+
+
         }
         // tim don hang 
         private void Button_TimMonAn_Click(object sender, EventArgs e)
@@ -152,5 +159,35 @@ namespace FastFood
 
 
         }
+        //Cập nhật bill
+        public bool ResultOfChange()
+        {
+            int countRowDataCurrent = dataGridView_DanhSachDonHang.RowCount;
+            int countRowSqlData = BillDAO.Instance.GetNumberOfRowSQLData(layCuaHangHienTai);
+            bool result = false;
+            if (countRowSqlData > countRowDataCurrent) result = true;
+            return result;
+        }
+
+        public void dungTimer1()
+        {
+            timer1.Stop();
+        }
+        int i = 0;
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            i++;
+            if (i == 1)
+            {
+                hienDanhSachDonHang(layCuaHangHienTai);
+            }
+            while(ResultOfChange())
+            {
+                MessageBox.Show("Có đơn hàng mới", "Thông báo", MessageBoxButtons.OK);
+                hienDanhSachDonHang(layCuaHangHienTai);
+            } 
+
+        }
+
     }
 }

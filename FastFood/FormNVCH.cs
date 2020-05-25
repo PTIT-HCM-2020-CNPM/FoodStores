@@ -12,13 +12,13 @@ namespace FastFood
 {
     public partial class FormNVCH : Form
     {
-
         public FormNVCH()
         {
             InitializeComponent();
             panel_chọn.Height = button_trang_chủ.Height;
             panel_chọn.Top = button_trang_chủ.Top;
             hinhtrangchu1.BringToFront();
+
         }
         // ham lay du lieu taikhoan dang nhap tu ben formdangnhap de xac dinh Cua hang dang dang nhap vao
         string taiKhoan;
