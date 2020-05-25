@@ -34,12 +34,17 @@
             this.button_tìm_đơn_hàng = new System.Windows.Forms.Button();
             this.textBox_tìm_đơn_hàng = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label_danh_sách_hóa_đơn = new System.Windows.Forms.Label();
             this.dataGridView_đơn_hàng = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_chi_tiết_hóa_đơn = new System.Windows.Forms.Panel();
+            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
+            this.dataGridView_chi_tiết_đơn_hàng = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBox_địa_chỉ = new System.Windows.Forms.TextBox();
             this.label_địa_chỉ = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.textBox_ngày = new System.Windows.Forms.TextBox();
             this.label_ngày = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.radioButton_lấy_trực_tiếp = new System.Windows.Forms.RadioButton();
@@ -61,18 +66,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox_mã_đơn_hàng = new System.Windows.Forms.TextBox();
             this.label_mã_đơn_hàng = new System.Windows.Forms.Label();
-            this.label_danh_sách_hóa_đơn = new System.Windows.Forms.Label();
-            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
-            this.textBox_ngày = new System.Windows.Forms.TextBox();
             this.cHUOICUAHANGDOANDataSet = new FastFood.CHUOICUAHANGDOANDataSet();
             this.dONDATHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dON_DAT_HANGTableAdapter = new FastFood.CHUOICUAHANGDOANDataSetTableAdapters.DON_DAT_HANGTableAdapter();
-            this.panel_chi_tiết_hóa_đơn = new System.Windows.Forms.Panel();
-            this.dataGridView_chi_tiết_đơn_hàng = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_đơn_hàng)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel_chi_tiết_hóa_đơn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_chi_tiết_đơn_hàng)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -83,8 +85,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cHUOICUAHANGDOANDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dONDATHANGBindingSource)).BeginInit();
-            this.panel_chi_tiết_hóa_đơn.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_chi_tiết_đơn_hàng)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -132,6 +132,18 @@
             this.panel3.Size = new System.Drawing.Size(282, 415);
             this.panel3.TabIndex = 4;
             // 
+            // label_danh_sách_hóa_đơn
+            // 
+            this.label_danh_sách_hóa_đơn.AutoSize = true;
+            this.label_danh_sách_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_danh_sách_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_danh_sách_hóa_đơn.ForeColor = System.Drawing.Color.White;
+            this.label_danh_sách_hóa_đơn.Location = new System.Drawing.Point(3, 13);
+            this.label_danh_sách_hóa_đơn.Name = "label_danh_sách_hóa_đơn";
+            this.label_danh_sách_hóa_đơn.Size = new System.Drawing.Size(172, 23);
+            this.label_danh_sách_hóa_đơn.TabIndex = 1;
+            this.label_danh_sách_hóa_đơn.Text = "Danh sách hóa đơn";
+            // 
             // dataGridView_đơn_hàng
             // 
             this.dataGridView_đơn_hàng.AllowUserToAddRows = false;
@@ -167,6 +179,45 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(615, 716);
             this.panel2.TabIndex = 5;
+            // 
+            // panel_chi_tiết_hóa_đơn
+            // 
+            this.panel_chi_tiết_hóa_đơn.Controls.Add(this.label_chi_tiết_hóa_đơn);
+            this.panel_chi_tiết_hóa_đơn.Controls.Add(this.dataGridView_chi_tiết_đơn_hàng);
+            this.panel_chi_tiết_hóa_đơn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(0, 0);
+            this.panel_chi_tiết_hóa_đơn.Name = "panel_chi_tiết_hóa_đơn";
+            this.panel_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(615, 219);
+            this.panel_chi_tiết_hóa_đơn.TabIndex = 6;
+            // 
+            // label_chi_tiết_hóa_đơn
+            // 
+            this.label_chi_tiết_hóa_đơn.AutoSize = true;
+            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
+            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(3, 19);
+            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
+            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
+            this.label_chi_tiết_hóa_đơn.TabIndex = 2;
+            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
+            // 
+            // dataGridView_chi_tiết_đơn_hàng
+            // 
+            this.dataGridView_chi_tiết_đơn_hàng.AllowUserToAddRows = false;
+            this.dataGridView_chi_tiết_đơn_hàng.AllowUserToDeleteRows = false;
+            this.dataGridView_chi_tiết_đơn_hàng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_chi_tiết_đơn_hàng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_chi_tiết_đơn_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_chi_tiết_đơn_hàng.Location = new System.Drawing.Point(2, 41);
+            this.dataGridView_chi_tiết_đơn_hàng.Name = "dataGridView_chi_tiết_đơn_hàng";
+            this.dataGridView_chi_tiết_đơn_hàng.ReadOnly = true;
+            this.dataGridView_chi_tiết_đơn_hàng.RowHeadersWidth = 51;
+            this.dataGridView_chi_tiết_đơn_hàng.RowTemplate.Height = 24;
+            this.dataGridView_chi_tiết_đơn_hàng.Size = new System.Drawing.Size(613, 175);
+            this.dataGridView_chi_tiết_đơn_hàng.TabIndex = 0;
             // 
             // panel11
             // 
@@ -206,6 +257,15 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(578, 51);
             this.panel10.TabIndex = 9;
+            // 
+            // textBox_ngày
+            // 
+            this.textBox_ngày.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_ngày.Location = new System.Drawing.Point(167, 11);
+            this.textBox_ngày.Name = "textBox_ngày";
+            this.textBox_ngày.ReadOnly = true;
+            this.textBox_ngày.Size = new System.Drawing.Size(397, 27);
+            this.textBox_ngày.TabIndex = 6;
             // 
             // label_ngày
             // 
@@ -434,39 +494,6 @@
             this.label_mã_đơn_hàng.TabIndex = 0;
             this.label_mã_đơn_hàng.Text = "Mã đơn hàng";
             // 
-            // label_danh_sách_hóa_đơn
-            // 
-            this.label_danh_sách_hóa_đơn.AutoSize = true;
-            this.label_danh_sách_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_danh_sách_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_danh_sách_hóa_đơn.ForeColor = System.Drawing.Color.White;
-            this.label_danh_sách_hóa_đơn.Location = new System.Drawing.Point(3, 13);
-            this.label_danh_sách_hóa_đơn.Name = "label_danh_sách_hóa_đơn";
-            this.label_danh_sách_hóa_đơn.Size = new System.Drawing.Size(172, 23);
-            this.label_danh_sách_hóa_đơn.TabIndex = 1;
-            this.label_danh_sách_hóa_đơn.Text = "Danh sách hóa đơn";
-            // 
-            // label_chi_tiết_hóa_đơn
-            // 
-            this.label_chi_tiết_hóa_đơn.AutoSize = true;
-            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
-            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(3, 19);
-            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
-            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
-            this.label_chi_tiết_hóa_đơn.TabIndex = 2;
-            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
-            // 
-            // textBox_ngày
-            // 
-            this.textBox_ngày.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_ngày.Location = new System.Drawing.Point(167, 11);
-            this.textBox_ngày.Name = "textBox_ngày";
-            this.textBox_ngày.ReadOnly = true;
-            this.textBox_ngày.Size = new System.Drawing.Size(397, 27);
-            this.textBox_ngày.TabIndex = 6;
-            // 
             // cHUOICUAHANGDOANDataSet
             // 
             this.cHUOICUAHANGDOANDataSet.DataSetName = "CHUOICUAHANGDOANDataSet";
@@ -480,33 +507,6 @@
             // dON_DAT_HANGTableAdapter
             // 
             this.dON_DAT_HANGTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel_chi_tiết_hóa_đơn
-            // 
-            this.panel_chi_tiết_hóa_đơn.Controls.Add(this.label_chi_tiết_hóa_đơn);
-            this.panel_chi_tiết_hóa_đơn.Controls.Add(this.dataGridView_chi_tiết_đơn_hàng);
-            this.panel_chi_tiết_hóa_đơn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(0, 0);
-            this.panel_chi_tiết_hóa_đơn.Name = "panel_chi_tiết_hóa_đơn";
-            this.panel_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(615, 219);
-            this.panel_chi_tiết_hóa_đơn.TabIndex = 6;
-            // 
-            // dataGridView_chi_tiết_đơn_hàng
-            // 
-            this.dataGridView_chi_tiết_đơn_hàng.AllowUserToAddRows = false;
-            this.dataGridView_chi_tiết_đơn_hàng.AllowUserToDeleteRows = false;
-            this.dataGridView_chi_tiết_đơn_hàng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_chi_tiết_đơn_hàng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_chi_tiết_đơn_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_chi_tiết_đơn_hàng.Location = new System.Drawing.Point(2, 41);
-            this.dataGridView_chi_tiết_đơn_hàng.Name = "dataGridView_chi_tiết_đơn_hàng";
-            this.dataGridView_chi_tiết_đơn_hàng.ReadOnly = true;
-            this.dataGridView_chi_tiết_đơn_hàng.RowHeadersWidth = 51;
-            this.dataGridView_chi_tiết_đơn_hàng.RowTemplate.Height = 24;
-            this.dataGridView_chi_tiết_đơn_hàng.Size = new System.Drawing.Size(613, 175);
-            this.dataGridView_chi_tiết_đơn_hàng.TabIndex = 0;
             // 
             // NVQLDonHang
             // 
@@ -525,6 +525,9 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_đơn_hàng)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel_chi_tiết_hóa_đơn.ResumeLayout(false);
+            this.panel_chi_tiết_hóa_đơn.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_chi_tiết_đơn_hàng)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -543,9 +546,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cHUOICUAHANGDOANDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dONDATHANGBindingSource)).EndInit();
-            this.panel_chi_tiết_hóa_đơn.ResumeLayout(false);
-            this.panel_chi_tiết_hóa_đơn.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_chi_tiết_đơn_hàng)).EndInit();
             this.ResumeLayout(false);
 
         }
