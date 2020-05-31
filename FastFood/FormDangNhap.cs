@@ -71,7 +71,10 @@ namespace FastFood
                 }         
                 else {
                     FormNVCH formNVCH = new FormNVCH();
+                    // lay tai khoan va mat khau hien tai trong textbox qua cho formNVCH
+                    
                     formNVCH.nhan = txtUser.Text;
+                    formNVCH.layMatKhauCuFormNVCH = txtPass.Text;
                     this.Hide();
                     formNVCH.ShowDialog();
                     this.Show();
@@ -81,7 +84,7 @@ namespace FastFood
             //khách hàng
             else if (LoginCustomer(userName, password, customerAccess))
             {
-                FormKhachHang formKH = new FormKhachHang();
+                FormKhachHang formKH = new FormKhachHang(userName);
                 this.Hide();
                 formKH.ShowDialog();
                 this.Show();

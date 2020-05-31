@@ -13,7 +13,7 @@ namespace FastFood
    
     public partial class Giohang : UserControl
     {
-       
+        public string numberPhone;
         public Giohang()
         {
             InitializeComponent();

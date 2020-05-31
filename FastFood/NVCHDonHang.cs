@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FastFood.DAL_DataLayer;
+using System.IO;
 
 namespace FastFood
 {
@@ -45,6 +46,7 @@ namespace FastFood
         }
         // lay trang thai ban dau cua don hang
         int trangThaiDau;
+        string timMaDonChoXuatHoaDon;
         private void DataGridView_DanhSachDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
@@ -58,14 +60,21 @@ namespace FastFood
             else if (dataGridView_DanhSachDonHang.Rows[numrow].Cells[7].Value.ToString() == "2")
             {
                 trangThaiDau = 2;
-                radioButton_DaGiaoHang.Checked = true;
+                radioButton_LayTaiCuaHang.Checked = true;
             }
             else if (dataGridView_DanhSachDonHang.Rows[numrow].Cells[7].Value.ToString() == "3")
             {
                 trangThaiDau = 3;
-                radioButton_LayTrucTiep.Checked = true;
+                radioButton_HoanThanh.Checked = true;
             }
+            else if (dataGridView_DanhSachDonHang.Rows[numrow].Cells[7].Value.ToString() == "0")
+            {
+                trangThaiDau = 0;
+                radioButton_ChuanBi.Checked = true;
+            }
+
             // chi tiet don hang 
+            timMaDonChoXuatHoaDon = dataGridView_DanhSachDonHang.Rows[numrow].Cells[0].Value.ToString();
             string timDonHang = dataGridView_DanhSachDonHang.Rows[numrow].Cells[0].Value.ToString();
             String query = "select CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + timDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
             dataGridView_ChiTietDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
@@ -76,7 +85,7 @@ namespace FastFood
         private void Button_TimMonAn_Click(object sender, EventArgs e)
         {
             // tim kiem theo ma don hang
-            string timDonHang = textBox_MaDonHang.Text;
+            string timDonHang = textBox_TimDonHang.Text;
 
             if (timDonHang != "")
             {
@@ -113,16 +122,17 @@ namespace FastFood
             {
                 textBox_TimDonHang.Clear();
             }
+            hienDanhSachDonHang(layCuaHangHienTai);
         }
 
         private void Button_sửa_Click(object sender, EventArgs e)
         {
             string maDonHang = textBox_MaDonHang.Text;
+            int trangthai;
 
-            int trangthai = 0;
-            if (radioButton_DaGiaoHang.Checked == true)
+            if (radioButton_HoanThanh.Checked == true && trangThaiDau != 0)
             {
-                trangthai = 2;
+                trangthai = 3;
                 if (DanhSachDonHangDAO.Instance.capNhatTrangThaiDonHang(trangthai, maDonHang))
                 {
                     MessageBox.Show("Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK);
@@ -132,7 +142,7 @@ namespace FastFood
                 else
                     MessageBox.Show("Cập nhật không thành công", "Thông Báo", MessageBoxButtons.OK);
             }
-            else if (radioButton_DangGiaoHang.Checked == true && trangThaiDau != 2)
+            else if (radioButton_DangGiaoHang.Checked == true && trangThaiDau != 2 && trangThaiDau != 3)
             {
                 trangthai = 1;
                 if (DanhSachDonHangDAO.Instance.capNhatTrangThaiDonHang(trangthai, maDonHang))
@@ -143,9 +153,9 @@ namespace FastFood
                 else
                     MessageBox.Show("Cập nhật không thành công", "Thông Báo", MessageBoxButtons.OK);
             }
-            else if (radioButton_LayTrucTiep.Checked == true && trangThaiDau != 2)
+            else if (radioButton_LayTaiCuaHang.Checked == true && trangThaiDau != 1 && trangThaiDau != 3 && trangThaiDau != 2)
             {
-                trangthai = 3;
+                trangthai = 2;
                 if (DanhSachDonHangDAO.Instance.capNhatTrangThaiDonHang(trangthai, maDonHang))
                 {
                     MessageBox.Show("Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK);
@@ -173,21 +183,48 @@ namespace FastFood
         {
             timer1.Stop();
         }
-        int i = 0;
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            i++;
-            if (i == 1)
-            {
-                hienDanhSachDonHang(layCuaHangHienTai);
-            }
-            while(ResultOfChange())
+
+            while (ResultOfChange())
             {
                 MessageBox.Show("Có đơn hàng mới", "Thông báo", MessageBoxButtons.OK);
                 hienDanhSachDonHang(layCuaHangHienTai);
-            } 
+            }
 
         }
 
+        private void RadioButton_DangGiaoHang_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button_XuatHoaDon_Click(object sender, EventArgs e)
+        {         
+            String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='" + timMaDonChoXuatHoaDon + "'" ;
+            dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            //
+            //
+            TextWriter writer = new StreamWriter(@"C:\Users\ASUS\Desktop\txt\text.txt");
+
+            for (int i = 0; i < dataGridView_DanhSachDonHang.Columns.Count; i++)
+            {
+                writer.Write("\t" + dataGridView_DanhSachDonHang.Rows[0].Cells[i].Value.ToString() + "\t" + "|");
+                writer.WriteLine("");
+                writer.WriteLine("----------------------------------------------------------------");
+            }
+            for (int i = 0; i < dataGridView_ChiTietDonHang.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView_ChiTietDonHang.Columns.Count; j++)
+                {
+                    writer.Write("\t" + dataGridView_ChiTietDonHang.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                }
+                writer.WriteLine("");
+                writer.WriteLine("----------------------------------------------------------------");
+            }
+            writer.Close();
+            MessageBox.Show("Đã xuất hóa đơn");
+        }
     }
 }

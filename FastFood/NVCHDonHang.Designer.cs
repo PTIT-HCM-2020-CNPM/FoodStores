@@ -34,38 +34,39 @@
             this.button_sửa = new System.Windows.Forms.Button();
             this.button_XoaOTimKiem = new System.Windows.Forms.Button();
             this.button_TimDonHang = new System.Windows.Forms.Button();
-            this.button_ChiTietHoaDon = new System.Windows.Forms.Button();
             this.textBox_TimDonHang = new System.Windows.Forms.TextBox();
             this.label_hienCuaHangUC = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView_DanhSachDonHang = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
+            this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.radioButton_LayTrucTiep = new System.Windows.Forms.RadioButton();
-            this.radioButton_DaGiaoHang = new System.Windows.Forms.RadioButton();
+            this.radioButton_ChuanBi = new System.Windows.Forms.RadioButton();
+            this.radioButton_LayTaiCuaHang = new System.Windows.Forms.RadioButton();
+            this.radioButton_HoanThanh = new System.Windows.Forms.RadioButton();
             this.radioButton_DangGiaoHang = new System.Windows.Forms.RadioButton();
             this.label_TrangThai = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox_MaDonHang = new System.Windows.Forms.TextBox();
             this.label_MaDonHang = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
-            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
+            this.button_XuatHoaDon = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_XuatHoaDon);
             this.panel1.Controls.Add(this.button_sửa);
             this.panel1.Controls.Add(this.button_XoaOTimKiem);
             this.panel1.Controls.Add(this.button_TimDonHang);
-            this.panel1.Controls.Add(this.button_ChiTietHoaDon);
             this.panel1.Controls.Add(this.textBox_TimDonHang);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -120,21 +121,6 @@
             this.button_TimDonHang.TabIndex = 10;
             this.button_TimDonHang.UseVisualStyleBackColor = true;
             this.button_TimDonHang.Click += new System.EventHandler(this.Button_TimMonAn_Click);
-            // 
-            // button_ChiTietHoaDon
-            // 
-            this.button_ChiTietHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_ChiTietHoaDon.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
-            this.button_ChiTietHoaDon.ForeColor = System.Drawing.Color.White;
-            this.button_ChiTietHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("button_ChiTietHoaDon.Image")));
-            this.button_ChiTietHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_ChiTietHoaDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button_ChiTietHoaDon.Location = new System.Drawing.Point(370, 4);
-            this.button_ChiTietHoaDon.Name = "button_ChiTietHoaDon";
-            this.button_ChiTietHoaDon.Size = new System.Drawing.Size(46, 42);
-            this.button_ChiTietHoaDon.TabIndex = 12;
-            this.button_ChiTietHoaDon.UseVisualStyleBackColor = true;
-            this.button_ChiTietHoaDon.Click += new System.EventHandler(this.Button_ChiTietHoaDon_Click);
             // 
             // textBox_TimDonHang
             // 
@@ -194,10 +180,39 @@
             this.panel2.Size = new System.Drawing.Size(651, 627);
             this.panel2.TabIndex = 5;
             // 
+            // label_chi_tiết_hóa_đơn
+            // 
+            this.label_chi_tiết_hóa_đơn.AutoSize = true;
+            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
+            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(11, 3);
+            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
+            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
+            this.label_chi_tiết_hóa_đơn.TabIndex = 13;
+            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
+            // 
+            // dataGridView_ChiTietDonHang
+            // 
+            this.dataGridView_ChiTietDonHang.AllowUserToAddRows = false;
+            this.dataGridView_ChiTietDonHang.AllowUserToDeleteRows = false;
+            this.dataGridView_ChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_ChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ChiTietDonHang.Location = new System.Drawing.Point(3, 46);
+            this.dataGridView_ChiTietDonHang.Name = "dataGridView_ChiTietDonHang";
+            this.dataGridView_ChiTietDonHang.ReadOnly = true;
+            this.dataGridView_ChiTietDonHang.RowHeadersWidth = 51;
+            this.dataGridView_ChiTietDonHang.RowTemplate.Height = 24;
+            this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(645, 248);
+            this.dataGridView_ChiTietDonHang.TabIndex = 12;
+            // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.radioButton_LayTrucTiep);
-            this.panel10.Controls.Add(this.radioButton_DaGiaoHang);
+            this.panel10.Controls.Add(this.radioButton_ChuanBi);
+            this.panel10.Controls.Add(this.radioButton_LayTaiCuaHang);
+            this.panel10.Controls.Add(this.radioButton_HoanThanh);
             this.panel10.Controls.Add(this.radioButton_DangGiaoHang);
             this.panel10.Controls.Add(this.label_TrangThai);
             this.panel10.Location = new System.Drawing.Point(53, 495);
@@ -205,35 +220,49 @@
             this.panel10.Size = new System.Drawing.Size(499, 85);
             this.panel10.TabIndex = 11;
             // 
-            // radioButton_LayTrucTiep
+            // radioButton_ChuanBi
             // 
-            this.radioButton_LayTrucTiep.AutoSize = true;
-            this.radioButton_LayTrucTiep.Font = new System.Drawing.Font("Cambria", 10.2F);
-            this.radioButton_LayTrucTiep.ForeColor = System.Drawing.Color.White;
-            this.radioButton_LayTrucTiep.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_LayTrucTiep.Location = new System.Drawing.Point(167, 49);
-            this.radioButton_LayTrucTiep.Name = "radioButton_LayTrucTiep";
-            this.radioButton_LayTrucTiep.Size = new System.Drawing.Size(137, 24);
-            this.radioButton_LayTrucTiep.TabIndex = 9;
-            this.radioButton_LayTrucTiep.TabStop = true;
-            this.radioButton_LayTrucTiep.Text = "3:Lấy trực tiếp";
-            this.radioButton_LayTrucTiep.UseVisualStyleBackColor = true;
-            this.radioButton_LayTrucTiep.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
+            this.radioButton_ChuanBi.AutoSize = true;
+            this.radioButton_ChuanBi.Font = new System.Drawing.Font("Cambria", 10.2F);
+            this.radioButton_ChuanBi.ForeColor = System.Drawing.Color.White;
+            this.radioButton_ChuanBi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.radioButton_ChuanBi.Location = new System.Drawing.Point(167, 10);
+            this.radioButton_ChuanBi.Name = "radioButton_ChuanBi";
+            this.radioButton_ChuanBi.Size = new System.Drawing.Size(107, 24);
+            this.radioButton_ChuanBi.TabIndex = 10;
+            this.radioButton_ChuanBi.TabStop = true;
+            this.radioButton_ChuanBi.Text = "0:Chuẩn Bị";
+            this.radioButton_ChuanBi.UseVisualStyleBackColor = true;
             // 
-            // radioButton_DaGiaoHang
+            // radioButton_LayTaiCuaHang
             // 
-            this.radioButton_DaGiaoHang.AutoSize = true;
-            this.radioButton_DaGiaoHang.Font = new System.Drawing.Font("Cambria", 10.2F);
-            this.radioButton_DaGiaoHang.ForeColor = System.Drawing.Color.White;
-            this.radioButton_DaGiaoHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_DaGiaoHang.Location = new System.Drawing.Point(341, 14);
-            this.radioButton_DaGiaoHang.Name = "radioButton_DaGiaoHang";
-            this.radioButton_DaGiaoHang.Size = new System.Drawing.Size(134, 24);
-            this.radioButton_DaGiaoHang.TabIndex = 8;
-            this.radioButton_DaGiaoHang.TabStop = true;
-            this.radioButton_DaGiaoHang.Text = "2:Đã giao hàng";
-            this.radioButton_DaGiaoHang.UseVisualStyleBackColor = true;
-            this.radioButton_DaGiaoHang.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
+            this.radioButton_LayTaiCuaHang.AutoSize = true;
+            this.radioButton_LayTaiCuaHang.Font = new System.Drawing.Font("Cambria", 10.2F);
+            this.radioButton_LayTaiCuaHang.ForeColor = System.Drawing.Color.White;
+            this.radioButton_LayTaiCuaHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.radioButton_LayTaiCuaHang.Location = new System.Drawing.Point(167, 49);
+            this.radioButton_LayTaiCuaHang.Name = "radioButton_LayTaiCuaHang";
+            this.radioButton_LayTaiCuaHang.Size = new System.Drawing.Size(169, 24);
+            this.radioButton_LayTaiCuaHang.TabIndex = 9;
+            this.radioButton_LayTaiCuaHang.TabStop = true;
+            this.radioButton_LayTaiCuaHang.Text = "2:Lấy Tại Cửa Hàng";
+            this.radioButton_LayTaiCuaHang.UseVisualStyleBackColor = true;
+            this.radioButton_LayTaiCuaHang.CheckedChanged += new System.EventHandler(this.RadioButton3_CheckedChanged);
+            // 
+            // radioButton_HoanThanh
+            // 
+            this.radioButton_HoanThanh.AutoSize = true;
+            this.radioButton_HoanThanh.Font = new System.Drawing.Font("Cambria", 10.2F);
+            this.radioButton_HoanThanh.ForeColor = System.Drawing.Color.White;
+            this.radioButton_HoanThanh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.radioButton_HoanThanh.Location = new System.Drawing.Point(351, 49);
+            this.radioButton_HoanThanh.Name = "radioButton_HoanThanh";
+            this.radioButton_HoanThanh.Size = new System.Drawing.Size(130, 24);
+            this.radioButton_HoanThanh.TabIndex = 8;
+            this.radioButton_HoanThanh.TabStop = true;
+            this.radioButton_HoanThanh.Text = "3:Hoàn Thành";
+            this.radioButton_HoanThanh.UseVisualStyleBackColor = true;
+            this.radioButton_HoanThanh.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
             // radioButton_DangGiaoHang
             // 
@@ -241,13 +270,14 @@
             this.radioButton_DangGiaoHang.Font = new System.Drawing.Font("Cambria", 10.2F);
             this.radioButton_DangGiaoHang.ForeColor = System.Drawing.Color.White;
             this.radioButton_DangGiaoHang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radioButton_DangGiaoHang.Location = new System.Drawing.Point(167, 10);
+            this.radioButton_DangGiaoHang.Location = new System.Drawing.Point(334, 10);
             this.radioButton_DangGiaoHang.Name = "radioButton_DangGiaoHang";
             this.radioButton_DangGiaoHang.Size = new System.Drawing.Size(151, 24);
             this.radioButton_DangGiaoHang.TabIndex = 7;
             this.radioButton_DangGiaoHang.TabStop = true;
             this.radioButton_DangGiaoHang.Text = "1:Đang giao hàng";
             this.radioButton_DangGiaoHang.UseVisualStyleBackColor = true;
+            this.radioButton_DangGiaoHang.CheckedChanged += new System.EventHandler(this.RadioButton_DangGiaoHang_CheckedChanged);
             // 
             // label_TrangThai
             // 
@@ -296,33 +326,21 @@
             this.timer1.Interval = 10000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // dataGridView_ChiTietDonHang
+            // button_XuatHoaDon
             // 
-            this.dataGridView_ChiTietDonHang.AllowUserToAddRows = false;
-            this.dataGridView_ChiTietDonHang.AllowUserToDeleteRows = false;
-            this.dataGridView_ChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_ChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ChiTietDonHang.Location = new System.Drawing.Point(3, 46);
-            this.dataGridView_ChiTietDonHang.Name = "dataGridView_ChiTietDonHang";
-            this.dataGridView_ChiTietDonHang.ReadOnly = true;
-            this.dataGridView_ChiTietDonHang.RowHeadersWidth = 51;
-            this.dataGridView_ChiTietDonHang.RowTemplate.Height = 24;
-            this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(645, 248);
-            this.dataGridView_ChiTietDonHang.TabIndex = 12;
-            // 
-            // label_chi_tiết_hóa_đơn
-            // 
-            this.label_chi_tiết_hóa_đơn.AutoSize = true;
-            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
-            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(11, 3);
-            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
-            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
-            this.label_chi_tiết_hóa_đơn.TabIndex = 13;
-            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
+            this.button_XuatHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_XuatHoaDon.FlatAppearance.BorderSize = 0;
+            this.button_XuatHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_XuatHoaDon.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_XuatHoaDon.ForeColor = System.Drawing.Color.White;
+            this.button_XuatHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_XuatHoaDon.Location = new System.Drawing.Point(666, 4);
+            this.button_XuatHoaDon.Name = "button_XuatHoaDon";
+            this.button_XuatHoaDon.Size = new System.Drawing.Size(147, 42);
+            this.button_XuatHoaDon.TabIndex = 14;
+            this.button_XuatHoaDon.Text = "Xuất Hóa Đơn";
+            this.button_XuatHoaDon.UseVisualStyleBackColor = true;
+            this.button_XuatHoaDon.Click += new System.EventHandler(this.Button_XuatHoaDon_Click);
             // 
             // NVCHDonHang
             // 
@@ -341,11 +359,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,7 +376,6 @@
         private System.Windows.Forms.DataGridView dataGridView_DanhSachDonHang;
         private System.Windows.Forms.Button button_TimDonHang;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button_ChiTietHoaDon;
         private System.Windows.Forms.Button button_XoaOTimKiem;
         private System.Windows.Forms.Label label_hienCuaHangUC;
         private System.Windows.Forms.Panel panel5;
@@ -366,12 +383,14 @@
         private System.Windows.Forms.Label label_MaDonHang;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label_TrangThai;
-        private System.Windows.Forms.RadioButton radioButton_LayTrucTiep;
-        private System.Windows.Forms.RadioButton radioButton_DaGiaoHang;
+        private System.Windows.Forms.RadioButton radioButton_LayTaiCuaHang;
+        private System.Windows.Forms.RadioButton radioButton_HoanThanh;
         private System.Windows.Forms.RadioButton radioButton_DangGiaoHang;
         private System.Windows.Forms.Button button_sửa;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.DataGridView dataGridView_ChiTietDonHang;
         private System.Windows.Forms.Label label_chi_tiết_hóa_đơn;
+        private System.Windows.Forms.RadioButton radioButton_ChuanBi;
+        private System.Windows.Forms.Button button_XuatHoaDon;
     }
 }

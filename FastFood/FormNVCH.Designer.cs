@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNVCH));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_đặt_trực_tiếp = new System.Windows.Forms.Button();
             this.panel_chọn = new System.Windows.Forms.Panel();
             this.button_tài_khoản = new System.Windows.Forms.Button();
             this.button_món_ăn = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.nvchDatTrucTiep1 = new FastFood.NVCHDatTrucTiep();
             this.nvchTaiKhoan1 = new FastFood.NVCHTaiKhoan();
             this.nvchDonHang1 = new FastFood.NVCHDonHang();
             this.nvchDanhSachMonAn1 = new FastFood.NVCHDanhSachMonAn();
@@ -56,6 +58,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.button_đặt_trực_tiếp);
             this.panel2.Controls.Add(this.panel_chọn);
             this.panel2.Controls.Add(this.button_tài_khoản);
             this.panel2.Controls.Add(this.button_món_ăn);
@@ -66,6 +69,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(212, 784);
             this.panel2.TabIndex = 3;
+            // 
+            // button_đặt_trực_tiếp
+            // 
+            this.button_đặt_trực_tiếp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_đặt_trực_tiếp.FlatAppearance.BorderSize = 0;
+            this.button_đặt_trực_tiếp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_đặt_trực_tiếp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_đặt_trực_tiếp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_đặt_trực_tiếp.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_đặt_trực_tiếp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_đặt_trực_tiếp.Location = new System.Drawing.Point(0, 280);
+            this.button_đặt_trực_tiếp.Margin = new System.Windows.Forms.Padding(4);
+            this.button_đặt_trực_tiếp.Name = "button_đặt_trực_tiếp";
+            this.button_đặt_trực_tiếp.Size = new System.Drawing.Size(212, 70);
+            this.button_đặt_trực_tiếp.TabIndex = 6;
+            this.button_đặt_trực_tiếp.Text = "Đặt Trực Tiếp";
+            this.button_đặt_trực_tiếp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_đặt_trực_tiếp.UseVisualStyleBackColor = true;
+            this.button_đặt_trực_tiếp.Click += new System.EventHandler(this.Button_đặt_trực_tiếp_Click);
             // 
             // panel_chọn
             // 
@@ -224,6 +246,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.nvchDatTrucTiep1);
             this.panel3.Controls.Add(this.nvchTaiKhoan1);
             this.panel3.Controls.Add(this.nvchDonHang1);
             this.panel3.Controls.Add(this.nvchDanhSachMonAn1);
@@ -233,10 +256,23 @@
             this.panel3.Size = new System.Drawing.Size(962, 550);
             this.panel3.TabIndex = 6;
             // 
+            // nvchDatTrucTiep1
+            // 
+            this.nvchDatTrucTiep1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvchDatTrucTiep1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvchDatTrucTiep1.layCuaHangHienTai = null;
+            this.nvchDatTrucTiep1.layMaDonHangHienTai = null;
+            this.nvchDatTrucTiep1.layMaNhanVienHienTai = null;
+            this.nvchDatTrucTiep1.Location = new System.Drawing.Point(0, 0);
+            this.nvchDatTrucTiep1.Name = "nvchDatTrucTiep1";
+            this.nvchDatTrucTiep1.Size = new System.Drawing.Size(962, 550);
+            this.nvchDatTrucTiep1.TabIndex = 4;
+            // 
             // nvchTaiKhoan1
             // 
             this.nvchTaiKhoan1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.nvchTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvchTaiKhoan1.LayMatKhauCuNVCHTaiKhoan = null;
             this.nvchTaiKhoan1.layTaiKhoanHienTai = null;
             this.nvchTaiKhoan1.Location = new System.Drawing.Point(0, 0);
             this.nvchTaiKhoan1.Name = "nvchTaiKhoan1";
@@ -295,6 +331,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNVCH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormNVCH_FormClosing);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -325,5 +362,7 @@
         private NVCHDanhSachMonAn nvchDanhSachMonAn1;
         private NVCHDonHang nvchDonHang1;
         private NVCHTaiKhoan nvchTaiKhoan1;
+        private System.Windows.Forms.Button button_đặt_trực_tiếp;
+        private NVCHDatTrucTiep nvchDatTrucTiep1;
     }
 }

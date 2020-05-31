@@ -180,7 +180,7 @@
             this.dataGridView_DanhSachMonAn.ReadOnly = true;
             this.dataGridView_DanhSachMonAn.RowHeadersWidth = 51;
             this.dataGridView_DanhSachMonAn.RowTemplate.Height = 24;
-            this.dataGridView_DanhSachMonAn.Size = new System.Drawing.Size(304, 507);
+            this.dataGridView_DanhSachMonAn.Size = new System.Drawing.Size(304, 435);
             this.dataGridView_DanhSachMonAn.TabIndex = 0;
             this.dataGridView_DanhSachMonAn.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView_MonAn_CellContentClick);
             // 

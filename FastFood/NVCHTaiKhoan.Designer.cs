@@ -35,8 +35,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox_NhapLaiMatKhaiMoi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox_MatKhauCu = new System.Windows.Forms.TextBox();
+            this.label_MatKhauCu = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_Luu
@@ -80,9 +84,9 @@
             this.label_MatKhauMoi.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label_MatKhauMoi.Location = new System.Drawing.Point(12, 14);
             this.label_MatKhauMoi.Name = "label_MatKhauMoi";
-            this.label_MatKhauMoi.Size = new System.Drawing.Size(119, 20);
+            this.label_MatKhauMoi.Size = new System.Drawing.Size(118, 20);
             this.label_MatKhauMoi.TabIndex = 0;
-            this.label_MatKhauMoi.Text = "Mật Khẩu mới";
+            this.label_MatKhauMoi.Text = "Mật Khẩu Mới";
             // 
             // panel1
             // 
@@ -109,15 +113,45 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(12, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 20);
+            this.label1.Size = new System.Drawing.Size(190, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nhập Lại Mật Khẩu mới";
+            this.label1.Text = "Nhập Lại Mật Khẩu Mới";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox_MatKhauCu);
+            this.panel2.Controls.Add(this.label_MatKhauCu);
+            this.panel2.Location = new System.Drawing.Point(19, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(578, 51);
+            this.panel2.TabIndex = 15;
+            // 
+            // textBox_MatKhauCu
+            // 
+            this.textBox_MatKhauCu.Location = new System.Drawing.Point(250, 8);
+            this.textBox_MatKhauCu.Name = "textBox_MatKhauCu";
+            this.textBox_MatKhauCu.Size = new System.Drawing.Size(318, 22);
+            this.textBox_MatKhauCu.TabIndex = 2;
+            this.textBox_MatKhauCu.UseSystemPasswordChar = true;
+            // 
+            // label_MatKhauCu
+            // 
+            this.label_MatKhauCu.AutoSize = true;
+            this.label_MatKhauCu.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label_MatKhauCu.ForeColor = System.Drawing.Color.White;
+            this.label_MatKhauCu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_MatKhauCu.Location = new System.Drawing.Point(12, 14);
+            this.label_MatKhauCu.Name = "label_MatKhauCu";
+            this.label_MatKhauCu.Size = new System.Drawing.Size(152, 20);
+            this.label_MatKhauCu.TabIndex = 0;
+            this.label_MatKhauCu.Text = "Nhập Mật Khẩu Cũ";
             // 
             // NVCHTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.button_Luu);
@@ -127,6 +161,8 @@
             this.panel5.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,5 +176,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox_NhapLaiMatKhaiMoi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox_MatKhauCu;
+        private System.Windows.Forms.Label label_MatKhauCu;
     }
 }

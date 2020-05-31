@@ -79,12 +79,13 @@ namespace FastFood.DAL_DataLayer
         //ĐẾM SỐ LƯỢNG DÒNG TRONG BẢNG ĐƠN ĐẶT HÀNG
         public int GetNumberOfRowSQLData(string storeNumber)
         {
-            string query = "ESP_GetNumberBillByStore @macuahang";
+            string query = String.Format("select * From dbo.DON_DAT_HANG where [MÃ CỬA HÀNG]='{0}'",storeNumber);
                 
-            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] { storeNumber });
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             
             return data.Rows.Count;
         } 
         ///
+
     }
 }

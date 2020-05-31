@@ -24,6 +24,13 @@ namespace FastFood
             get { return taiKhoan; }
             set { taiKhoan = value; }
         }
+        string matKhauCu;
+        public string LayMatKhauCuNVCHTaiKhoan
+        {
+            get { return matKhauCu; }
+            set { matKhauCu = value; }
+        }
+
 
         private void TextBox_MatKhauMoi_TextChanged(object sender, EventArgs e)
         {
@@ -34,18 +41,38 @@ namespace FastFood
         {
             string matKhauMoi = textBox_MatKhauMoi.Text;
             string nhapLaiMatKhau = textBox_NhapLaiMatKhaiMoi.Text;
+            string matKhauCu = textBox_MatKhauCu.Text;
 
-            if (matKhauMoi == nhapLaiMatKhau)
+
+            if(matKhauCu == LayMatKhauCuNVCHTaiKhoan)
             {
-                if (MessageBox.Show("Bạn đồng ý thay đổi !", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (matKhauMoi != "")
                 {
-                    if (AccountDAO.Instance.doiMatKhauNhanVienCuaHang(taiKhoan, matKhauMoi))
+                    if (matKhauMoi == nhapLaiMatKhau)
                     {
-                        MessageBox.Show("Thay đổi mật khẩu thành công", "Thông Báo", MessageBoxButtons.OK);
+                        if (MessageBox.Show("Bạn đồng ý thay đổi !", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                        {
+                            if (AccountDAO.Instance.doiMatKhauNhanVienCuaHang(taiKhoan, matKhauMoi))
+                            {
+                                MessageBox.Show("Thay đổi mật khẩu thành công", "Thông Báo", MessageBoxButtons.OK);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nhập lại mật khẩu không khớp", "Thông Báo", MessageBoxButtons.OK);
                     }
                 }
-
+                else
+                {
+                    MessageBox.Show("Mật khẩu mới không được để trống", "Thông Báo", MessageBoxButtons.OK);
+                }
             }
+            else
+            {
+                MessageBox.Show("Mật khẩu cũ không khớp", "Thông Báo", MessageBoxButtons.OK);
+            }
+            
         }
     }
 }
