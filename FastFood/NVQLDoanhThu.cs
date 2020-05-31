@@ -62,16 +62,43 @@ namespace FastFood
             {
                 dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyStoreBill(dateTo, dateFrom);
             }
-            else if (itemSelectedCBDoanhThu == "Số lượng mỗi món ăn bán ra")
+            else if (itemSelectedCBDoanhThu == "Tổng số tiền đơn hàng offline của chuỗi cửa hàng")
             {
-
+                dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyOfflineBill(dateTo, dateFrom);
             }
             else if (itemSelectedCBDoanhThu == "Tổng số tiền đơn hàng của chuỗi cửa hàng")
             {
                 dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyBill(dateTo, dateFrom);
             }
+            else if(itemSelectedCBDoanhThu == "Tổng số tiền đơn hàng online của chuỗi cửa hàng")
+            {
+                dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyOnlineBill(dateTo, dateFrom);
+            }
         }
 
-        
+        private void button_xuất_excel_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_doanh_thu.Rows.Count > 0)
+            {
+                Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+                excelApp.Application.Workbooks.Add(Type.Missing);
+
+                for(int i=1; i< dataGridView_doanh_thu.Columns.Count + 1; i++)
+                {
+                    excelApp.Cells[1, i] = dataGridView_doanh_thu.Columns[i - 1].HeaderText;
+                }
+
+                for(int i = 0; i < dataGridView_doanh_thu.Rows.Count; i++)
+                {
+                    for(int j=0; j < dataGridView_doanh_thu.Columns.Count; j++)
+                    {
+                        excelApp.Cells[i + 2,j+1]=dataGridView_doanh_thu.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                excelApp.Columns.AutoFit();
+                excelApp.Visible=true;
+            }
+        }
     }
 }

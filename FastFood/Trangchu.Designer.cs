@@ -50,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.hinhtrangchu2 = new FastFood.Hinhtrangchu();
-           
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
@@ -74,7 +73,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 702);
+            this.panel1.Size = new System.Drawing.Size(184, 702);
             this.panel1.TabIndex = 0;
             // 
             // button_góp_ý
@@ -85,12 +84,11 @@
             this.button_góp_ý.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_góp_ý.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_góp_ý.Image = ((System.Drawing.Image)(resources.GetObject("button_góp_ý.Image")));
-            this.button_góp_ý.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_góp_ý.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_góp_ý.Location = new System.Drawing.Point(0, 426);
             this.button_góp_ý.Name = "button_góp_ý";
-            this.button_góp_ý.Size = new System.Drawing.Size(175, 60);
+            this.button_góp_ý.Size = new System.Drawing.Size(184, 60);
             this.button_góp_ý.TabIndex = 4;
-            this.button_góp_ý.Text = "   Góp ý";
             this.button_góp_ý.UseVisualStyleBackColor = true;
             this.button_góp_ý.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -115,7 +113,7 @@
             this.button_đồ_ăn_nhanh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button_đồ_ăn_nhanh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_đồ_ăn_nhanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_đồ_ăn_nhanh.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_đồ_ăn_nhanh.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_ăn_nhanh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_ăn_nhanh.Location = new System.Drawing.Point(0, 116);
             this.button_đồ_ăn_nhanh.Name = "button_đồ_ăn_nhanh";
@@ -132,7 +130,7 @@
             this.button_món_chính.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button_món_chính.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_món_chính.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_món_chính.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_món_chính.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_món_chính.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_món_chính.Location = new System.Drawing.Point(0, 60);
             this.button_món_chính.Name = "button_món_chính";
@@ -152,14 +150,14 @@
             this.button_đồ_ăn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_ăn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_ăn.Image = ((System.Drawing.Image)(resources.GetObject("button_đồ_ăn.Image")));
-            this.button_đồ_ăn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_đồ_ăn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_đồ_ăn.Location = new System.Drawing.Point(0, 0);
             this.button_đồ_ăn.MaximumSize = new System.Drawing.Size(175, 170);
             this.button_đồ_ăn.MinimumSize = new System.Drawing.Size(175, 60);
             this.button_đồ_ăn.Name = "button_đồ_ăn";
             this.button_đồ_ăn.Size = new System.Drawing.Size(175, 60);
             this.button_đồ_ăn.TabIndex = 3;
-            this.button_đồ_ăn.Text = "    Đồ ăn";
+            this.button_đồ_ăn.Text = "Đồ ăn";
             this.button_đồ_ăn.UseVisualStyleBackColor = true;
             this.button_đồ_ăn.Click += new System.EventHandler(this.button_đồ_ăn_Click);
             // 
@@ -172,7 +170,7 @@
             this.pnlDropDrink.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDropDrink.Location = new System.Drawing.Point(0, 70);
             this.pnlDropDrink.Name = "pnlDropDrink";
-            this.pnlDropDrink.Size = new System.Drawing.Size(175, 186);
+            this.pnlDropDrink.Size = new System.Drawing.Size(184, 186);
             this.pnlDropDrink.TabIndex = 5;
             // 
             // button_đồ_uống
@@ -185,12 +183,12 @@
             this.button_đồ_uống.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_uống.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_uống.Image = ((System.Drawing.Image)(resources.GetObject("button_đồ_uống.Image")));
-            this.button_đồ_uống.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button_đồ_uống.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_đồ_uống.Location = new System.Drawing.Point(0, 0);
             this.button_đồ_uống.Name = "button_đồ_uống";
-            this.button_đồ_uống.Size = new System.Drawing.Size(175, 62);
+            this.button_đồ_uống.Size = new System.Drawing.Size(184, 62);
             this.button_đồ_uống.TabIndex = 2;
-            this.button_đồ_uống.Text = "     Đồ uống";
+            this.button_đồ_uống.Text = "Đồ uống";
             this.button_đồ_uống.UseVisualStyleBackColor = true;
             this.button_đồ_uống.Click += new System.EventHandler(this.btnDrink_Click_2);
             // 
@@ -198,7 +196,7 @@
             // 
             this.button_đồ_uống_có_ga.FlatAppearance.BorderSize = 0;
             this.button_đồ_uống_có_ga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_đồ_uống_có_ga.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_đồ_uống_có_ga.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_uống_có_ga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_uống_có_ga.Location = new System.Drawing.Point(0, 126);
             this.button_đồ_uống_có_ga.Name = "button_đồ_uống_có_ga";
@@ -212,7 +210,7 @@
             // 
             this.button_cà_phê.FlatAppearance.BorderSize = 0;
             this.button_cà_phê.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_cà_phê.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cà_phê.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cà_phê.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_cà_phê.Location = new System.Drawing.Point(0, 67);
             this.button_cà_phê.Name = "button_cà_phê";
@@ -236,11 +234,9 @@
             this.button_trang_chủ.Location = new System.Drawing.Point(0, 0);
             this.button_trang_chủ.Margin = new System.Windows.Forms.Padding(4);
             this.button_trang_chủ.Name = "button_trang_chủ";
-            this.button_trang_chủ.Size = new System.Drawing.Size(175, 70);
+            this.button_trang_chủ.Size = new System.Drawing.Size(184, 70);
             this.button_trang_chủ.TabIndex = 1;
             this.button_trang_chủ.Text = "Trang chủ";
-            this.button_trang_chủ.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_trang_chủ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_trang_chủ.UseVisualStyleBackColor = true;
             this.button_trang_chủ.Click += new System.EventHandler(this.button_trang_chủ_Click);
             // 
@@ -251,10 +247,10 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(175, 0);
+            this.panel2.Location = new System.Drawing.Point(184, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(943, 63);
+            this.panel2.Size = new System.Drawing.Size(934, 93);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -264,11 +260,11 @@
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(801, 26);
+            this.button6.Location = new System.Drawing.Point(747, 27);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 35);
+            this.button6.Size = new System.Drawing.Size(184, 49);
             this.button6.TabIndex = 1;
             this.button6.Text = "Đăng ký";
             this.button6.UseVisualStyleBackColor = false;
@@ -280,9 +276,9 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(787, 0);
+            this.label3.Location = new System.Drawing.Point(743, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 19);
+            this.label3.Size = new System.Drawing.Size(191, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "Hotline:0123456789";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -293,11 +289,11 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogin.Location = new System.Drawing.Point(635, 26);
+            this.btnLogin.Location = new System.Drawing.Point(535, 27);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(143, 35);
+            this.btnLogin.Size = new System.Drawing.Size(189, 49);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -311,7 +307,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label1.Location = new System.Drawing.Point(10, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 40);
+            this.label1.Size = new System.Drawing.Size(187, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "FoodHouse";
             // 
@@ -321,7 +317,7 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(191, 17);
+            this.panel4.Location = new System.Drawing.Point(219, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(203, 165);
             this.panel4.TabIndex = 10;
@@ -342,7 +338,7 @@
             this.label2.BackColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(24, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 19);
+            this.label2.Size = new System.Drawing.Size(152, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Food Restaurant";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -354,9 +350,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.hinhtrangchu2);
             this.panel3.Controls.Add(this.hinhtrangchu1);
-            this.panel3.Location = new System.Drawing.Point(175, 216);
+            this.panel3.Location = new System.Drawing.Point(184, 216);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(943, 486);
+            this.panel3.Size = new System.Drawing.Size(934, 486);
             this.panel3.TabIndex = 11;
             // 
             // hinhtrangchu2
@@ -367,7 +363,7 @@
             this.hinhtrangchu2.Location = new System.Drawing.Point(0, 0);
             this.hinhtrangchu2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.hinhtrangchu2.Name = "hinhtrangchu2";
-            this.hinhtrangchu2.Size = new System.Drawing.Size(943, 486);
+            this.hinhtrangchu2.Size = new System.Drawing.Size(934, 486);
             this.hinhtrangchu2.TabIndex = 5;
             // 
             // hinhtrangchu1
@@ -380,13 +376,13 @@
             this.hinhtrangchu1.Location = new System.Drawing.Point(0, 0);
             this.hinhtrangchu1.Margin = new System.Windows.Forms.Padding(6);
             this.hinhtrangchu1.Name = "hinhtrangchu1";
-            this.hinhtrangchu1.Size = new System.Drawing.Size(943, 486);
+            this.hinhtrangchu1.Size = new System.Drawing.Size(934, 486);
             this.hinhtrangchu1.TabIndex = 0;
             // 
             // Trangchu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1118, 702);
@@ -395,7 +391,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Trangchu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

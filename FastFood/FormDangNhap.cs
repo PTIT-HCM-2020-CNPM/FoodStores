@@ -11,11 +11,13 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class FormDangNhap : Form
+    public partial class FormDangNhap : System.Windows.Forms.Form
     {
+        
         public FormDangNhap()
         {
             InitializeComponent();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,9 +53,8 @@ namespace FastFood
         private void button_đăng_nhập_Click(object sender, EventArgs e)
         {
             
-            
             string userName = txtUser.Text;
-            string password = txtPass.Text;
+            string password = txtPass.Text;         
             int managerAccess = 1, employeeAccess = 2, customerAccess = 3;
 
             if (LoginManager(userName,password,managerAccess)) {
@@ -81,16 +82,39 @@ namespace FastFood
             //khách hàng
             else if (LoginCustomer(userName, password, customerAccess))
             {
-                FormKhachHang formKH = new FormKhachHang();
+                FormKhachHang formKhachHang = new FormKhachHang(userName);
                 this.Hide();
-                formKH.ShowDialog();
+                formKhachHang.ShowDialog();
                 this.Show();
             }
             else
             {
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu không chính xác!");
             }
+            //Lưu mật khẩu:
+            if (checkBox_lưu_mật_khẩu.Checked)//nhấn lưu
+            {
+                Properties.Settings.Default.username = txtUser.Text;
+                Properties.Settings.Default.password = txtPass.Text;
+                Properties.Settings.Default.Save();
+            }
+            else//ngược lại không nhấn lưu
+            {
+                Properties.Settings.Default.username = "";
+                Properties.Settings.Default.password = "";
+                Properties.Settings.Default.Save();
+            }
         }
+        //Load form lấy dữ liệu tk đã nhớ điền vào tài khoản và mật khẩu
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = Properties.Settings.Default.username;
+            txtPass.Text = Properties.Settings.Default.password;
+            if (Properties.Settings.Default.username == "" && Properties.Settings.Default.password == "")
+                checkBox_lưu_mật_khẩu.Checked = false;
+            else checkBox_lưu_mật_khẩu.Checked = true;
+        }
+
         bool LoginManager(string userName, string password, int kindAccess)
         {
             return AccountDAO.Instance.LoginManager(userName,password, kindAccess);
@@ -104,10 +128,6 @@ namespace FastFood
             return AccountDAO.Instance.LoginCustomer(userName, password, kindAccess);
         }
 
-        private void FormDangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-        
+       
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class FormNVQL : Form
+    public partial class FormNVQL : System.Windows.Forms.Form
     {
         public FormNVQL()
         {
@@ -82,10 +82,11 @@ namespace FastFood
         {
 
         }
-
-        private void nvqlDonHang1_Load(object sender, EventArgs e)
+        //Nút đăng xuất
+        private void button_đăng_xuất_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            nvqlDonHang1.timer_thời_gian_reload.Stop();
         }
     }
 }

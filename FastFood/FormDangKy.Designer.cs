@@ -98,7 +98,7 @@
             this.txtNumberPhone.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtNumberPhone.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumberPhone.Location = new System.Drawing.Point(461, 91);
-            this.txtNumberPhone.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNumberPhone.Margin = new System.Windows.Forms.Padding(5);
             this.txtNumberPhone.Name = "txtNumberPhone";
             this.txtNumberPhone.Size = new System.Drawing.Size(438, 26);
             this.txtNumberPhone.TabIndex = 1;
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(983, 32);
             this.panel1.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(884, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 32);
             this.button1.TabIndex = 6;
@@ -145,7 +145,7 @@
             this.txtPass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtPass.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(461, 233);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(5);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(438, 26);
             this.txtPass.TabIndex = 3;
@@ -158,7 +158,7 @@
             this.txtName.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtName.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(461, 163);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(438, 26);
             this.txtName.TabIndex = 2;
@@ -170,7 +170,7 @@
             this.txtRePass.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtRePass.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePass.Location = new System.Drawing.Point(461, 302);
-            this.txtRePass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtRePass.Margin = new System.Windows.Forms.Padding(5);
             this.txtRePass.Name = "txtRePass";
             this.txtRePass.Size = new System.Drawing.Size(438, 26);
             this.txtRePass.TabIndex = 4;
@@ -205,10 +205,10 @@
             // FormDangKy
             // 
             this.AcceptButton = this.btnRegis;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.SandyBrown;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(983, 458);
             this.Controls.Add(this.btnRegis);
@@ -223,7 +223,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangKy";

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class Trangchu : Form
+    public partial class Trangchu : System.Windows.Forms.Form
     {
         public Trangchu()
         {
@@ -37,14 +37,11 @@ namespace FastFood
             
             //hinhtrangchu1.BringToFront();
             //
-            if (pnlDropDrink.Height == 186)
+            if (pnlDropDrink.Height == 170)
             {
                 pnlDropDrink.Height = 60;
             }
-            else { pnlDropDrink.Height = 186; }
-
-
-
+            else { pnlDropDrink.Height = 170; }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -58,7 +55,8 @@ namespace FastFood
             FormDangNhap formdn = new FormDangNhap();
             formdn.ShowDialog();
             this.Show();
-            
+           
+
         }
 
         private void button6_Click_1(object sender, EventArgs e)

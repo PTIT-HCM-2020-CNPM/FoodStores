@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class FormNVCH : Form
+    public partial class FormNVCH : System.Windows.Forms.Form
     {
         public FormNVCH()
         {

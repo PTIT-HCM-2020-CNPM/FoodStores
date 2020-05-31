@@ -162,7 +162,19 @@ namespace FastFood.DAL_DataLayer
 
             return result > 0;
         }
-
-
+        //LẤY MẬT KHẨU TK KH 
+        public DataTable getPasswordCustommer(string customerNum)
+        {
+            string query = String.Format("select [MẬT KHẨU] from TAI_KHOAN where [TÊN TÀI KHOẢN]='{0}'",customerNum);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+        //UPDATE MẬT KHẨU KHÁCH HÀNG
+        public bool updatePassCustomer(string userName, string password, string newPass)
+        {
+            string query = "exec USP_UpdatePass @userName , @password ,  @newPass ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { userName, password, newPass });
+            return result>0;
+        }
     }
 }

@@ -33,10 +33,11 @@ namespace FastFood
 
             foreach (DataRow item in result.Rows)
             {
+                int i = 2;
                 PictureBox pictureBox1 = new PictureBox()
                 {
                     Dock = DockStyle.Top,
-                    Image = Image.FromFile(@"Img\" + item["HÌNH ẢNH"].ToString()),
+                    Image = Image.FromFile(@"C:\Users\Admin\Desktop\CNPM\FastFood\ImageFood\" + item["HÌNH ẢNH"].ToString()),
                     Location = new System.Drawing.Point(0, 0),
                     Margin = new Padding(2),
                     Name = "pictureBox1",

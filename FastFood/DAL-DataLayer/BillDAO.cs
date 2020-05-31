@@ -41,6 +41,7 @@ namespace FastFood.DAL_DataLayer
             }
             return list;
         }
+        ///CHI TIẾT ĐƠN ĐẶT HÀNG KHI CHỌN ĐƠN HÀNG
         public bool SelectBill(string billNumber)
         {
             string query = "USP_SelectBill @madonhang";
@@ -75,29 +76,75 @@ namespace FastFood.DAL_DataLayer
             return result;
 
         }
-        ///
+        //
+        //TỔNG TIỀN BILL OFF THEO CỬA HÀNG
+        public  DataTable GetTotalMoneyOfflineBill(DateTime dateTo, DateTime dateFrom)
+        {
+            string query = "USP_GetTotalMoneyOfflineBill @ngaybatdau , @ngayketthuc ";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { dateTo, dateFrom });
+            return result;
+        }
+        //
+        //TỔNG TIỀN BILL ONL THEO CỬA HÀNG
+        public DataTable GetTotalMoneyOnlineBill(DateTime dateTo, DateTime dateFrom)
+        {
+            string query = "USP_GetTotalMoneyOnlineBill @ngaybatdau , @ngayketthuc ";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { dateTo, dateFrom });
+            return result;
+        }
+        //
         //ĐẾM SỐ LƯỢNG DÒNG TRONG BẢNG ĐƠN ĐẶT HÀNG
         public int GetNumberOfRowSQLData(string storeNumber)
         {
-            string query = "ESP_GetNumberBillByStore @macuahang";
+            string query = String.Format("select * from dbo.DON_DAT_HANG where [MÃ CỬA HÀNG]='{0}'",storeNumber);
                 
-            DataTable data = DataProvider.Instance.ExecuteQuery(query,new object[] { storeNumber });
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             
             return data.Rows.Count;
         } 
-        ///
-        //THÊM ĐƠN HÀNG BỞI KHÁCH HÀNG
-        public bool InsertBillByCustomer(string billNumber, string storeNumber, string customerNumber, int totalBill, string date, int kindBill)
-        {
+        //
 
-            
-            string query = string.Format("insert dbo.DON_DAT_HANG([MÃ ĐƠN HÀNG],[MÃ CỬA HÀNG], [MÃ KHÁCH HÀNG(SĐT)],[TỔNG TIỀN], NGÀY, [ĐỊA CHỈ], [TRẠNG THÁI ĐƠN HÀNG] ) " +
+        //THÊM ĐƠN HÀNG BỞI KHÁCH HÀNG
+        public bool InsertBillByCustomer(string billNumber, string storeNumber, string customerNumber, int totalBill, string date,string address, int kindBill)
+        {  
+            string query = string.Format("insert dbo.DON_DAT_HANG([MÃ ĐƠN HÀNG], [MÃ CỬA HÀNG], [MÃ KHÁCH HÀNG(SĐT)],[TỔNG TIỀN], NGÀY, [ĐỊA CHỈ], [TRẠNG THÁI ĐƠN HÀNG] ) " +
                 "values('{0}', '{1}', '{2}', {3}, '{4}', N'{5}', {6})",
-                billNumber, storeNumber, customerNumber, totalBill, date, kindBill);
+                billNumber, storeNumber, customerNumber, totalBill, date,address, kindBill);
 
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result>0;
         }
         //
+        //THÊM CHI TIẾT ĐƠN ĐẶT HÀNG BỞI KHÁCH HÀNG
+        public bool InsertBillIfByCus(string billNum, string foodNam, int foodMount)
+        {
+            string query = String.Format("insert dbo.CHI_TIET_DON_DAT_HANG([MÃ ĐƠN HÀNG], [TÊN MÓN ĂN], [SỐ LƯỢNG]) values('{0}', '{1}', {2})", billNum, foodNam, foodMount);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        //LOAD DANH SÁCH ĐƠN HÀNG CỦA MỘT KHÁCH HÀNG
+        public List<HistoryOrder> LoadBillCustomer(string customerNumber)
+        {
+            List<HistoryOrder> orders = new List<HistoryOrder>();
+
+            string query= String.Format("select [ĐỊA CHỈ] as [ĐỊA CHỈ ĐẶT HÀNG],[TỔNG TIỀN],NGÀY,[MÃ ĐƠN HÀNG],[TRẠNG THÁI ĐƠN HÀNG] from DON_DAT_HANG where [MÃ KHÁCH HÀNG(SĐT)] = '{0}'", customerNumber);
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach(DataRow row in data.Rows)
+            {
+                HistoryOrder order = new HistoryOrder(row);
+                orders.Add(order);
+            }
+
+            return orders;
+        }
+        //LẤY MÃ ĐƠN HÀNG THEO KHÁCH HÀNG
+        public DataTable GetNumBillCustomer(string customerNumber)
+        {
+            string query = String.Format("select [MÃ ĐƠN HÀNG] from DON_DAT_HANG where [MÃ KHÁCH HÀNG(SĐT)] = '{0}'", customerNumber);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
     }
 }

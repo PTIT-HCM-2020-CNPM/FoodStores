@@ -261,7 +261,8 @@
             // 
             // dataGridView_cửa_hàng
             // 
-            this.dataGridView_cửa_hàng.AllowUserToOrderColumns = true;
+            this.dataGridView_cửa_hàng.AllowUserToAddRows = false;
+            this.dataGridView_cửa_hàng.AllowUserToDeleteRows = false;
             this.dataGridView_cửa_hàng.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -269,6 +270,7 @@
             this.dataGridView_cửa_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_cửa_hàng.Location = new System.Drawing.Point(0, 58);
             this.dataGridView_cửa_hàng.Name = "dataGridView_cửa_hàng";
+            this.dataGridView_cửa_hàng.ReadOnly = true;
             this.dataGridView_cửa_hàng.RowTemplate.Height = 24;
             this.dataGridView_cửa_hàng.Size = new System.Drawing.Size(239, 377);
             this.dataGridView_cửa_hàng.TabIndex = 0;
@@ -288,8 +290,8 @@
             // 
             // NVQLCuaHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);

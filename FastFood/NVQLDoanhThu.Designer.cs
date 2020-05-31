@@ -32,13 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView_doanh_thu = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox_doanh_thu = new System.Windows.Forms.ComboBox();
             this.button_xuất_excel = new System.Windows.Forms.Button();
             this.button_thống_kê = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker_kết_thúc = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker_bắt_đầu = new System.Windows.Forms.DateTimePicker();
-            this.comboBox_doanh_thu = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_doanh_thu)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +85,25 @@
             this.panel2.Size = new System.Drawing.Size(944, 115);
             this.panel2.TabIndex = 1;
             // 
+            // comboBox_doanh_thu
+            // 
+            this.comboBox_doanh_thu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox_doanh_thu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox_doanh_thu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox_doanh_thu.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_doanh_thu.FormattingEnabled = true;
+            this.comboBox_doanh_thu.Items.AddRange(new object[] {
+            "Doanh thu mỗi cửa hàng",
+            "Tổng số tiền đơn hàng của chuỗi cửa hàng",
+            "Tổng số tiền đơn hàng offline của chuỗi cửa hàng",
+            "Tổng số tiền đơn hàng online của chuỗi cửa hàng"});
+            this.comboBox_doanh_thu.Location = new System.Drawing.Point(209, 79);
+            this.comboBox_doanh_thu.Name = "comboBox_doanh_thu";
+            this.comboBox_doanh_thu.Size = new System.Drawing.Size(427, 28);
+            this.comboBox_doanh_thu.Sorted = true;
+            this.comboBox_doanh_thu.TabIndex = 3;
+            this.comboBox_doanh_thu.SelectedValueChanged += new System.EventHandler(this.comboBox_doanh_thu_SelectedValueChanged);
+            // 
             // button_xuất_excel
             // 
             this.button_xuất_excel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -98,6 +117,7 @@
             this.button_xuất_excel.TabIndex = 5;
             this.button_xuất_excel.Text = "Xuất excel";
             this.button_xuất_excel.UseVisualStyleBackColor = true;
+            this.button_xuất_excel.Click += new System.EventHandler(this.button_xuất_excel_Click);
             // 
             // button_thống_kê
             // 
@@ -156,28 +176,10 @@
             this.dateTimePicker_bắt_đầu.Size = new System.Drawing.Size(142, 27);
             this.dateTimePicker_bắt_đầu.TabIndex = 1;
             // 
-            // comboBox_doanh_thu
-            // 
-            this.comboBox_doanh_thu.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox_doanh_thu.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox_doanh_thu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox_doanh_thu.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox_doanh_thu.FormattingEnabled = true;
-            this.comboBox_doanh_thu.Items.AddRange(new object[] {
-            "Doanh thu mỗi cửa hàng",
-            "Số lượng mỗi món ăn bán ra",
-            "Tổng số tiền đơn hàng của chuỗi cửa hàng"});
-            this.comboBox_doanh_thu.Location = new System.Drawing.Point(209, 79);
-            this.comboBox_doanh_thu.Name = "comboBox_doanh_thu";
-            this.comboBox_doanh_thu.Size = new System.Drawing.Size(427, 28);
-            this.comboBox_doanh_thu.Sorted = true;
-            this.comboBox_doanh_thu.TabIndex = 3;
-            this.comboBox_doanh_thu.SelectedValueChanged += new System.EventHandler(this.comboBox_doanh_thu_SelectedValueChanged);
-            // 
             // NVQLDoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

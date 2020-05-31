@@ -159,7 +159,7 @@ namespace FastFood
 
 
         }
-        //Cập nhật bill
+        //Cập nhật bill theo thời gian
         public bool ResultOfChange()
         {
             int countRowDataCurrent = dataGridView_DanhSachDonHang.RowCount;

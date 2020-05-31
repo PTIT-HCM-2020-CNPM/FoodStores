@@ -40,6 +40,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView_DanhSachDonHang = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
+            this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
             this.radioButton_LayTrucTiep = new System.Windows.Forms.RadioButton();
             this.radioButton_DaGiaoHang = new System.Windows.Forms.RadioButton();
@@ -49,15 +51,13 @@
             this.textBox_MaDonHang = new System.Windows.Forms.TextBox();
             this.label_MaDonHang = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dataGridView_ChiTietDonHang = new System.Windows.Forms.DataGridView();
-            this.label_chi_tiết_hóa_đơn = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -194,6 +194,34 @@
             this.panel2.Size = new System.Drawing.Size(651, 627);
             this.panel2.TabIndex = 5;
             // 
+            // label_chi_tiết_hóa_đơn
+            // 
+            this.label_chi_tiết_hóa_đơn.AutoSize = true;
+            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
+            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(11, 3);
+            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
+            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
+            this.label_chi_tiết_hóa_đơn.TabIndex = 13;
+            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
+            // 
+            // dataGridView_ChiTietDonHang
+            // 
+            this.dataGridView_ChiTietDonHang.AllowUserToAddRows = false;
+            this.dataGridView_ChiTietDonHang.AllowUserToDeleteRows = false;
+            this.dataGridView_ChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_ChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ChiTietDonHang.Location = new System.Drawing.Point(3, 46);
+            this.dataGridView_ChiTietDonHang.Name = "dataGridView_ChiTietDonHang";
+            this.dataGridView_ChiTietDonHang.ReadOnly = true;
+            this.dataGridView_ChiTietDonHang.RowHeadersWidth = 51;
+            this.dataGridView_ChiTietDonHang.RowTemplate.Height = 24;
+            this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(645, 248);
+            this.dataGridView_ChiTietDonHang.TabIndex = 12;
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.radioButton_LayTrucTiep);
@@ -293,41 +321,13 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10000;
+            this.timer1.Interval = 30000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // dataGridView_ChiTietDonHang
-            // 
-            this.dataGridView_ChiTietDonHang.AllowUserToAddRows = false;
-            this.dataGridView_ChiTietDonHang.AllowUserToDeleteRows = false;
-            this.dataGridView_ChiTietDonHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView_ChiTietDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_ChiTietDonHang.Location = new System.Drawing.Point(3, 46);
-            this.dataGridView_ChiTietDonHang.Name = "dataGridView_ChiTietDonHang";
-            this.dataGridView_ChiTietDonHang.ReadOnly = true;
-            this.dataGridView_ChiTietDonHang.RowHeadersWidth = 51;
-            this.dataGridView_ChiTietDonHang.RowTemplate.Height = 24;
-            this.dataGridView_ChiTietDonHang.Size = new System.Drawing.Size(645, 248);
-            this.dataGridView_ChiTietDonHang.TabIndex = 12;
-            // 
-            // label_chi_tiết_hóa_đơn
-            // 
-            this.label_chi_tiết_hóa_đơn.AutoSize = true;
-            this.label_chi_tiết_hóa_đơn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label_chi_tiết_hóa_đơn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_chi_tiết_hóa_đơn.ForeColor = System.Drawing.Color.White;
-            this.label_chi_tiết_hóa_đơn.Location = new System.Drawing.Point(11, 3);
-            this.label_chi_tiết_hóa_đơn.Name = "label_chi_tiết_hóa_đơn";
-            this.label_chi_tiết_hóa_đơn.Size = new System.Drawing.Size(146, 23);
-            this.label_chi_tiết_hóa_đơn.TabIndex = 13;
-            this.label_chi_tiết_hóa_đơn.Text = "Chi tiết hóa đơn";
             // 
             // NVCHDonHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
@@ -341,11 +341,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_DanhSachDonHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ChiTietDonHang)).EndInit();
             this.ResumeLayout(false);
 
         }

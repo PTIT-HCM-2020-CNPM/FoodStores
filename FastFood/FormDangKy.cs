@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace FastFood
 {
-    public partial class FormDangKy : Form
+    public partial class FormDangKy : System.Windows.Forms.Form
     {
         public FormDangKy()
         {

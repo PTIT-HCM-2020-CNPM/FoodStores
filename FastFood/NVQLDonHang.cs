@@ -16,8 +16,7 @@ namespace FastFood
     {
         public NVQLDonHang()
         {
-            InitializeComponent();
-            timer_thời_gian_reload.Start();
+            InitializeComponent();          
             LoadBillList();
         }
 
@@ -54,17 +53,21 @@ namespace FastFood
                 textBox_địa_chỉ.Text = row.Cells[6].Value.ToString();
                 
                 int status = (int)row.Cells[7].Value;
-                if (status == 1)
+                if(status == 0)
                 {
-                    radioButton_giao_hàng.Checked = true;
+                    radioButton_chuẩn_bị.Checked = true;
                 }
-                else if (status == 2)
+                else if (status == 1)
                 {
                     radioButton_đang_giao.Checked = true;
                 }
+                else if (status == 2)
+                {
+                    radioButton_tại_cửa_hàng.Checked = true;
+                }
                 else if (status == 3)
                 {
-                    radioButton_lấy_trực_tiếp.Checked = true;
+                    radioButton_hoàn_thành.Checked = true;
                 }
 
 
@@ -74,10 +77,6 @@ namespace FastFood
                     string query = "USP_SelectBill @madonhang";
 
                     dataGridView_chi_tiết_đơn_hàng.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] { billNumber });
-                    
-                
-
-
             }
         }
         ///
@@ -97,13 +96,18 @@ namespace FastFood
 
         ///
 
-        ///LIÊN TỤC CẬP NHẬT DỮ LIỆU  SAU 2 PHÚT 
+        ///LIÊN TỤC CẬP NHẬT BẢNG ĐƠN HÀNG SAU 2 PHÚT 
         int i = 0;
         private void timer_thời_gian_reload_Tick(object sender, EventArgs e)
         {
             LoadBillList();
             i++;
             label1.Text = i.ToString();
+        }
+
+        private void NVQLDonHang_Load(object sender, EventArgs e)
+        {
+            timer_thời_gian_reload.Start();
         }
 
         ///
