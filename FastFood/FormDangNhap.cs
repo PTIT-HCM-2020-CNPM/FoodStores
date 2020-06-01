@@ -72,7 +72,10 @@ namespace FastFood
                 }         
                 else {
                     FormNVCH formNVCH = new FormNVCH();
+                    // lay tai khoan va mat khau hien tai trong textbox qua cho formNVCH
+                    
                     formNVCH.nhan = txtUser.Text;
+                    formNVCH.layMatKhauCuFormNVCH = txtPass.Text;
                     this.Hide();
                     formNVCH.ShowDialog();
                     this.Show();

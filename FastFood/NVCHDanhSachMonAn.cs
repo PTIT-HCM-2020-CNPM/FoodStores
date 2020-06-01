@@ -56,20 +56,25 @@ namespace FastFood
         // cap nhat mon an 
         private void Button_LuuMonAn_Click(object sender, EventArgs e)
         {
-            // lay gia tien nhap tu textbox xuong
-            float giaTien =(float)(Convert.ToDouble(textBox_GiaTien.Text));
-            string maMonAn = textBox_MaMonAn.Text;
-            string tenMonAn = textBox_TenMonAn.Text;
-            String query = "update MON_AN set [GIÁ TIỀN] = '"+giaTien+ "',[TÊN MÓN ĂN] = '"+tenMonAn+"' where MON_AN.[MÃ MÓN ĂN]='" + maMonAn +"' ";
-            dataGridView_DanhSachMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            int soLuong = Convert.ToInt32(textBox_SoLuong.Text);
+            if (soLuong >= 0)
+            {
+                // lay gia tien nhap tu textbox xuong
+                float giaTien = (float)(Convert.ToDouble(textBox_GiaTien.Text));
+                string maMonAn = textBox_MaMonAn.Text;
+                string tenMonAn = textBox_TenMonAn.Text;
+                String query = "update MON_AN set [GIÁ TIỀN] = '" + giaTien + "',[TÊN MÓN ĂN] = '" + tenMonAn + "' where MON_AN.[MÃ MÓN ĂN]='" + maMonAn + "' ";
+                dataGridView_DanhSachMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
 
-            int soLuong =Convert.ToInt32(textBox_SoLuong.Text);
-            // cap nhat so luong
-            String query1 = "update MON_AN_CUA_HANG set [SỐ LƯỢNG] = '" +soLuong+ "' where MON_AN_CUA_HANG.[MÃ MÓN ĂN] ='" +maMonAn+"' ";
-            dataGridView_DanhSachMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query1);
-            // hien thi lai danh sach
-            hienDanhSachMonAn(layCuaHangHienTai);
-            MessageBox.Show("Cập Nhật Thành Công", "Cập Nhật Đồ Ăn", MessageBoxButtons.OK);
+                // cap nhat so luong
+                String query1 = "update MON_AN_CUA_HANG set [SỐ LƯỢNG] = '" + soLuong + "' where MON_AN_CUA_HANG.[MÃ MÓN ĂN] ='" + maMonAn + "' ";
+                dataGridView_DanhSachMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query1);
+                // hien thi lai danh sach
+                hienDanhSachMonAn(layCuaHangHienTai);
+                MessageBox.Show("Cập Nhật Thành Công", "Cập Nhật Đồ Ăn", MessageBoxButtons.OK);
+            }
+            else
+                MessageBox.Show("số lượng phải lớn hơn bằng 0", "Cập Nhật Đồ Ăn", MessageBoxButtons.OK);
         }
 
         private void Button_TimMonAn_Click(object sender, EventArgs e)
@@ -144,6 +149,7 @@ namespace FastFood
             {
                 textBox_TimMonAn.Clear();
             }
+            hienDanhSachMonAn(layCuaHangHienTai);
         }
 
         private void Button_XoaMonAn_Click(object sender, EventArgs e)

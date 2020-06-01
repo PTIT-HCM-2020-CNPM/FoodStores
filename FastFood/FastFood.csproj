@@ -68,6 +68,7 @@
     <Compile Include="DAL-DataLayer\LichsuDAO.cs" />
     <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\ReviewDAO.cs" />
+    <Compile Include="DAL-DataLayer\NVCHDatTrucTiepDAO.cs" />
     <Compile Include="DAL-DataLayer\StoresDAO.cs" />
     <Compile Include="DTO-DataTranferObject\Bill.cs" />
     <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
@@ -140,6 +141,12 @@
     </Compile>
     <Compile Include="MonAn.Designer.cs">
       <DependentUpon>MonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCHDatTrucTiep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVCHDatTrucTiep.Designer.cs">
+      <DependentUpon>NVCHDatTrucTiep.cs</DependentUpon>
     </Compile>
     <Compile Include="NVCHDonHang.cs">
       <SubType>UserControl</SubType>
@@ -235,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCHDatTrucTiep.resx">
+      <DependentUpon>NVCHDatTrucTiep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVCHDonHang.resx">
       <DependentUpon>NVCHDonHang.cs</DependentUpon>
