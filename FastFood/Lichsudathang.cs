@@ -29,6 +29,7 @@ namespace FastFood
         }
         private void Lichsudathang_Load(object sender, EventArgs e)
         {
+            timer_reload.Start();//timer bắt đầu->hàm reload khởi động
             try
             {
                 dataGridView1.DataSource = ListOrders();
@@ -69,9 +70,13 @@ namespace FastFood
             {
                 MessageBox.Show("Vui lòng chọn đơn hàng muốn đặt lại");
             }
+            else if (BillDAO.Instance.GetNumBillCus(customerNumber,3)>0)
+            {
+                MessageBox.Show("Bạn đã đặt một đơn hàng, không thể đặt đơn khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                FormKHDiaChiGiaoHang diaChiGiaoHang = new FormKHDiaChiGiaoHang(customerNumber);
+                KHDiaChiGiaoHang diaChiGiaoHang = new KHDiaChiGiaoHang(customerNumber);
                 diaChiGiaoHang.totalPayment = totalPayment;
                 foreach (DataGridViewRow row in dataGridView_chi_tiết_đơn_hàng.Rows)
                 {
@@ -83,6 +88,11 @@ namespace FastFood
                 }
                 diaChiGiaoHang.ShowDialog();
             }
+        }
+        //Hàm thời gian reload đơn hàng
+        private void timer_reload_Tick(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ListOrders();
         }
     }
 }

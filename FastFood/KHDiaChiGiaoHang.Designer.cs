@@ -1,6 +1,6 @@
 ﻿namespace FastFood
 {
-    partial class FormKHDiaChiGiaoHang
+    partial class KHDiaChiGiaoHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel3 = new System.Windows.Forms.Panel();
             this.radioButton_lấy_trực_tiếp = new System.Windows.Forms.RadioButton();
             this.radioButton_giao_hàng = new System.Windows.Forms.RadioButton();
@@ -57,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_phí = new System.Windows.Forms.TextBox();
             this.label_phí = new System.Windows.Forms.Label();
+            this.timer_reload = new System.Windows.Forms.Timer(this.components);
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -81,7 +83,7 @@
             // radioButton_lấy_trực_tiếp
             // 
             this.radioButton_lấy_trực_tiếp.AutoSize = true;
-            this.radioButton_lấy_trực_tiếp.BackColor = System.Drawing.Color.Firebrick;
+            this.radioButton_lấy_trực_tiếp.BackColor = System.Drawing.Color.Maroon;
             this.radioButton_lấy_trực_tiếp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.radioButton_lấy_trực_tiếp.Font = new System.Drawing.Font("Cambria", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton_lấy_trực_tiếp.ForeColor = System.Drawing.Color.White;
@@ -92,6 +94,7 @@
             this.radioButton_lấy_trực_tiếp.TabStop = true;
             this.radioButton_lấy_trực_tiếp.Text = "Lấy trực tiếp";
             this.radioButton_lấy_trực_tiếp.UseVisualStyleBackColor = false;
+            this.radioButton_lấy_trực_tiếp.CheckedChanged += new System.EventHandler(this.radioButton_lấy_trực_tiếp_CheckedChanged);
             // 
             // radioButton_giao_hàng
             // 
@@ -113,7 +116,7 @@
             // 
             this.label_hình_thức_đặt.AutoSize = true;
             this.label_hình_thức_đặt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_hình_thức_đặt.ForeColor = System.Drawing.Color.Maroon;
+            this.label_hình_thức_đặt.ForeColor = System.Drawing.Color.White;
             this.label_hình_thức_đặt.Location = new System.Drawing.Point(20, 9);
             this.label_hình_thức_đặt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_hình_thức_đặt.Name = "label_hình_thức_đặt";
@@ -134,7 +137,7 @@
             // 
             this.label_địa_chỉ.AutoSize = true;
             this.label_địa_chỉ.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_địa_chỉ.ForeColor = System.Drawing.Color.Maroon;
+            this.label_địa_chỉ.ForeColor = System.Drawing.Color.White;
             this.label_địa_chỉ.Location = new System.Drawing.Point(20, 7);
             this.label_địa_chỉ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_địa_chỉ.Name = "label_địa_chỉ";
@@ -176,7 +179,7 @@
             // 
             this.label_cửa_hàng.AutoSize = true;
             this.label_cửa_hàng.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cửa_hàng.ForeColor = System.Drawing.Color.Maroon;
+            this.label_cửa_hàng.ForeColor = System.Drawing.Color.White;
             this.label_cửa_hàng.Location = new System.Drawing.Point(20, 7);
             this.label_cửa_hàng.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_cửa_hàng.Name = "label_cửa_hàng";
@@ -218,6 +221,7 @@
             this.SOLUONG,
             this.GIATIEN});
             this.dataGridView_đơn_hàng.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_đơn_hàng.GridColor = System.Drawing.Color.Coral;
             this.dataGridView_đơn_hàng.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_đơn_hàng.Name = "dataGridView_đơn_hàng";
             this.dataGridView_đơn_hàng.ReadOnly = true;
@@ -254,7 +258,7 @@
             // 
             this.label_chi_tiết_đơn_hàng.AutoSize = true;
             this.label_chi_tiết_đơn_hàng.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_chi_tiết_đơn_hàng.ForeColor = System.Drawing.Color.Maroon;
+            this.label_chi_tiết_đơn_hàng.ForeColor = System.Drawing.Color.White;
             this.label_chi_tiết_đơn_hàng.Location = new System.Drawing.Point(20, 9);
             this.label_chi_tiết_đơn_hàng.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_chi_tiết_đơn_hàng.Name = "label_chi_tiết_đơn_hàng";
@@ -275,7 +279,7 @@
             // 
             this.label_số_điện_thoại.AutoSize = true;
             this.label_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_số_điện_thoại.ForeColor = System.Drawing.Color.Maroon;
+            this.label_số_điện_thoại.ForeColor = System.Drawing.Color.White;
             this.label_số_điện_thoại.Location = new System.Drawing.Point(20, 7);
             this.label_số_điện_thoại.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_số_điện_thoại.Name = "label_số_điện_thoại";
@@ -297,7 +301,7 @@
             // 
             this.label_tổng_tiền.AutoSize = true;
             this.label_tổng_tiền.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_tổng_tiền.ForeColor = System.Drawing.Color.Maroon;
+            this.label_tổng_tiền.ForeColor = System.Drawing.Color.White;
             this.label_tổng_tiền.Location = new System.Drawing.Point(3, 10);
             this.label_tổng_tiền.Name = "label_tổng_tiền";
             this.label_tổng_tiền.Size = new System.Drawing.Size(122, 28);
@@ -309,7 +313,7 @@
             this.panel7.Controls.Add(this.label_đồng);
             this.panel7.Controls.Add(this.textBox_tổng_tiền);
             this.panel7.Controls.Add(this.label_tổng_tiền);
-            this.panel7.Location = new System.Drawing.Point(369, 641);
+            this.panel7.Location = new System.Drawing.Point(369, 640);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(292, 45);
             this.panel7.TabIndex = 22;
@@ -318,6 +322,7 @@
             // 
             this.label_đồng.AutoSize = true;
             this.label_đồng.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_đồng.ForeColor = System.Drawing.Color.White;
             this.label_đồng.Location = new System.Drawing.Point(262, 9);
             this.label_đồng.Name = "label_đồng";
             this.label_đồng.Size = new System.Drawing.Size(25, 28);
@@ -351,6 +356,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(307, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 28);
@@ -374,18 +380,18 @@
             // 
             this.label_phí.AutoSize = true;
             this.label_phí.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_phí.ForeColor = System.Drawing.Color.Maroon;
+            this.label_phí.ForeColor = System.Drawing.Color.White;
             this.label_phí.Location = new System.Drawing.Point(3, 10);
             this.label_phí.Name = "label_phí";
             this.label_phí.Size = new System.Drawing.Size(156, 28);
             this.label_phí.TabIndex = 22;
             this.label_phí.Text = "Phí giao hàng:";
             // 
-            // FormKHDiaChiGiaoHang
+            // KHDiaChiGiaoHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.BackColor = System.Drawing.Color.Firebrick;
             this.ClientSize = new System.Drawing.Size(755, 788);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
@@ -397,12 +403,12 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button_xác_nhận);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormKHDiaChiGiaoHang";
+            this.Name = "KHDiaChiGiaoHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForKHDiaChiGiaoHang";
-            this.Load += new System.EventHandler(this.FormKHDiaChiGiaoHang_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -454,5 +460,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_phí;
         private System.Windows.Forms.Label label_phí;
+        private System.Windows.Forms.Timer timer_reload;
     }
 }

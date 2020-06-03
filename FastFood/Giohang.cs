@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FastFood.DAL_DataLayer;
 
 namespace FastFood
 {
@@ -61,7 +62,7 @@ namespace FastFood
                 if (f) continue;
                 {
                     int cnt = 0;
-                    foreach(DataRow item2 in FormKhachHang.GioHang)
+                    foreach (DataRow item2 in FormKhachHang.GioHang)
                     {
                         if(item["TÊN MÓN ĂN"].ToString().Equals(item["TÊN MÓN ĂN"].ToString()))
                             ++cnt;
@@ -88,9 +89,13 @@ namespace FastFood
             {
                 MessageBox.Show("Tổng đơn hàng cần lớn hơn 30,000đ! Xin vui lòng chọn thêm món!");
             }
+            else if (BillDAO.Instance.GetNumBillCus(numberPhone,3)>0)
+            {
+                MessageBox.Show("Bạn đã đặt một đơn hàng, không thể đặt đơn khác!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             else
             {
-                FormKHDiaChiGiaoHang formKHDiaChiGiao = new FormKHDiaChiGiaoHang(numberPhone);
+                KHDiaChiGiaoHang formKHDiaChiGiao = new KHDiaChiGiaoHang(numberPhone);
                 formKHDiaChiGiao.totalPayment = totalPayment;
                 //Lấy giá trị datagridview giỏ hàng -> datagirdview xác nhận
                 foreach (DataGridViewRow row in dataGridView1_giỏ_hàng.Rows)

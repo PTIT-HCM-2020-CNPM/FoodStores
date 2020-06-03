@@ -13,10 +13,11 @@ using FastFood.DAL_DataLayer;
 
 namespace FastFood
 {
-    public partial class FormKHDiaChiGiaoHang : System.Windows.Forms.Form
+    public partial class KHDiaChiGiaoHang : System.Windows.Forms.Form
     {
         public int totalPayment;
-        public FormKHDiaChiGiaoHang(string numberPhone)
+        private int kindBill;
+        public KHDiaChiGiaoHang(string numberPhone)
         {
             InitializeComponent();
             //Lấy sđt từ form giỏ hàng->form xác nhận
@@ -24,7 +25,7 @@ namespace FastFood
             //Phí giao hàng
             feeDelivery();
             //Lấy tổng tiền từ giỏ hàng->form xác nhận
-            textBox_tổng_tiền.Text = ( Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString()) ).ToString();           
+            textBox_tổng_tiền.Text = ( totalPayment + Convert.ToInt32(textBox_phí.Text.ToString()) ).ToString();           
             //
             FillComboBoxCuaHang();
         }
@@ -34,10 +35,12 @@ namespace FastFood
             if (radioButton_giao_hàng.Checked == true)
             {
                textBox_phí.Text = "15000";
+                
             }
             else
             {
                 textBox_phí.Text = "0";
+                
             }
         }
         //Load combo box cửa hàng
@@ -50,12 +53,6 @@ namespace FastFood
             comboBox_chọn_cửa_hàng.ValueMember = "MÃ CỬA HÀNG";
 
         }
-        
-        private void FormKHDiaChiGiaoHang_Load(object sender, EventArgs e)
-        {
-            
-        }
-        //
         //Thêm đơn hàng tử khách hàng
         private void button_xác_nhận_Click(object sender, EventArgs e)
         {
@@ -64,10 +61,10 @@ namespace FastFood
             string customerNumber = textBox_số_điện_thoại.Text;
             string billNumber = storeNumber + "DH" + (numBillCurent+1).ToString();
             int totalBill = Convert.ToInt32(textBox_tổng_tiền.Text);
-            DateTime dateNow = DateTime.Now;
+            DateTime dateNow = DateTime.Today;
             string address = textBox_địa_chỉ_giao_hàng.Text;
             string date = dateNow.ToString("yyyy/MM/dd");
-            int kindBill = 0;
+            
             if (textBox_địa_chỉ_giao_hàng.Text == "")
             {
                 MessageBox.Show("Vui lòng điền địa chỉ!", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -87,17 +84,27 @@ namespace FastFood
                     BillDAO.Instance.InsertBillIfByCus(billNumber, foodNam, foodMount);
                 }              
                 MessageBox.Show("Đơn hàng đã gửi tới cửa hàng!", "Thông báo");
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Có lỗi! Không thể đặt hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void radioButton_giao_hàng_CheckedChanged(object sender, EventArgs e)
         {
             feeDelivery();
             textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
+            kindBill = 0;
+        }
+
+        private void radioButton_lấy_trực_tiếp_CheckedChanged(object sender, EventArgs e)
+        {
+            feeDelivery();
+            textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
+            kindBill = 2;
         }
         //
     }

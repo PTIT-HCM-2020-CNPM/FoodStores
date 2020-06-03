@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_reorder = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView_chi_tiết_đơn_hàng = new System.Windows.Forms.DataGridView();
-            this.button_reorder = new System.Windows.Forms.Button();
+            this.timer_reload = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -100,6 +102,22 @@
             this.panel1.Size = new System.Drawing.Size(987, 389);
             this.panel1.TabIndex = 3;
             // 
+            // button_reorder
+            // 
+            this.button_reorder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_reorder.BackColor = System.Drawing.Color.Coral;
+            this.button_reorder.FlatAppearance.BorderSize = 0;
+            this.button_reorder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_reorder.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_reorder.ForeColor = System.Drawing.Color.Gold;
+            this.button_reorder.Location = new System.Drawing.Point(470, 64);
+            this.button_reorder.Name = "button_reorder";
+            this.button_reorder.Size = new System.Drawing.Size(172, 54);
+            this.button_reorder.TabIndex = 4;
+            this.button_reorder.Text = "Đặt lại";
+            this.button_reorder.UseVisualStyleBackColor = false;
+            this.button_reorder.Click += new System.EventHandler(this.button_reorder_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,21 +146,10 @@
             this.dataGridView_chi_tiết_đơn_hàng.Size = new System.Drawing.Size(365, 272);
             this.dataGridView_chi_tiết_đơn_hàng.TabIndex = 2;
             // 
-            // button_reorder
+            // timer_reload
             // 
-            this.button_reorder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_reorder.BackColor = System.Drawing.Color.Coral;
-            this.button_reorder.FlatAppearance.BorderSize = 0;
-            this.button_reorder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_reorder.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_reorder.ForeColor = System.Drawing.Color.Gold;
-            this.button_reorder.Location = new System.Drawing.Point(470, 64);
-            this.button_reorder.Name = "button_reorder";
-            this.button_reorder.Size = new System.Drawing.Size(172, 54);
-            this.button_reorder.TabIndex = 4;
-            this.button_reorder.Text = "Đặt lại";
-            this.button_reorder.UseVisualStyleBackColor = false;
-            this.button_reorder.Click += new System.EventHandler(this.button_reorder_Click);
+            this.timer_reload.Interval = 10000;
+            this.timer_reload.Tick += new System.EventHandler(this.timer_reload_Tick);
             // 
             // Lichsudathang
             // 
@@ -173,5 +180,6 @@
         private System.Windows.Forms.DataGridView dataGridView_chi_tiết_đơn_hàng;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_reorder;
+        private System.Windows.Forms.Timer timer_reload;
     }
 }
