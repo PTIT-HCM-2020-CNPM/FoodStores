@@ -80,15 +80,19 @@
             // 
             this.button_góp_ý.Dock = System.Windows.Forms.DockStyle.Top;
             this.button_góp_ý.FlatAppearance.BorderSize = 0;
+            this.button_góp_ý.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_góp_ý.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_góp_ý.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_góp_ý.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_góp_ý.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_góp_ý.Image = ((System.Drawing.Image)(resources.GetObject("button_góp_ý.Image")));
-            this.button_góp_ý.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_góp_ý.Location = new System.Drawing.Point(0, 426);
+            this.button_góp_ý.Location = new System.Drawing.Point(0, 460);
             this.button_góp_ý.Name = "button_góp_ý";
             this.button_góp_ý.Size = new System.Drawing.Size(184, 60);
             this.button_góp_ý.TabIndex = 4;
+            this.button_góp_ý.Text = "Trang chủ";
+            this.button_góp_ý.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_góp_ý.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_góp_ý.UseVisualStyleBackColor = true;
             this.button_góp_ý.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -99,11 +103,9 @@
             this.pnlDropFood.Controls.Add(this.button_món_chính);
             this.pnlDropFood.Controls.Add(this.button_đồ_ăn);
             this.pnlDropFood.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDropFood.Location = new System.Drawing.Point(0, 256);
-            this.pnlDropFood.MaximumSize = new System.Drawing.Size(175, 170);
-            this.pnlDropFood.MinimumSize = new System.Drawing.Size(175, 60);
+            this.pnlDropFood.Location = new System.Drawing.Point(0, 259);
             this.pnlDropFood.Name = "pnlDropFood";
-            this.pnlDropFood.Size = new System.Drawing.Size(175, 170);
+            this.pnlDropFood.Size = new System.Drawing.Size(184, 201);
             this.pnlDropFood.TabIndex = 7;
             // 
             // button_đồ_ăn_nhanh
@@ -115,9 +117,9 @@
             this.button_đồ_ăn_nhanh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_đồ_ăn_nhanh.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_ăn_nhanh.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_đồ_ăn_nhanh.Location = new System.Drawing.Point(0, 116);
+            this.button_đồ_ăn_nhanh.Location = new System.Drawing.Point(0, 126);
             this.button_đồ_ăn_nhanh.Name = "button_đồ_ăn_nhanh";
-            this.button_đồ_ăn_nhanh.Size = new System.Drawing.Size(175, 56);
+            this.button_đồ_ăn_nhanh.Size = new System.Drawing.Size(184, 56);
             this.button_đồ_ăn_nhanh.TabIndex = 8;
             this.button_đồ_ăn_nhanh.Text = "Đồ ăn nhanh";
             this.button_đồ_ăn_nhanh.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@
             this.button_món_chính.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_món_chính.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_món_chính.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_món_chính.Location = new System.Drawing.Point(0, 60);
+            this.button_món_chính.Location = new System.Drawing.Point(0, 70);
             this.button_món_chính.Name = "button_món_chính";
-            this.button_món_chính.Size = new System.Drawing.Size(175, 56);
+            this.button_món_chính.Size = new System.Drawing.Size(184, 56);
             this.button_món_chính.TabIndex = 7;
             this.button_món_chính.Text = "Món chính";
             this.button_món_chính.UseVisualStyleBackColor = true;
@@ -150,14 +152,13 @@
             this.button_đồ_ăn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_ăn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_ăn.Image = ((System.Drawing.Image)(resources.GetObject("button_đồ_ăn.Image")));
-            this.button_đồ_ăn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_đồ_ăn.Location = new System.Drawing.Point(0, 0);
-            this.button_đồ_ăn.MaximumSize = new System.Drawing.Size(175, 170);
-            this.button_đồ_ăn.MinimumSize = new System.Drawing.Size(175, 60);
             this.button_đồ_ăn.Name = "button_đồ_ăn";
-            this.button_đồ_ăn.Size = new System.Drawing.Size(175, 60);
+            this.button_đồ_ăn.Size = new System.Drawing.Size(184, 70);
             this.button_đồ_ăn.TabIndex = 3;
             this.button_đồ_ăn.Text = "Đồ ăn";
+            this.button_đồ_ăn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_đồ_ăn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_đồ_ăn.UseVisualStyleBackColor = true;
             this.button_đồ_ăn.Click += new System.EventHandler(this.button_đồ_ăn_Click);
             // 
@@ -170,7 +171,7 @@
             this.pnlDropDrink.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlDropDrink.Location = new System.Drawing.Point(0, 70);
             this.pnlDropDrink.Name = "pnlDropDrink";
-            this.pnlDropDrink.Size = new System.Drawing.Size(184, 186);
+            this.pnlDropDrink.Size = new System.Drawing.Size(184, 189);
             this.pnlDropDrink.TabIndex = 5;
             // 
             // button_đồ_uống
@@ -183,24 +184,27 @@
             this.button_đồ_uống.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_uống.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_đồ_uống.Image = ((System.Drawing.Image)(resources.GetObject("button_đồ_uống.Image")));
-            this.button_đồ_uống.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_đồ_uống.Location = new System.Drawing.Point(0, 0);
             this.button_đồ_uống.Name = "button_đồ_uống";
-            this.button_đồ_uống.Size = new System.Drawing.Size(184, 62);
+            this.button_đồ_uống.Size = new System.Drawing.Size(184, 70);
             this.button_đồ_uống.TabIndex = 2;
             this.button_đồ_uống.Text = "Đồ uống";
+            this.button_đồ_uống.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_đồ_uống.UseVisualStyleBackColor = true;
             this.button_đồ_uống.Click += new System.EventHandler(this.btnDrink_Click_2);
             // 
             // button_đồ_uống_có_ga
             // 
+            this.button_đồ_uống_có_ga.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_đồ_uống_có_ga.FlatAppearance.BorderSize = 0;
+            this.button_đồ_uống_có_ga.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_đồ_uống_có_ga.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_đồ_uống_có_ga.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_đồ_uống_có_ga.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_đồ_uống_có_ga.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_đồ_uống_có_ga.Location = new System.Drawing.Point(0, 126);
+            this.button_đồ_uống_có_ga.Location = new System.Drawing.Point(0, 69);
             this.button_đồ_uống_có_ga.Name = "button_đồ_uống_có_ga";
-            this.button_đồ_uống_có_ga.Size = new System.Drawing.Size(175, 59);
+            this.button_đồ_uống_có_ga.Size = new System.Drawing.Size(184, 60);
             this.button_đồ_uống_có_ga.TabIndex = 6;
             this.button_đồ_uống_có_ga.Text = "Đồ uống có ga";
             this.button_đồ_uống_có_ga.UseVisualStyleBackColor = true;
@@ -208,13 +212,16 @@
             // 
             // button_cà_phê
             // 
+            this.button_cà_phê.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button_cà_phê.FlatAppearance.BorderSize = 0;
+            this.button_cà_phê.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_cà_phê.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_cà_phê.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cà_phê.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_cà_phê.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_cà_phê.Location = new System.Drawing.Point(0, 67);
+            this.button_cà_phê.Location = new System.Drawing.Point(0, 129);
             this.button_cà_phê.Name = "button_cà_phê";
-            this.button_cà_phê.Size = new System.Drawing.Size(175, 60);
+            this.button_cà_phê.Size = new System.Drawing.Size(184, 60);
             this.button_cà_phê.TabIndex = 5;
             this.button_cà_phê.Text = "Cà phê";
             this.button_cà_phê.UseVisualStyleBackColor = true;
@@ -223,6 +230,7 @@
             // button_trang_chủ
             // 
             this.button_trang_chủ.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_trang_chủ.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.button_trang_chủ.FlatAppearance.BorderSize = 0;
             this.button_trang_chủ.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button_trang_chủ.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
@@ -230,13 +238,13 @@
             this.button_trang_chủ.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_trang_chủ.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_trang_chủ.Image = ((System.Drawing.Image)(resources.GetObject("button_trang_chủ.Image")));
-            this.button_trang_chủ.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_trang_chủ.Location = new System.Drawing.Point(0, 0);
             this.button_trang_chủ.Margin = new System.Windows.Forms.Padding(4);
             this.button_trang_chủ.Name = "button_trang_chủ";
             this.button_trang_chủ.Size = new System.Drawing.Size(184, 70);
             this.button_trang_chủ.TabIndex = 1;
             this.button_trang_chủ.Text = "Trang chủ";
+            this.button_trang_chủ.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_trang_chủ.UseVisualStyleBackColor = true;
             this.button_trang_chủ.Click += new System.EventHandler(this.button_trang_chủ_Click);
             // 
@@ -258,7 +266,8 @@
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button6.FlatAppearance.BorderSize = 2;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -287,7 +296,8 @@
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogin.FlatAppearance.BorderSize = 2;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -301,15 +311,18 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Red;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label1.Location = new System.Drawing.Point(10, 84);
+            this.label1.Location = new System.Drawing.Point(30, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(187, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "FoodHouse";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -334,13 +347,16 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(24, 135);
+            this.label2.Location = new System.Drawing.Point(43, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Food Restaurant";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3
@@ -381,8 +397,7 @@
             // 
             // Trangchu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1118, 702);

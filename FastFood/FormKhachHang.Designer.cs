@@ -194,6 +194,8 @@
             // button_ds_đánh_giá
             // 
             this.button_ds_đánh_giá.FlatAppearance.BorderSize = 0;
+            this.button_ds_đánh_giá.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_ds_đánh_giá.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_ds_đánh_giá.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ds_đánh_giá.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_ds_đánh_giá.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -209,6 +211,8 @@
             // button_viết_đánh_giá
             // 
             this.button_viết_đánh_giá.FlatAppearance.BorderSize = 0;
+            this.button_viết_đánh_giá.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_viết_đánh_giá.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button_viết_đánh_giá.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_viết_đánh_giá.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_viết_đánh_giá.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -539,8 +543,7 @@
             // 
             // FormKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1209, 876);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

@@ -27,8 +27,8 @@ namespace FastFood
 
         private void Trangchu_Load(object sender, EventArgs e)
         {
-            pnlDropFood.Height = 60;
-            pnlDropDrink.Height = 60;
+            pnlDropFood.Height = 70;
+            pnlDropDrink.Height = 70;
         }
 
         private void btnDrink_Click_2(object sender, EventArgs e)
@@ -37,11 +37,11 @@ namespace FastFood
             
             //hinhtrangchu1.BringToFront();
             //
-            if (pnlDropDrink.Height == 170)
+            if (pnlDropDrink.Height == 190)
             {
-                pnlDropDrink.Height = 60;
+                pnlDropDrink.Height = 55;
             }
-            else { pnlDropDrink.Height = 170; }
+            else { pnlDropDrink.Height = 190; }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -78,11 +78,11 @@ namespace FastFood
 
         private void button_đồ_ăn_Click(object sender, EventArgs e)
         {
-            if (pnlDropFood.Height == 170)
+            if (pnlDropFood.Height == 190)
             {
-                pnlDropFood.Height = 60;
+                pnlDropFood.Height = 70;
             }
-            else { pnlDropFood.Height = 170; }
+            else { pnlDropFood.Height = 190; }
         }
 
         private void button_món_chính_Click(object sender, EventArgs e)
