@@ -99,6 +99,12 @@ namespace FastFood
             feeDelivery();
             textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
         }
+
+        private void radioButton_lấy_trực_tiếp_CheckedChanged(object sender, EventArgs e)
+        {
+            feeDelivery();
+            textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
+        }
         //
     }
 }

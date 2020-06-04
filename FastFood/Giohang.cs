@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FastFood.DAL_DataLayer;
 
 namespace FastFood
 {
@@ -60,11 +61,11 @@ namespace FastFood
                 }
                 if (f) continue;
                 {
-                    int cnt = 0;
+                    int cnt = 1;
                     foreach(DataRow item2 in FormKhachHang.GioHang)
                     {
-                        if(item["TÊN MÓN ĂN"].ToString().Equals(item["TÊN MÓN ĂN"].ToString()))
-                            ++cnt;
+                        if (item["TÊN MÓN ĂN"].ToString().Equals(item["TÊN MÓN ĂN"].ToString())) cnt=1;
+                           
                     }
                     dataGridView1_giỏ_hàng.Rows.Add(item["TÊN MÓN ĂN"].ToString(), cnt, item["GIÁ TIỀN"].ToString());
                 }
@@ -128,5 +129,29 @@ namespace FastFood
                 textBox_tổng_tiền.Text = "0";
             }
         }
+        //
+
+        //Điều chỉnh số lượng
+        private int indexRow;
+        private void dataGridView1_giỏ_hàng_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indexRow = e.RowIndex;
+            
+        }
+
+        private void button_điều_chỉnh_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row= dataGridView1_giỏ_hàng.Rows[indexRow];
+            if (numericUpDown_số_lượng.Value.Equals(0))
+            {
+                dataGridView1_giỏ_hàng.Rows.RemoveAt(indexRow);
+                subBillPay();
+            }
+            else { 
+                row.Cells[1].Value = numericUpDown_số_lượng.Value.ToString();
+                subBillPay();
+            }
+        }
+
     }
 }
