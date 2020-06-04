@@ -191,6 +191,12 @@
     <Compile Include="NVQLDonHang.Designer.cs">
       <DependentUpon>NVQLDonHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVQLMatKhau.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVQLMatKhau.Designer.cs">
+      <DependentUpon>NVQLMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVQLQuanLyTaiKhoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLDonHang.resx">
       <DependentUpon>NVQLDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVQLMatKhau.resx">
+      <DependentUpon>NVQLMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVQLQuanLyTaiKhoan.resx">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>

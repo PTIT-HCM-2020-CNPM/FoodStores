@@ -99,8 +99,8 @@ namespace FastFood.DAL_DataLayer
 
                 //mở kết nối để lấy dữ liệu
                 connection.Open();
-                //try
-                //{
+                try
+                {
                     SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
 
                 if (parameter != null)
@@ -118,13 +118,13 @@ namespace FastFood.DAL_DataLayer
                 }
 
                 data = command.ExecuteNonQuery();//số lần thêm thành công
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
-                //}
-                //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
-                connection.Close();
+                }
+                    catch
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
+                }
+            //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
+            connection.Close();
             }
 
             return data;

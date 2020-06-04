@@ -56,9 +56,10 @@ namespace FastFood
             string userName = txtUser.Text;
             string password = txtPass.Text;         
             int managerAccess = 1, employeeAccess = 2, customerAccess = 3;
-
+            //Quản lý
             if (LoginManager(userName,password,managerAccess)) {
                 FormNVQL formNVQL = new FormNVQL();
+                formNVQL.userName = userName;
                 this.Hide();
                 formNVQL.ShowDialog();
                 this.Show();

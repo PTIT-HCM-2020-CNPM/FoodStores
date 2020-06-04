@@ -12,6 +12,7 @@ namespace FastFood
 {
     public partial class FormNVQL : System.Windows.Forms.Form
     {
+        public string userName;
         public FormNVQL()
         {
             InitializeComponent();
@@ -87,6 +88,14 @@ namespace FastFood
         {
             this.Close();
             nvqlDonHang1.timer_thời_gian_reload.Stop();
+        }
+        //Nút mật khẩu
+        private void button_mật_khẩu_Click(object sender, EventArgs e)
+        {
+            panel_chọn.Height = button_mật_khẩu.Height;
+            panel_chọn.Top = button_mật_khẩu.Top;
+            nvqlMatKhau1.userName = userName;
+            nvqlMatKhau1.BringToFront();
         }
     }
 }

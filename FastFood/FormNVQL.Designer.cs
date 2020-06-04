@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNVQL));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_đăng_xuất = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_chọn = new System.Windows.Forms.Panel();
             this.button_doanh_thu = new System.Windows.Forms.Button();
@@ -42,12 +43,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_đăng_xuất = new System.Windows.Forms.Button();
+            this.button_mật_khẩu = new System.Windows.Forms.Button();
             this.nvqlDonHang1 = new FastFood.NVQLDonHang();
             this.nvqlQuanLyTaiKhoan1 = new FastFood.NVQLQuanLyTaiKhoan();
             this.nvqlCuaHang1 = new FastFood.NVQLCuaHang();
             this.nvqlDoanhThu1 = new FastFood.NVQLDoanhThu();
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
+            this.nvqlMatKhau1 = new FastFood.NVQLMatKhau();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_logo.SuspendLayout();
@@ -66,9 +68,28 @@
             this.panel1.Size = new System.Drawing.Size(961, 63);
             this.panel1.TabIndex = 1;
             // 
+            // button_đăng_xuất
+            // 
+            this.button_đăng_xuất.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_đăng_xuất.FlatAppearance.BorderSize = 0;
+            this.button_đăng_xuất.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_đăng_xuất.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_đăng_xuất.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_đăng_xuất.Image = ((System.Drawing.Image)(resources.GetObject("button_đăng_xuất.Image")));
+            this.button_đăng_xuất.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_đăng_xuất.Location = new System.Drawing.Point(789, 0);
+            this.button_đăng_xuất.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button_đăng_xuất.Name = "button_đăng_xuất";
+            this.button_đăng_xuất.Size = new System.Drawing.Size(172, 63);
+            this.button_đăng_xuất.TabIndex = 10;
+            this.button_đăng_xuất.Text = " Đăng xuất";
+            this.button_đăng_xuất.UseVisualStyleBackColor = true;
+            this.button_đăng_xuất.Click += new System.EventHandler(this.button_đăng_xuất_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.button_mật_khẩu);
             this.panel2.Controls.Add(this.panel_chọn);
             this.panel2.Controls.Add(this.button_doanh_thu);
             this.panel2.Controls.Add(this.button_cửa_hàng);
@@ -249,6 +270,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.nvqlMatKhau1);
             this.panel3.Controls.Add(this.nvqlDonHang1);
             this.panel3.Controls.Add(this.nvqlQuanLyTaiKhoan1);
             this.panel3.Controls.Add(this.nvqlCuaHang1);
@@ -260,23 +282,26 @@
             this.panel3.Size = new System.Drawing.Size(961, 541);
             this.panel3.TabIndex = 4;
             // 
-            // button_đăng_xuất
+            // button_mật_khẩu
             // 
-            this.button_đăng_xuất.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_đăng_xuất.FlatAppearance.BorderSize = 0;
-            this.button_đăng_xuất.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_đăng_xuất.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_đăng_xuất.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_đăng_xuất.Image = ((System.Drawing.Image)(resources.GetObject("button_đăng_xuất.Image")));
-            this.button_đăng_xuất.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_đăng_xuất.Location = new System.Drawing.Point(789, 0);
-            this.button_đăng_xuất.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button_đăng_xuất.Name = "button_đăng_xuất";
-            this.button_đăng_xuất.Size = new System.Drawing.Size(172, 63);
-            this.button_đăng_xuất.TabIndex = 10;
-            this.button_đăng_xuất.Text = " Đăng xuất";
-            this.button_đăng_xuất.UseVisualStyleBackColor = true;
-            this.button_đăng_xuất.Click += new System.EventHandler(this.button_đăng_xuất_Click);
+            this.button_mật_khẩu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_mật_khẩu.FlatAppearance.BorderSize = 0;
+            this.button_mật_khẩu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_mật_khẩu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_mật_khẩu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_mật_khẩu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_mật_khẩu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_mật_khẩu.Image = ((System.Drawing.Image)(resources.GetObject("button_mật_khẩu.Image")));
+            this.button_mật_khẩu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_mật_khẩu.Location = new System.Drawing.Point(0, 350);
+            this.button_mật_khẩu.Margin = new System.Windows.Forms.Padding(4);
+            this.button_mật_khẩu.Name = "button_mật_khẩu";
+            this.button_mật_khẩu.Size = new System.Drawing.Size(212, 70);
+            this.button_mật_khẩu.TabIndex = 6;
+            this.button_mật_khẩu.Text = "Mật khẩu";
+            this.button_mật_khẩu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_mật_khẩu.UseVisualStyleBackColor = true;
+            this.button_mật_khẩu.Click += new System.EventHandler(this.button_mật_khẩu_Click);
             // 
             // nvqlDonHang1
             // 
@@ -335,6 +360,15 @@
             this.hinhtrangchu1.TabIndex = 6;
             this.hinhtrangchu1.Load += new System.EventHandler(this.hinhtrangchu1_Load);
             // 
+            // nvqlMatKhau1
+            // 
+            this.nvqlMatKhau1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvqlMatKhau1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvqlMatKhau1.Location = new System.Drawing.Point(0, 0);
+            this.nvqlMatKhau1.Name = "nvqlMatKhau1";
+            this.nvqlMatKhau1.Size = new System.Drawing.Size(961, 541);
+            this.nvqlMatKhau1.TabIndex = 11;
+            // 
             // FormNVQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -384,5 +418,7 @@
         private NVQLQuanLyTaiKhoan nvqlQuanLyTaiKhoan1;
         private NVQLDonHang nvqlDonHang1;
         private System.Windows.Forms.Button button_đăng_xuất;
+        private System.Windows.Forms.Button button_mật_khẩu;
+        private NVQLMatKhau nvqlMatKhau1;
     }
 }

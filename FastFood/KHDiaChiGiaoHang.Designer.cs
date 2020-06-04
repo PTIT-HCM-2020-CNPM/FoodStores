@@ -49,7 +49,6 @@
             this.label_chi_tiết_đơn_hàng = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label_số_điện_thoại = new System.Windows.Forms.Label();
-            this.textBox_số_điện_thoại = new System.Windows.Forms.TextBox();
             this.label_tổng_tiền = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label_đồng = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@
             this.textBox_phí = new System.Windows.Forms.TextBox();
             this.label_phí = new System.Windows.Forms.Label();
             this.timer_reload = new System.Windows.Forms.Timer(this.components);
+            this.textBox_số_điện_thoại = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -287,16 +287,6 @@
             this.label_số_điện_thoại.TabIndex = 1;
             this.label_số_điện_thoại.Text = "Số điện thoại";
             // 
-            // textBox_số_điện_thoại
-            // 
-            this.textBox_số_điện_thoại.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_số_điện_thoại.Location = new System.Drawing.Point(200, 4);
-            this.textBox_số_điện_thoại.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox_số_điện_thoại.Name = "textBox_số_điện_thoại";
-            this.textBox_số_điện_thoại.Size = new System.Drawing.Size(334, 31);
-            this.textBox_số_điện_thoại.TabIndex = 3;
-            // 
             // label_tổng_tiền
             // 
             this.label_tổng_tiền.AutoSize = true;
@@ -387,6 +377,17 @@
             this.label_phí.TabIndex = 22;
             this.label_phí.Text = "Phí giao hàng:";
             // 
+            // textBox_số_điện_thoại
+            // 
+            this.textBox_số_điện_thoại.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox_số_điện_thoại.Enabled = false;
+            this.textBox_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_số_điện_thoại.Location = new System.Drawing.Point(200, 4);
+            this.textBox_số_điện_thoại.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox_số_điện_thoại.Name = "textBox_số_điện_thoại";
+            this.textBox_số_điện_thoại.Size = new System.Drawing.Size(334, 31);
+            this.textBox_số_điện_thoại.TabIndex = 3;
+            // 
             // KHDiaChiGiaoHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -447,7 +448,6 @@
         private System.Windows.Forms.Label label_chi_tiết_đơn_hàng;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label_số_điện_thoại;
-        private System.Windows.Forms.TextBox textBox_số_điện_thoại;
         private System.Windows.Forms.Label label_tổng_tiền;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBox_tổng_tiền;
@@ -461,5 +461,6 @@
         private System.Windows.Forms.TextBox textBox_phí;
         private System.Windows.Forms.Label label_phí;
         private System.Windows.Forms.Timer timer_reload;
+        private System.Windows.Forms.TextBox textBox_số_điện_thoại;
     }
 }
