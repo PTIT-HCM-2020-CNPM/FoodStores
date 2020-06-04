@@ -23,8 +23,8 @@ namespace FastFood.DTO_DataTranferObject
             set { totalBill = value; }
         }
 
-        private DateTime date;
-        public DateTime NGÀY
+        private string date;
+        public string NGÀY
         {
             get { return date; }
             set { date = value; }
@@ -52,7 +52,7 @@ namespace FastFood.DTO_DataTranferObject
             set { status = Convert.ToInt32(value); }
         }
 
-        public HistoryOrder(string addStore, string totalBill, DateTime date, string numBill, int status)
+        public HistoryOrder(string addStore, string totalBill, string date, string numBill, int status)
         {
             this.addStore = addStore;
             this.totalBill=totalBill;
@@ -65,7 +65,7 @@ namespace FastFood.DTO_DataTranferObject
         {
             this.addStore = row["ĐỊA CHỈ ĐẶT HÀNG"].ToString();
             this.totalBill = row["TỔNG TIỀN"].ToString();
-            this.date =(DateTime) row["NGÀY"];
+            this.date= row["NGÀY"].ToString();
             this.numBill = row["MÃ ĐƠN HÀNG"].ToString();
             this.status = Convert.ToInt32(row["TRẠNG THÁI ĐƠN HÀNG"]);
         }

@@ -50,15 +50,6 @@ namespace FastFood.DAL_DataLayer
 
             return result.Rows.Count > 0;
         }
-        //Load chi tiết hóa đơn
-        public DataTable GetBillInfo(string billNumber)
-        {
-            string query = "USP_SelectBill @madonhang";
-
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { billNumber });
-
-            return result;
-        }
         //TỔNG TIỀN ALL BILL
         public DataTable GetTotalMoneyBill(DateTime dateTo, DateTime dateFrom)
         {
@@ -129,7 +120,7 @@ namespace FastFood.DAL_DataLayer
         //THÊM CHI TIẾT ĐƠN ĐẶT HÀNG BỞI KHÁCH HÀNG
         public bool InsertBillIfByCus(string billNum, string foodNam, int foodMount)
         {
-            string query = String.Format("insert dbo.CHI_TIET_DON_DAT_HANG([MÃ ĐƠN HÀNG], [TÊN MÓN ĂN], [SỐ LƯỢNG]) values('{0}', N'{1}', {2})", billNum, foodNam, foodMount);
+            string query = String.Format("insert dbo.CHI_TIET_DON_DAT_HANG([MÃ ĐƠN HÀNG], [TÊN MÓN ĂN], [SỐ LƯỢNG]) values('{0}', '{1}', {2})", billNum, foodNam, foodMount);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -154,28 +145,6 @@ namespace FastFood.DAL_DataLayer
             string query = String.Format("select [MÃ ĐƠN HÀNG] from DON_DAT_HANG where [MÃ KHÁCH HÀNG(SĐT)] = '{0}'", customerNumber);
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
-        }
-        //ĐẾM SỐ ĐƠN HÀNG THEO MÃ KHÁCH HÀNG
-        public int GetNumBillCus(string numCus, int status)
-        {
-            string query = String.Format("select * from DON_DAT_HANG where[MÃ KHÁCH HÀNG(SĐT)] = '{0}' " +
-                "and[TRẠNG THÁI ĐƠN HÀNG] != {1} and [MÃ NHÂN VIÊN] is null", numCus, status);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data.Rows.Count;
-        }
-        public DataTable GetNumBillCus1(string numCus, int status)
-        {
-            string query = String.Format("select * from DON_DAT_HANG where [MÃ KHÁCH HÀNG(SĐT)] = '{0}' " +
-                "and[TRẠNG THÁI ĐƠN HÀNG] != {1} and [MÃ NHÂN VIÊN] is null", numCus, status);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
-        }
-        //Trả về tổng tiền của bill onl cho form kiểm tra đơn hàng
-        public DataTable GetPayBill(string numCus)
-        {
-            string query = String.Format("select [TỔNG TIỀN] from DON_DAT_HANG where [MÃ ĐƠN HÀNG]='{0}'",numCus);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
         }
     }
 }
