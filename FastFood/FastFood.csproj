@@ -73,7 +73,6 @@
     <Compile Include="DTO-DataTranferObject\Bill.cs" />
     <Compile Include="DTO-DataTranferObject\BillInfo.cs" />
     <Compile Include="DTO-DataTranferObject\EmployeeAccount.cs" />
-    <Compile Include="DTO-DataTranferObject\Food.cs" />
     <Compile Include="DTO-DataTranferObject\HistoryOrder.cs" />
     <Compile Include="DTO-DataTranferObject\Review.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
@@ -83,11 +82,11 @@
     <Compile Include="FormDanhGia.Designer.cs">
       <DependentUpon>FormDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="KHDiaChiGiaoHang.cs">
+    <Compile Include="FormKHDiaChiGiaoHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KHDiaChiGiaoHang.Designer.cs">
-      <DependentUpon>KHDiaChiGiaoHang.cs</DependentUpon>
+    <Compile Include="FormKHDiaChiGiaoHang.Designer.cs">
+      <DependentUpon>FormKHDiaChiGiaoHang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
@@ -130,12 +129,6 @@
     </Compile>
     <Compile Include="KHBaiDanhGia.Designer.cs">
       <DependentUpon>KHBaiDanhGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KHKiemtradonhang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KHKiemtradonhang.Designer.cs">
-      <DependentUpon>KHKiemtradonhang.cs</DependentUpon>
     </Compile>
     <Compile Include="Lichsudathang.cs">
       <SubType>UserControl</SubType>
@@ -220,8 +213,8 @@
     <EmbeddedResource Include="FormDanhGia.resx">
       <DependentUpon>FormDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KHDiaChiGiaoHang.resx">
-      <DependentUpon>KHDiaChiGiaoHang.cs</DependentUpon>
+    <EmbeddedResource Include="FormKHDiaChiGiaoHang.resx">
+      <DependentUpon>FormKHDiaChiGiaoHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangKy.resx">
       <DependentUpon>FormDangKy.cs</DependentUpon>
@@ -243,9 +236,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KHBaiDanhGia.resx">
       <DependentUpon>KHBaiDanhGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KHKiemtradonhang.resx">
-      <DependentUpon>KHKiemtradonhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lichsudathang.resx">
       <DependentUpon>Lichsudathang.cs</DependentUpon>

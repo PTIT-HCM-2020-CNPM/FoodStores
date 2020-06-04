@@ -100,7 +100,7 @@ namespace FastFood
             maMonAn = dataGridView_DanhSachMonAn.Rows[numrow].Cells[1].Value.ToString();
             textBox_TenMonAn.Text = dataGridView_DanhSachMonAn.Rows[numrow].Cells[2].Value.ToString();
             tienMotMon = (float)(Convert.ToInt32(dataGridView_DanhSachMonAn.Rows[numrow].Cells[3].Value.ToString()));
-
+            soLuongTruocCapNhat = 0;
         }
 
         private void Button_TaoDonHang_Click(object sender, EventArgs e)
@@ -164,6 +164,7 @@ namespace FastFood
                 }
             }
         }
+        // 2 mang luu tru mon an tam thoi de tra lai so luong khi cap nhat hoặc huy
         public int[] soLuongTM = new int[100];
         public string[] maTM = new string[100];
         public int count =-1;
@@ -227,32 +228,51 @@ namespace FastFood
                     
                     if (MessageBox.Show("Cập Nhật Số Lượng", "Thông Báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
-                        String query = "update CHI_TIET_DON_DAT_HANG set [SỐ LƯỢNG] = '" + soLuong + "' where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] = '" + maDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = '" + maMonAn + "'";
-                        DataProvider.Instance.ExecuteQuery(query);
-                        // tong tien
-                        tongTien = tongTien - (tienMotMon * soLuongTruocCapNhat) + (tienMotMon * soLuong);
-                        textBox_TongTien.Text = tongTien.ToString();
-                        // xoa nhung mon co so luong bang 0 sao khi cap nhat
-                        NVCHDatTrucTiepDAO.Instance.xoaMonAnSoLuong0();
-                        // tru so luong mon an
-                        //gan vao mang
-                        int soluongTrongKho = NVCHDatTrucTiepDAO.Instance.kiemTraSoLuongMonAn(layCuaHangHienTai, maMonAn);
-                        int soLuongTrongKhoTruocCN = soluongTrongKho + soLuongTruocCapNhat;
-                        for (int i = count; i >= 0; i--)
+                        if (soLuongTruocCapNhat != 0)
                         {
-                            if (maTM[i]==maMonAn)
+                            int soluongTrongKho = NVCHDatTrucTiepDAO.Instance.kiemTraSoLuongMonAn(layCuaHangHienTai, maMonAn);
+                            int soLuongTrongKhoTruocCN = soluongTrongKho + soLuongTruocCapNhat; // so luong trong kho cộng với số lượng món đó trong đơn hàng trước cập nhật
+                                                                                                // kiem tra so luong trong kho con du khong va kiem tra mon do co trong don chua
+                            if (NVCHDatTrucTiepDAO.Instance.kiemTraMonAnCoChua(maDonHang, maMonAn) > 0)
                             {
-                                soLuongTM[i] = soLuong;
+                                if (soLuongTrongKhoTruocCN >= soLuong)
+                                {
+                                    // cap nhat 
+                                    String query = "update CHI_TIET_DON_DAT_HANG set [SỐ LƯỢNG] = '" + soLuong + "' where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] = '" + maDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = '" + maMonAn + "'";
+                                    DataProvider.Instance.ExecuteQuery(query);
+                                    // xoa nhung mon co so luong bang 0 sao khi cap nhat
+                                    NVCHDatTrucTiepDAO.Instance.xoaMonAnSoLuong0();
+                                    // tong tien
+                                    tongTien = tongTien - (tienMotMon * soLuongTruocCapNhat) + (tienMotMon * soLuong);
+                                    textBox_TongTien.Text = tongTien.ToString();
+                                    // gan lai so luong moi 
+                                    for (int i = count; i >= 0; i--)
+                                    {
+                                        if (maTM[i] == maMonAn)
+                                        {
+                                            soLuongTM[i] = soLuong;
+                                        }
+                                    }
+                                    NVCHDatTrucTiepDAO.Instance.truSoLuongTrongKho(soLuongTrongKhoTruocCN, soLuong, layCuaHangHienTai, maMonAn);
+                                    hienDanhSachMonAn(layCuaHangHienTai);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Số Lượng trong kho không đủ", "Thông Báo", MessageBoxButtons.OK);
+                                }
                             }
-                        }
-                        NVCHDatTrucTiepDAO.Instance.truSoLuongTrongKho(soLuongTrongKhoTruocCN,soLuong,layCuaHangHienTai,maMonAn);
-                        hienDanhSachMonAn(layCuaHangHienTai);
-                        // hien thi ngay len datagiwview chi tiet don hang
-                        String query1 = "select CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + maDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
-                        dataGridView_ChiTietDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query1);
+                            else
+                                MessageBox.Show("Món Ăn chưa có sẵn,vui lòng thêm mới", "Thông Báo", MessageBoxButtons.OK);
+                            // hien thi ngay len datagiwview chi tiet don hang
+                            String query1 = "select CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN],MON_AN.[TÊN MÓN ĂN],CHI_TIET_DON_DAT_HANG.[SỐ LƯỢNG],MON_AN.[GIÁ TIỀN] from CHI_TIET_DON_DAT_HANG , MON_AN where CHI_TIET_DON_DAT_HANG.[MÃ ĐƠN HÀNG] ='" + maDonHang + "' and CHI_TIET_DON_DAT_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] ";
+                            dataGridView_ChiTietDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query1);
 
-                        textBox_SoLuong.Text = "";
-                        textBox_TenMonAn.Text = "";
+                            textBox_SoLuong.Text = "";
+                            textBox_TenMonAn.Text = "";
+                            soLuongTruocCapNhat = 0;
+                        }
+                        else
+                            MessageBox.Show("Bấm vào 1 món bên chi tiết đơn hàng để cập nhật", "Thông Báo", MessageBoxButtons.OK);
                     }
                 }
                 else
@@ -297,7 +317,9 @@ namespace FastFood
             tienMotMon = (float)(Convert.ToInt32(dataGridView_ChiTietDonHang.Rows[numrow].Cells[3].Value.ToString()));
             textBox_SoLuong.Text = dataGridView_ChiTietDonHang.Rows[numrow].Cells[2].Value.ToString();
             soLuongTruocCapNhat = Convert.ToInt32(dataGridView_ChiTietDonHang.Rows[numrow].Cells[2].Value.ToString());
-            textBox_TenMonAn.Text = dataGridView_ChiTietDonHang.Rows[numrow].Cells[1].Value.ToString();
+            textBox_TenMonAn.Text = dataGridView_ChiTietDonHang.Rows[numrow].Cells[1].Value.ToString();      
+            
+            
         }
     }
 }

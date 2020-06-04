@@ -49,7 +49,6 @@
             this.button_trang_chủ = new System.Windows.Forms.Button();
             this.button_đăng_xuất = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_theo_dõi_đơn_hàng = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.khBaiDanhGia1 = new FastFood.KHBaiDanhGia();
@@ -387,7 +386,7 @@
             this.button_đăng_xuất.Location = new System.Drawing.Point(832, 0);
             this.button_đăng_xuất.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_đăng_xuất.Name = "button_đăng_xuất";
-            this.button_đăng_xuất.Size = new System.Drawing.Size(172, 64);
+            this.button_đăng_xuất.Size = new System.Drawing.Size(172, 44);
             this.button_đăng_xuất.TabIndex = 9;
             this.button_đăng_xuất.Text = " Đăng xuất";
             this.button_đăng_xuất.UseVisualStyleBackColor = true;
@@ -396,31 +395,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.panel2.Controls.Add(this.button_theo_dõi_đơn_hàng);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.button_đăng_xuất);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(205, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1004, 64);
+            this.panel2.Size = new System.Drawing.Size(1004, 44);
             this.panel2.TabIndex = 2;
-            // 
-            // button_theo_dõi_đơn_hàng
-            // 
-            this.button_theo_dõi_đơn_hàng.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_theo_dõi_đơn_hàng.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_theo_dõi_đơn_hàng.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_theo_dõi_đơn_hàng.Image = ((System.Drawing.Image)(resources.GetObject("button_theo_dõi_đơn_hàng.Image")));
-            this.button_theo_dõi_đơn_hàng.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_theo_dõi_đơn_hàng.Location = new System.Drawing.Point(400, 7);
-            this.button_theo_dõi_đơn_hàng.Name = "button_theo_dõi_đơn_hàng";
-            this.button_theo_dõi_đơn_hàng.Size = new System.Drawing.Size(235, 50);
-            this.button_theo_dõi_đơn_hàng.TabIndex = 12;
-            this.button_theo_dõi_đơn_hàng.Text = "Theo dõi đơn hàng";
-            this.button_theo_dõi_đơn_hàng.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_theo_dõi_đơn_hàng.UseVisualStyleBackColor = true;
-            this.button_theo_dõi_đơn_hàng.Click += new System.EventHandler(this.button_theo_dõi_đơn_hàng_Click);
             // 
             // label3
             // 
@@ -618,6 +600,5 @@
         private System.Windows.Forms.Button button_đồ_ăn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button button_lịch_sử_hóa_đơn;
-        private System.Windows.Forms.Button button_theo_dõi_đơn_hàng;
     }
 }

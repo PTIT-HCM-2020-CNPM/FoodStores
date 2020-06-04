@@ -201,30 +201,33 @@ namespace FastFood
         }
 
         private void Button_XuatHoaDon_Click(object sender, EventArgs e)
-        {         
-            String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='" + timMaDonChoXuatHoaDon + "'" ;
-            dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            //
-            //
+        {                  
             TextWriter writer = new StreamWriter(@"C:\Users\ASUS\Desktop\txt\text.txt");
+            if (dataGridView_ChiTietDonHang.Rows.Count > 0)
+            {
+                String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='" + timMaDonChoXuatHoaDon + "'";
+                dataGridView_DanhSachDonHang.DataSource = DataProvider.Instance.ExecuteQuery(query);
 
-            for (int i = 0; i < dataGridView_DanhSachDonHang.Columns.Count; i++)
-            {
-                writer.Write("\t" + dataGridView_DanhSachDonHang.Rows[0].Cells[i].Value.ToString() + "\t" + "|");
-                writer.WriteLine("");
-                writer.WriteLine("----------------------------------------------------------------");
-            }
-            for (int i = 0; i < dataGridView_ChiTietDonHang.Rows.Count; i++)
-            {
-                for (int j = 0; j < dataGridView_ChiTietDonHang.Columns.Count; j++)
+                for (int i = 0; i < dataGridView_DanhSachDonHang.Columns.Count; i++)
                 {
-                    writer.Write("\t" + dataGridView_ChiTietDonHang.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    writer.Write("\t" + dataGridView_DanhSachDonHang.Rows[0].Cells[i].Value.ToString() + "\t" + "|");
+                    writer.WriteLine("");
+                    writer.WriteLine("----------------------------------------------------------------");
                 }
-                writer.WriteLine("");
-                writer.WriteLine("----------------------------------------------------------------");
+                for (int i = 0; i < dataGridView_ChiTietDonHang.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView_ChiTietDonHang.Columns.Count; j++)
+                    {
+                        writer.Write("\t" + dataGridView_ChiTietDonHang.Rows[i].Cells[j].Value.ToString() + "\t" + "|");
+                    }
+                    writer.WriteLine("");
+                    writer.WriteLine("----------------------------------------------------------------");
+                }
+                MessageBox.Show("Đã xuất hóa đơn");
             }
+            else
+                MessageBox.Show("Vui Lòng chọn hóa đơn xuất");
             writer.Close();
-            MessageBox.Show("Đã xuất hóa đơn");
         }
     }
 }

@@ -13,7 +13,6 @@ namespace FastFood
     public partial class FormKhachHang : System.Windows.Forms.Form
     {
         private string numCus;
-        //private string billNum;
         public static List<DataRow> GioHang = new List<DataRow>();
         public FormKhachHang(string numberPCustomer)
         {
@@ -91,7 +90,8 @@ namespace FastFood
         }
         //GIỎ HÀNG
         private void button_giỏ_hàng_Click(object sender, EventArgs e)
-        {          
+        {
+            
             giohang1.BringToFront();
             giohang1.Giohang_Load(null, EventArgs.Empty);           
         }
@@ -136,12 +136,7 @@ namespace FastFood
         {
             khBaiDanhGia1.BringToFront();
         }
-        //Theo dõi đơn hàng
-        private void button_theo_dõi_đơn_hàng_Click(object sender, EventArgs e)
-        {
-            KHKiemtradonhang kHKiemtradonhang = new KHKiemtradonhang();
-            kHKiemtradonhang.numCus = numCus;
-            kHKiemtradonhang.ShowDialog();
-        }
+
+       
     }
 }

@@ -84,8 +84,8 @@ namespace FastFood
 
             if (timMon != "")
             {
-                string maCuaHang = dataGridView_DanhSachMonAn.Rows[0].Cells[0].Value.ToString();
-                String query = "select CUA_HANG.[MÃ CỬA HÀNG] , MON_AN.[MÃ MÓN ĂN] , MON_AN.[TÊN MÓN ĂN] , MON_AN.[GIÁ TIỀN] , MON_AN_CUA_HANG.[SỐ LƯỢNG] from MON_AN, MON_AN_CUA_HANG, CUA_HANG where  MON_AN_CUA_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] and MON_AN_CUA_HANG.[MÃ CỬA HÀNG] = CUA_HANG.[MÃ CỬA HÀNG] and MON_AN.[TÊN MÓN ĂN] like '%"+timMon+"%' and CUA_HANG.[MÃ CỬA HÀNG] ='"+maCuaHang+"' ";
+                string maCuaHang = layCuaHangHienTai;//dataGridView_DanhSachMonAn.Rows[0].Cells[0].Value.ToString();
+                String query = "select CUA_HANG.[MÃ CỬA HÀNG] , MON_AN.[MÃ MÓN ĂN] , MON_AN.[TÊN MÓN ĂN] , MON_AN.[GIÁ TIỀN] , MON_AN_CUA_HANG.[SỐ LƯỢNG] from MON_AN, MON_AN_CUA_HANG, CUA_HANG where  MON_AN_CUA_HANG.[MÃ MÓN ĂN] = MON_AN.[MÃ MÓN ĂN] and MON_AN_CUA_HANG.[MÃ CỬA HÀNG] = CUA_HANG.[MÃ CỬA HÀNG] and MON_AN.[TÊN MÓN ĂN] like N'%"+timMon+"%' and CUA_HANG.[MÃ CỬA HÀNG] ='"+maCuaHang+"' ";
                 dataGridView_DanhSachMonAn.DataSource = DataProvider.Instance.ExecuteQuery(query);
             }
             else

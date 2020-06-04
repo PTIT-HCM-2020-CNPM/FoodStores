@@ -18,7 +18,7 @@ namespace FastFood.DAL_DataLayer
         //DESKTOP-PGRM0OK hoa
         //DESKTOP-4KQ12ML: VA
         //DESKTOP-MUJKC6P: HẢI
-        private String connectionStr = "Data Source=DESKTOP-4KQ12ML;Initial Catalog=CHUOICUAHANGDOAN-new;Integrated Security=True";
+        private String connectionStr = "Data Source=DESKTOP-PGRM0OK;Initial Catalog=CHUOICUAHANGDOAN;Integrated Security=True";
 
         public static DataProvider Instance {
             get {
@@ -99,8 +99,8 @@ namespace FastFood.DAL_DataLayer
 
                 //mở kết nối để lấy dữ liệu
                 connection.Open();
-                //try
-                //{
+                try
+                {
                     SqlCommand command = new SqlCommand(query, connection);//lệnh thực thi câu truy vấn tại kết nối "connection"
 
                 if (parameter != null)
@@ -118,11 +118,11 @@ namespace FastFood.DAL_DataLayer
                 }
 
                 data = command.ExecuteNonQuery();//số lần thêm thành công
-                //}
-                //catch
-                //{
-                //    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
-                //}
+                }
+                catch
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Kiểm tra lại!", "Thông báo", MessageBoxButtons.OK);
+                }
                 //đóng kết nối sql để tránh việc quá nhiều dữ liệu cùng một lúc đổ vê
                 connection.Close();
             }
