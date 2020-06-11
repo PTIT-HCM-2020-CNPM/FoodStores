@@ -24,24 +24,8 @@ namespace FastFood
         {
             //câu truy vấn chọn toàn bộ tài khoản nvch
             String query = "select * from dbo.CUA_HANG";
-
-
             // đưa data vào bảng dataGridView qua biến chọn nguồn data
             dataGridView_cửa_hàng.DataSource = DataProvider.Instance.ExecuteQuery(query);
-        }
-        private void dataGridView_cửa_hàng_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void NVQLCuaHang_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
         //2.THÊM CỬA HÀNG
 

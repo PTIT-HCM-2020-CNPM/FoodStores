@@ -14,7 +14,7 @@ namespace FastFood
 {
     public partial class MonAn : UserControl
     {
-
+        public string storeNum;
         public string TypeMonAn = "";
         public MonAn(string TypeMonAn)
         {
@@ -33,7 +33,7 @@ namespace FastFood
 
             foreach (DataRow item in result.Rows)
             {
-                int i = 2;
+                
                 PictureBox pictureBox1 = new PictureBox()
                 {
                     Dock = DockStyle.Top,
@@ -69,6 +69,19 @@ namespace FastFood
                     TabIndex = 2,
                     Text = item["GIÁ TIỀN"].ToString()
                 };
+                Label label3 = new Label()
+                {
+                    AutoSize = true,
+                    Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold))), System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                    ForeColor= Color.Red,
+                    Location = new System.Drawing.Point(0, 178),
+                    Margin = new Padding(2, 0, 2, 0),
+                    Name = "label3",
+                    Size = new System.Drawing.Size(58, 17),
+                    TabIndex = 3,
+                    Text = "Hết hàng",
+                    Visible = false
+                };
                 Button button1 = new Button()
                 {
                     FlatStyle = FlatStyle.Flat,
@@ -77,11 +90,21 @@ namespace FastFood
                     Margin = new Padding(2),
                     Name = "button1",
                     Size = new System.Drawing.Size(101, 35),
-                    TabIndex = 3,
+                    TabIndex = 4,
                     Text = "Đặt hàng",
                     UseVisualStyleBackColor = true
                 };
-                button1.Click += new EventHandler((sender, EventArgs) => { AddCart(sender, EventArgs, item); });
+                button1.Click += new EventHandler((sender, EventArgs) => 
+                {
+                    if(CheckAmountFood(storeNum,item["TÊN MÓN ĂN"].ToString()))
+                    {
+                        AddCart(sender, EventArgs, item);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Món ăn này tạm thời hết hàng,xin quý khách chọn món khác!");
+                    }                  
+                });
                 Panel panel1 = new Panel();
 
                 panel1.SuspendLayout();
@@ -91,9 +114,10 @@ namespace FastFood
                 // panel1
                 // 
                 panel1.Controls.Add(button1);
+                panel1.Controls.Add(label3);
                 panel1.Controls.Add(label2);
                 panel1.Controls.Add(label1);
-                panel1.Controls.Add(pictureBox1);
+                panel1.Controls.Add(pictureBox1);               
                 panel1.Location = new System.Drawing.Point(2, 2);
                 panel1.Margin = new Padding(2);
                 panel1.Name = "panel1";
@@ -114,7 +138,13 @@ namespace FastFood
         {
             FormKhachHang.GioHang.Add(item);
         }
-
+        //kiếm tra số lượng món ăn tại cửa hàng > 0 ?
+        private bool CheckAmountFood(string storeNumber, string foodName)
+        {
+            DataRow rowAmount = FoodDAO.Instance.GetAmountFoodStore(storeNumber, foodName).Rows[0];
+            int amount = Convert.ToInt32(rowAmount["SỐ LƯỢNG"]);
+            return amount > 0;
+        }
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 

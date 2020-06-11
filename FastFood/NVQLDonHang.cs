@@ -97,12 +97,9 @@ namespace FastFood
         ///
 
         ///LIÊN TỤC CẬP NHẬT BẢNG ĐƠN HÀNG SAU 2 PHÚT 
-        int i = 0;
         private void timer_thời_gian_reload_Tick(object sender, EventArgs e)
         {
-            LoadBillList();
-            i++;
-            label1.Text = i.ToString();
+            LoadBillList();        
         }
 
         private void NVQLDonHang_Load(object sender, EventArgs e)

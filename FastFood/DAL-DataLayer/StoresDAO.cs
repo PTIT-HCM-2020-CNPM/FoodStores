@@ -25,7 +25,13 @@ namespace FastFood.DAL_DataLayer
         }
 
         internal static StoresDAO Instance1 { get => instance; set => instance = value; }
-
+        //CHỌN TOÀN BỘ MÃ CỬA HÀNG
+        public DataTable SelectFoodNum()
+        {
+            string query = String.Format("select [MÃ CỬA HÀNG] from CUA_HANG");
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
         //THÊM CỬA HÀNG
         public bool InsertStore(string storeNumber, string address, int status)
         {

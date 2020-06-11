@@ -109,14 +109,14 @@ namespace FastFood
             string maNhanVien = layMaNhanVienHienTai;
             int soDHHienTai = BillDAO.Instance.GetNumberOfRowSQLData(maCuaHang);
             string MaDonHang = maCuaHang+"DH"+(soDHHienTai+1);
-            string date = DateTime.Now.ToString();
-
+            DateTime dateNow = DateTime.Now;
+            string date = dateNow.ToString("yyyy/MM/dd");
 
             if (textBox_MaDonHang.Text == "")
             {
                 textBox_MaDonHang.Text = MaDonHang;
                 layMaDonHangHienTai = textBox_MaDonHang.Text;
-                String query = "insert into DON_DAT_HANG ([MÃ ĐƠN HÀNG],[MÃ CỬA HÀNG],[MÃ NHÂN VIÊN],[MÃ KHÁCH HÀNG(SĐT)],[TỔNG TIỀN],NGÀY,[ĐỊA CHỈ],[TRẠNG THÁI ĐƠN HÀNG]) values('" + MaDonHang + "', '" + layCuaHangHienTai + "', '" + layMaNhanVienHienTai + "', '0000000000', '0', '"+date+"', '', '0')";
+                String query = String.Format("insert into DON_DAT_HANG ([MÃ ĐƠN HÀNG],[MÃ CỬA HÀNG],[MÃ NHÂN VIÊN],[MÃ KHÁCH HÀNG(SĐT)],[TỔNG TIỀN],NGÀY,[ĐỊA CHỈ],[TRẠNG THÁI ĐƠN HÀNG]) values('{0}', '{1}', '{2}', '0000000000', 0, '{3}','', 2)",MaDonHang,maCuaHang,maNhanVien,date);
                 DataProvider.Instance.ExecuteQuery(query);
                 MessageBox.Show("Tạo mới thành công", "Thông Báo", MessageBoxButtons.OK);
             }
@@ -174,7 +174,7 @@ namespace FastFood
             {
                 int soLuong = Convert.ToInt32(textBox_SoLuong.Text);
                 string maDonHang = textBox_MaDonHang.Text;
-            
+                string tenMonAn = textBox_TenMonAn.Text;
                 if (maDonHang != "")
                 {
                     if (MessageBox.Show("thêm món này", "Thông Báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -182,7 +182,7 @@ namespace FastFood
                         int soluongTrongKho = NVCHDatTrucTiepDAO.Instance.kiemTraSoLuongMonAn(layCuaHangHienTai, maMonAn);
                         if (soluongTrongKho >= soLuong)
                         {
-                            if (NVCHDatTrucTiepDAO.Instance.themMonAn(maDonHang, maMonAn, soLuong))
+                            if (NVCHDatTrucTiepDAO.Instance.themMonAn(maDonHang, maMonAn,tenMonAn, soLuong))
                             {
                                 tongTien = tongTien + (tienMotMon * soLuong);
                                 textBox_TongTien.Text = tongTien.ToString();

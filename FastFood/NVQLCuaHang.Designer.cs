@@ -237,7 +237,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(578, 51);
             this.panel4.TabIndex = 4;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // textBox_mã_cửa_hàng
             // 
@@ -274,7 +273,6 @@
             this.dataGridView_cửa_hàng.RowTemplate.Height = 24;
             this.dataGridView_cửa_hàng.Size = new System.Drawing.Size(239, 377);
             this.dataGridView_cửa_hàng.TabIndex = 0;
-            this.dataGridView_cửa_hàng.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_cửa_hàng_CellContentClick);
             this.dataGridView_cửa_hàng.SelectionChanged += new System.EventHandler(this.dataGridView_cửa_hàng_SelectionChanged);
             // 
             // panel3
@@ -298,7 +296,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "NVQLCuaHang";
             this.Size = new System.Drawing.Size(1070, 486);
-            this.Load += new System.EventHandler(this.NVQLCuaHang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

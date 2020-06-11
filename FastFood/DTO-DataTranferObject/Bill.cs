@@ -84,7 +84,7 @@ namespace FastFood.DTO_DataTranferObject
             this.employeeNumber = row["MÃ NHÂN VIÊN"].ToString();
             this.customerNumber = row["MÃ KHÁCH HÀNG(SĐT)"].ToString();
             this.totalMoney = row["TỔNG TIỀN"].ToString();
-            this.date = row["NGÀY"].ToString(); ;
+            this.date = row["NGÀY"].ToString();
             this.address = row["ĐỊA CHỈ"].ToString();
             this.status = (int)row["TRẠNG THÁI ĐƠN HÀNG"];
         }

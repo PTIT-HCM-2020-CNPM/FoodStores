@@ -107,7 +107,6 @@
             // 
             resources.ApplyResources(this.textBox__qltk_tên_tài_khoản, "textBox__qltk_tên_tài_khoản");
             this.textBox__qltk_tên_tài_khoản.Name = "textBox__qltk_tên_tài_khoản";
-            this.textBox__qltk_tên_tài_khoản.TextChanged += new System.EventHandler(this.textBox__qltk_tên_tài_khoản_TextChanged);
             // 
             // label_qltk_tên_tài_khoản
             // 

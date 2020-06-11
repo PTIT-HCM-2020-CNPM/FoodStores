@@ -46,6 +46,8 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.Controls.Add(this.textBox_mật_khẩu_mới);
             this.panel5.Controls.Add(this.label_MatKhauMoi);
             this.panel5.Location = new System.Drawing.Point(78, 159);
@@ -79,10 +81,11 @@
             // 
             // button_Luu
             // 
+            this.button_Luu.BackColor = System.Drawing.Color.Maroon;
             this.button_Luu.FlatAppearance.BorderSize = 0;
             this.button_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_Luu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Luu.ForeColor = System.Drawing.Color.Maroon;
+            this.button_Luu.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Luu.ForeColor = System.Drawing.Color.White;
             this.button_Luu.Image = ((System.Drawing.Image)(resources.GetObject("button_Luu.Image")));
             this.button_Luu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button_Luu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -92,11 +95,13 @@
             this.button_Luu.Size = new System.Drawing.Size(147, 52);
             this.button_Luu.TabIndex = 4;
             this.button_Luu.Text = "Lưu";
-            this.button_Luu.UseVisualStyleBackColor = true;
+            this.button_Luu.UseVisualStyleBackColor = false;
             this.button_Luu.Click += new System.EventHandler(this.button_Luu_Click);
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.textBox_nhập_lại_mật_khẩu_mới);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(78, 246);
@@ -130,6 +135,8 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.textBox_mật_khẩu_cũ);
             this.panel2.Controls.Add(this.label_mật_khẩu_cũ);
             this.panel2.Location = new System.Drawing.Point(78, 76);

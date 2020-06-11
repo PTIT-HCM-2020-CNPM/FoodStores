@@ -15,7 +15,7 @@ namespace FastFood
 {
     public partial class FormKHDiaChiGiaoHang : System.Windows.Forms.Form
     {
-        public int totalPayment;
+        public int totalPayment; public int storeIndex;
         public FormKHDiaChiGiaoHang(string numberPhone)
         {
             InitializeComponent();
@@ -53,10 +53,11 @@ namespace FastFood
         
         private void FormKHDiaChiGiaoHang_Load(object sender, EventArgs e)
         {
-            
+            comboBox_chọn_cửa_hàng.SelectedIndex = storeIndex;
         }
         //
         //Thêm đơn hàng tử khách hàng
+        int kindBill;
         private void button_xác_nhận_Click(object sender, EventArgs e)
         {
             string storeNumber = comboBox_chọn_cửa_hàng.SelectedValue.ToString();
@@ -67,7 +68,7 @@ namespace FastFood
             DateTime dateNow = DateTime.Now;
             string address = textBox_địa_chỉ_giao_hàng.Text;
             string date = dateNow.ToString("yyyy/MM/dd");
-            int kindBill = 0;
+            
             if (textBox_địa_chỉ_giao_hàng.Text == "")
             {
                 MessageBox.Show("Vui lòng điền địa chỉ!", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -78,15 +79,25 @@ namespace FastFood
             }
             else if (BillDAO.Instance.InsertBillByCustomer(billNumber, storeNumber, customerNumber, totalBill, date, address, kindBill))
             {
-                string foodNam;
-                int foodMount;
+                string foodNam;string foodNum; string foodID;
+                int foodMount; int newAmount;
                 foreach (DataGridViewRow row in dataGridView_đơn_hàng.Rows)
                 {
                     foodNam= dataGridView_đơn_hàng.Rows[row.Index].Cells[0].Value.ToString();
-                    foodMount = Convert.ToInt32(dataGridView_đơn_hàng.Rows[row.Index].Cells[1].Value.ToString());
-                    BillDAO.Instance.InsertBillIfByCus(billNumber, foodNam, foodMount);
-                }              
+                    foodMount = Convert.ToInt32(dataGridView_đơn_hàng.Rows[row.Index].Cells[2].Value.ToString());
+                    DataRow rowFoodID= FoodDAO.Instance.GetFoodID(foodNam).Rows[0];
+                    foodID = rowFoodID["MÃ MÓN ĂN"].ToString();
+                    BillDAO.Instance.InsertBillIfByCus(billNumber ,foodID ,foodNam, foodMount);
+                    //trừ số lượng món khách hàng đặt tại bảng csdl món ăn cửa hàng
+                    DataRow rowAmount = FoodDAO.Instance.GetAmountFoodStore(storeNumber, foodNam).Rows[0];
+                    newAmount = Convert.ToInt32(rowAmount["SỐ LƯỢNG"]) - foodMount; 
+                    foodNum = rowAmount["MÃ MÓN ĂN"].ToString();
+                    FoodDAO.Instance.UpdateAmountFood(storeNumber, foodNum, newAmount);
+                    //
+                }
+                //
                 MessageBox.Show("Đơn hàng đã gửi tới cửa hàng!", "Thông báo");
+                this.Close();
             }
             else
             {
@@ -98,12 +109,17 @@ namespace FastFood
         {
             feeDelivery();
             textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
+            kindBill = 0;
+            textBox_địa_chỉ_giao_hàng.Enabled = true;
         }
 
         private void radioButton_lấy_trực_tiếp_CheckedChanged(object sender, EventArgs e)
         {
             feeDelivery();
             textBox_tổng_tiền.Text = (Convert.ToInt32(totalPayment.ToString()) + Convert.ToInt32(textBox_phí.Text.ToString())).ToString();
+            kindBill = 2;
+            textBox_địa_chỉ_giao_hàng.Enabled = false;
+            textBox_địa_chỉ_giao_hàng.Text = "";
         }
         //
     }

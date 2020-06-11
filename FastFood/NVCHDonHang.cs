@@ -25,7 +25,12 @@ namespace FastFood
             get { return label_hienCuaHangUC.Text; }
             set { label_hienCuaHangUC.Text = value; }
         }
-
+        string maNhanVien;
+        public string layMaNhanVien
+        {
+            get { return maNhanVien; }
+            set { maNhanVien = value; }
+        }
         public void hienDanhSachDonHang(string cuaHang)
         {
 
@@ -147,6 +152,7 @@ namespace FastFood
                 trangthai = 1;
                 if (DanhSachDonHangDAO.Instance.capNhatTrangThaiDonHang(trangthai, maDonHang))
                 {
+                    DanhSachDonHangDAO.Instance.capNhatNhanVienNhanDon(layMaNhanVien, maDonHang);
                     MessageBox.Show("Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK);
                     hienDanhSachDonHang(layCuaHangHienTai);
                 }
@@ -158,6 +164,7 @@ namespace FastFood
                 trangthai = 2;
                 if (DanhSachDonHangDAO.Instance.capNhatTrangThaiDonHang(trangthai, maDonHang))
                 {
+                    DanhSachDonHangDAO.Instance.capNhatNhanVienNhanDon(layMaNhanVien, maDonHang);
                     MessageBox.Show("Cập nhật thành công", "Thông Báo", MessageBoxButtons.OK);
                     hienDanhSachDonHang(layCuaHangHienTai);
                 }
@@ -166,6 +173,7 @@ namespace FastFood
             }
             else
                 MessageBox.Show("Đơn hàng đang giao không thể đổi trạng thái !", "Thông Báo", MessageBoxButtons.OK);
+
 
 
         }
@@ -202,7 +210,7 @@ namespace FastFood
 
         private void Button_XuatHoaDon_Click(object sender, EventArgs e)
         {                  
-            TextWriter writer = new StreamWriter(@"C:\Users\ASUS\Desktop\txt\text.txt");
+            TextWriter writer = new StreamWriter(@"C:\Users\Admin\Desktop\Hoadon\Hoadon.txt");
             if (dataGridView_ChiTietDonHang.Rows.Count > 0)
             {
                 String query = "select * from DON_DAT_HANG where DON_DAT_HANG.[MÃ ĐƠN HÀNG]='" + timMaDonChoXuatHoaDon + "'";

@@ -16,6 +16,7 @@ namespace FastFood
         public FormNVQL()
         {
             InitializeComponent();
+           
             panel_chọn.Height = button_trang_chủ.Height;
             panel_chọn.Top = button_trang_chủ.Top;
             hinhtrangchu1.BringToFront();
@@ -23,6 +24,7 @@ namespace FastFood
 
         private void button_trang_chủ_Click(object sender, EventArgs e)
         {
+           
             panel_chọn.Height = button_trang_chủ.Height;
             panel_chọn.Top = button_trang_chủ.Top;
             hinhtrangchu1.BringToFront();
@@ -30,6 +32,7 @@ namespace FastFood
 
         private void button_tạo_tài_khoản_Click(object sender, EventArgs e)
         {
+           
             panel_chọn.Height = button_tạo_tài_khoản.Height;
             panel_chọn.Top = button_tạo_tài_khoản.Top;
             nvqlQuanLyTaiKhoan1.BringToFront();
@@ -37,18 +40,24 @@ namespace FastFood
 
         private void button_đơn_hàng_Click(object sender, EventArgs e)
         {
+            panel_chọn.Visible = true;
             panel_chọn.Height = button_đơn_hàng.Height;
             panel_chọn.Top = button_đơn_hàng.Top;
             nvqlDonHang1.BringToFront();
         }
 
         private void button_cửa_hàng_Click(object sender, EventArgs e)
-        {
+        {       
             panel_chọn.Height = button_cửa_hàng.Height;
             panel_chọn.Top = button_cửa_hàng.Top;
             nvqlCuaHang1.BringToFront();
         }
-
+        private void button_món_ăn_Click(object sender, EventArgs e)
+        {
+            panel_chọn.Height = button_món_ăn.Height;
+            panel_chọn.Top = button_món_ăn.Top;
+            nvqlMonAn1.BringToFront();
+        }
         private void button_doanh_thu_Click(object sender, EventArgs e)
         {
             panel_chọn.Height = button_doanh_thu.Height;
@@ -91,11 +100,13 @@ namespace FastFood
         }
         //Nút mật khẩu
         private void button_mật_khẩu_Click(object sender, EventArgs e)
-        {
+        {     
             panel_chọn.Height = button_mật_khẩu.Height;
             panel_chọn.Top = button_mật_khẩu.Top;
             nvqlMatKhau1.userName = userName;
             nvqlMatKhau1.BringToFront();
         }
+
+       
     }
 }

@@ -137,14 +137,14 @@ namespace FastFood.DAL_DataLayer
             return result > 0;
         }
         //TÌM KIẾM TÀI KHOẢN
-        public List<EmployeeAccount> SearchAccountByName(string employeeNumber)
+        public List<EmployeeAccount> SearchAccountByName(string strSearch)
         {
             List<EmployeeAccount> list = new List<EmployeeAccount>();
             string query = String.Format("select t.[TÊN TÀI KHOẢN] as [TÊN TÀI KHOẢN(MÃ NHÂN VIÊN)],t.[MẬT KHẨU] as [MẬT KHẨU],n.[MÃ CỬA HÀNG] as [MÃ CỬA HÀNG],n.[HỌ TÊN NHÂN VIÊN] as [HỌ TÊN NHÂN VIÊN]," +
                 "n.[NĂM SINH] as [NĂM SINH],n.[GIỚI TÍNH] as [GIỚI TÍNH],n.[ĐỊA CHỈ] as [ĐỊA CHỈ],n.[SỐ ĐIỆN THOẠI] as [SỐ ĐIỆN THOẠI]" +
                 "from TAI_KHOAN as t , NHAN_VIEN as n " +
                 "where t.[TÊN TÀI KHOẢN] = n.[MÃ NHÂN VIÊN]" +
-                "and t.[TÊN TÀI KHOẢN] like '{0}%'", employeeNumber);
+                "and (t.[TÊN TÀI KHOẢN] like '{0}%' or n.[HỌ TÊN NHÂN VIÊN] like N'{1}%' or n.[MÃ CỬA HÀNG] like '{2}%' )", strSearch, strSearch,strSearch);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach(DataRow item in data.Rows)

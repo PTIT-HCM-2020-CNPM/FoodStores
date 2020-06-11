@@ -89,7 +89,6 @@ namespace FastFood
         ///////////////////
 
         //THÊM TÀI KHOẢN NHÂN VIÊN: Thêm tài khoản -> thêm nhân viên
-
         public bool InsertEmployee(string accountName, string password, int kindAccess,
              string numberStore, string name, int birthYear, string gender, string address, string numberPhone)
         {
@@ -134,16 +133,6 @@ namespace FastFood
             
         }
         ////////////////
-
-        private void textBox__qltk_tên_tài_khoản_TextChanged(object sender, EventArgs e)
-        {
-            //string accountNumber = textBox__qltk_tên_tài_khoản.Text;
-            //if (AccountDAO.Instance.CheckDuplicateAccount(accountNumber))
-            //{
-            //    MessageBox.Show("Tên tài khoản vừa nhập bị trùng lặp! Vui lòng nhập lại!", "Thông báo", MessageBoxButtons.OK);
-            //}
-        }
-
         //RESET TRƯỜNG DỮ LIỆU + LOAD BẢNG
         private void button_reset_Click(object sender, EventArgs e)
         {
@@ -221,9 +210,9 @@ namespace FastFood
             }
         }
         //TÌM GẦN ĐÚNG TÀI KHOẢN
-        List<EmployeeAccount> SearchAcountByName (string employeeNumber)
+        List<EmployeeAccount> SearchAcountByName (string strSearch)
         {
-            List<EmployeeAccount> listAccount = AccountDAO.Instance.SearchAccountByName(employeeNumber);
+            List<EmployeeAccount> listAccount = AccountDAO.Instance.SearchAccountByName(strSearch);
             return listAccount;
         }
 

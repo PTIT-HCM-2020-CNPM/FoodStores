@@ -28,5 +28,12 @@ namespace FastFood.DAL_DataLayer
 
             return result > 0;
         }
+        public bool capNhatNhanVienNhanDon(string maNhanVien, string maDonHang)
+        {
+            string query = String.Format("update DON_DAT_HANG set [MÃ NHÂN VIÊN] = '" + maNhanVien + "' where DON_DAT_HANG.[MÃ ĐƠN HÀNG] = '" + maDonHang + "'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }

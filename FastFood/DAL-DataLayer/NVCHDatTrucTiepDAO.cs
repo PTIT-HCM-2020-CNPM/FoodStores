@@ -38,9 +38,9 @@ namespace FastFood.DAL_DataLayer
             return data.Rows.Count;
         }
 
-        public bool themMonAn(string maDonHang , string maMonAn , int soLuong)
+        public bool themMonAn(string maDonHang , string maMonAn,string tenMonAn , int soLuong)
         {
-            string query = String.Format("insert into CHI_TIET_DON_DAT_HANG ([MÃ ĐƠN HÀNG],[MÃ MÓN ĂN],[SỐ LƯỢNG]) values('" + maDonHang + "', '" + maMonAn + "', '" + soLuong + "')");
+            string query = String.Format("insert into CHI_TIET_DON_DAT_HANG ([MÃ ĐƠN HÀNG],[MÃ MÓN ĂN],[TÊN MÓN ĂN],[SỐ LƯỢNG]) values('" + maDonHang + "', '" + maMonAn + "','"+tenMonAn+"', '" + soLuong + "')");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

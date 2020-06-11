@@ -109,19 +109,9 @@ namespace FastFood
                 Properties.Settings.Default.Save();
             }
         }
-        //Load form lấy dữ liệu tk đã nhớ điền vào tài khoản và mật khẩu
-        private void FormDangNhap_Load(object sender, EventArgs e)
-        {
-            txtUser.Text = Properties.Settings.Default.username;
-            txtPass.Text = Properties.Settings.Default.password;
-            if (Properties.Settings.Default.username == "" && Properties.Settings.Default.password == "")
-                checkBox_lưu_mật_khẩu.Checked = false;
-            else checkBox_lưu_mật_khẩu.Checked = true;
-        }
-
         bool LoginManager(string userName, string password, int kindAccess)
         {
-            return AccountDAO.Instance.LoginManager(userName,password, kindAccess);
+            return AccountDAO.Instance.LoginManager(userName, password, kindAccess);
         }
         bool LoginEmployee(string userName, string password, int kindAccess)
         {
@@ -132,6 +122,17 @@ namespace FastFood
             return AccountDAO.Instance.LoginCustomer(userName, password, kindAccess);
         }
 
+        //Load form lấy dữ liệu tk đã nhớ điền vào tài khoản và mật khẩu
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = Properties.Settings.Default.username;
+            txtPass.Text = Properties.Settings.Default.password;
+            if (Properties.Settings.Default.username == "" && Properties.Settings.Default.password == "")
+                checkBox_lưu_mật_khẩu.Checked = false;
+            else checkBox_lưu_mật_khẩu.Checked = true;
+        }
+
+       
        
     }
 }

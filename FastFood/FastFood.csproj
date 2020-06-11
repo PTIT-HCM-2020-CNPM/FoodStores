@@ -65,6 +65,7 @@
     <Compile Include="DAL-DataLayer\DanhSachDonHangDAO.cs" />
     <Compile Include="DAL-DataLayer\DanhSachMonAnDAO.cs" />
     <Compile Include="DAL-DataLayer\DataProvider.cs" />
+    <Compile Include="DAL-DataLayer\FoodDAO.cs" />
     <Compile Include="DAL-DataLayer\LichsuDAO.cs" />
     <Compile Include="DAL-DataLayer\EmployeeDAO.cs" />
     <Compile Include="DAL-DataLayer\ReviewDAO.cs" />
@@ -76,6 +77,12 @@
     <Compile Include="DTO-DataTranferObject\HistoryOrder.cs" />
     <Compile Include="DTO-DataTranferObject\Review.cs" />
     <Compile Include="DTO-DataTranferObject\Store.cs" />
+    <Compile Include="FormChoncuahang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChoncuahang.Designer.cs">
+      <DependentUpon>FormChoncuahang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDanhGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,12 @@
     <Compile Include="FormKhachHang.Designer.cs">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKHKiemtradonhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKHKiemtradonhang.Designer.cs">
+      <DependentUpon>FormKHKiemtradonhang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNVQL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,11 +143,11 @@
     <Compile Include="KHBaiDanhGia.Designer.cs">
       <DependentUpon>KHBaiDanhGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lichsudathang.cs">
+    <Compile Include="KHLichsudathang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Lichsudathang.Designer.cs">
-      <DependentUpon>Lichsudathang.cs</DependentUpon>
+    <Compile Include="KHLichsudathang.Designer.cs">
+      <DependentUpon>KHLichsudathang.cs</DependentUpon>
     </Compile>
     <Compile Include="MonAn.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +209,12 @@
     <Compile Include="NVQLQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVQLMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NVQLMonAn.Designer.cs">
+      <DependentUpon>NVQLMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +235,9 @@
     <Compile Include="KHMatKhau.Designer.cs">
       <DependentUpon>KHMatKhau.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormChoncuahang.resx">
+      <DependentUpon>FormChoncuahang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDanhGia.resx">
       <DependentUpon>FormDanhGia.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +253,9 @@
     <EmbeddedResource Include="FormKhachHang.resx">
       <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKHKiemtradonhang.resx">
+      <DependentUpon>FormKHKiemtradonhang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNVCH.resx">
       <DependentUpon>FormNVCH.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +268,8 @@
     <EmbeddedResource Include="KHBaiDanhGia.resx">
       <DependentUpon>KHBaiDanhGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lichsudathang.resx">
-      <DependentUpon>Lichsudathang.cs</DependentUpon>
+    <EmbeddedResource Include="KHLichsudathang.resx">
+      <DependentUpon>KHLichsudathang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonAn.resx">
       <DependentUpon>MonAn.cs</DependentUpon>
@@ -279,6 +304,9 @@
     <EmbeddedResource Include="NVQLQuanLyTaiKhoan.vi-VN.resx">
       <DependentUpon>NVQLQuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NVQLMonAn.resx">
+      <DependentUpon>NVQLMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,46 +338,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ImageFood\377-3777953_home-icons-facebook-home-android-app-icon-png.png" />
-    <Content Include="ImageFood\bun-bo-hue.jpg" />
-    <Content Include="ImageFood\bun-thit-nuong.jpg" />
-    <Content Include="ImageFood\bunrieu.jpg" />
-    <Content Include="ImageFood\ca-phe-cabuchino.jpg" />
-    <Content Include="ImageFood\ca-phe-espresso.jpg" />
-    <Content Include="ImageFood\ca-phe-mako.png" />
-    <Content Include="ImageFood\ca-vien-chien.jpg" />
-    <Content Include="ImageFood\carousel-1.jpg" />
-    <Content Include="ImageFood\cocacola.png" />
-    <Content Include="ImageFood\com-ga.jpg" />
-    <Content Include="ImageFood\com-tam.jpg" />
-    <Content Include="ImageFood\computer-icons-meal-food-png-favpng-CkrtdYwPNPsFigPs9hevLKixv.jpg" />
-    <Content Include="ImageFood\da-xay.jpg" />
-    <Content Include="ImageFood\delete_48px.png" />
-    <Content Include="ImageFood\exit_32px.png" />
-    <Content Include="ImageFood\fanta.jpg" />
-    <Content Include="ImageFood\ga-ran.jpg" />
-    <Content Include="ImageFood\ga-sot-me.jpg" />
-    <Content Include="ImageFood\hamburger.jpg" />
-    <Content Include="ImageFood\home_52px.png" />
-    <Content Include="ImageFood\iphone_50px.png" />
-    <Content Include="ImageFood\khoai-tay-chien.jpg" />
-    <Content Include="ImageFood\latte-machiato.jpg" />
-    <Content Include="ImageFood\new_letter_50px.png" />
-    <Content Include="ImageFood\pepsi.jpg" />
-    <Content Include="ImageFood\pizza.jpg" />
-    <Content Include="ImageFood\pizza_50px.png" />
-    <Content Include="ImageFood\sandwich.jpg" />
-    <Content Include="ImageFood\sevenup.jpg" />
-    <Content Include="ImageFood\shopping_cart_30px.png" />
-    <Content Include="ImageFood\shopping_cart_64px.png" />
-    <Content Include="ImageFood\soda_50px.png" />
-    <Content Include="ImageFood\sprite.jpg" />
-    <Content Include="ImageFood\string.jpg" />
-    <Content Include="ImageFood\thiet-ke-logo-cho-quan-tra-sua-4.jpg" />
-    <Content Include="ImageFood\touchscreen_26px.png" />
-    <Content Include="ImageFood\unchecked_checkbox_50px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

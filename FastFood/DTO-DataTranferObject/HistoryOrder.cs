@@ -24,7 +24,7 @@ namespace FastFood.DTO_DataTranferObject
         }
 
         private DateTime date;
-        public DateTime NGÀY
+        public DateTime NGÀY_ĐẶT_HÀNG
         {
             get { return date; }
             set { date = value; }

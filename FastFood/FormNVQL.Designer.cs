@@ -33,8 +33,10 @@
             this.button_đăng_xuất = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_chọn = new System.Windows.Forms.Panel();
-            this.button_doanh_thu = new System.Windows.Forms.Button();
             this.button_cửa_hàng = new System.Windows.Forms.Button();
+            this.button_món_ăn = new System.Windows.Forms.Button();
+            this.button_mật_khẩu = new System.Windows.Forms.Button();
+            this.button_doanh_thu = new System.Windows.Forms.Button();
             this.button_đơn_hàng = new System.Windows.Forms.Button();
             this.button_tạo_tài_khoản = new System.Windows.Forms.Button();
             this.button_trang_chủ = new System.Windows.Forms.Button();
@@ -43,13 +45,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_mật_khẩu = new System.Windows.Forms.Button();
+            this.nvqlMonAn1 = new FastFood.NVQLMonAn();
+            this.nvqlMatKhau1 = new FastFood.NVQLMatKhau();
             this.nvqlDonHang1 = new FastFood.NVQLDonHang();
             this.nvqlQuanLyTaiKhoan1 = new FastFood.NVQLQuanLyTaiKhoan();
             this.nvqlCuaHang1 = new FastFood.NVQLCuaHang();
             this.nvqlDoanhThu1 = new FastFood.NVQLDoanhThu();
             this.hinhtrangchu1 = new FastFood.Hinhtrangchu();
-            this.nvqlMatKhau1 = new FastFood.NVQLMatKhau();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_logo.SuspendLayout();
@@ -89,10 +91,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.button_mật_khẩu);
             this.panel2.Controls.Add(this.panel_chọn);
-            this.panel2.Controls.Add(this.button_doanh_thu);
             this.panel2.Controls.Add(this.button_cửa_hàng);
+            this.panel2.Controls.Add(this.button_món_ăn);
+            this.panel2.Controls.Add(this.button_mật_khẩu);
+            this.panel2.Controls.Add(this.button_doanh_thu);
             this.panel2.Controls.Add(this.button_đơn_hàng);
             this.panel2.Controls.Add(this.button_tạo_tài_khoản);
             this.panel2.Controls.Add(this.button_trang_chủ);
@@ -111,28 +114,6 @@
             this.panel_chọn.Name = "panel_chọn";
             this.panel_chọn.Size = new System.Drawing.Size(16, 70);
             this.panel_chọn.TabIndex = 5;
-            this.panel_chọn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_chọn_Paint);
-            // 
-            // button_doanh_thu
-            // 
-            this.button_doanh_thu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_doanh_thu.FlatAppearance.BorderSize = 0;
-            this.button_doanh_thu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_doanh_thu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button_doanh_thu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_doanh_thu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_doanh_thu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_doanh_thu.Image = ((System.Drawing.Image)(resources.GetObject("button_doanh_thu.Image")));
-            this.button_doanh_thu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_doanh_thu.Location = new System.Drawing.Point(0, 280);
-            this.button_doanh_thu.Margin = new System.Windows.Forms.Padding(4);
-            this.button_doanh_thu.Name = "button_doanh_thu";
-            this.button_doanh_thu.Size = new System.Drawing.Size(212, 70);
-            this.button_doanh_thu.TabIndex = 5;
-            this.button_doanh_thu.Text = "Doanh thu";
-            this.button_doanh_thu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_doanh_thu.UseVisualStyleBackColor = true;
-            this.button_doanh_thu.Click += new System.EventHandler(this.button_doanh_thu_Click);
             // 
             // button_cửa_hàng
             // 
@@ -145,15 +126,78 @@
             this.button_cửa_hàng.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button_cửa_hàng.Image = ((System.Drawing.Image)(resources.GetObject("button_cửa_hàng.Image")));
             this.button_cửa_hàng.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_cửa_hàng.Location = new System.Drawing.Point(0, 210);
+            this.button_cửa_hàng.Location = new System.Drawing.Point(0, 420);
             this.button_cửa_hàng.Margin = new System.Windows.Forms.Padding(4);
             this.button_cửa_hàng.Name = "button_cửa_hàng";
             this.button_cửa_hàng.Size = new System.Drawing.Size(212, 70);
-            this.button_cửa_hàng.TabIndex = 4;
+            this.button_cửa_hàng.TabIndex = 7;
             this.button_cửa_hàng.Text = "Cửa hàng";
             this.button_cửa_hàng.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_cửa_hàng.UseVisualStyleBackColor = true;
             this.button_cửa_hàng.Click += new System.EventHandler(this.button_cửa_hàng_Click);
+            // 
+            // button_món_ăn
+            // 
+            this.button_món_ăn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_món_ăn.FlatAppearance.BorderSize = 0;
+            this.button_món_ăn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_món_ăn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_món_ăn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_món_ăn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_món_ăn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_món_ăn.Image = ((System.Drawing.Image)(resources.GetObject("button_món_ăn.Image")));
+            this.button_món_ăn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_món_ăn.Location = new System.Drawing.Point(0, 350);
+            this.button_món_ăn.Margin = new System.Windows.Forms.Padding(4);
+            this.button_món_ăn.Name = "button_món_ăn";
+            this.button_món_ăn.Size = new System.Drawing.Size(212, 70);
+            this.button_món_ăn.TabIndex = 6;
+            this.button_món_ăn.Text = "Món ăn";
+            this.button_món_ăn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_món_ăn.UseVisualStyleBackColor = true;
+            this.button_món_ăn.Click += new System.EventHandler(this.button_món_ăn_Click);
+            // 
+            // button_mật_khẩu
+            // 
+            this.button_mật_khẩu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_mật_khẩu.FlatAppearance.BorderSize = 0;
+            this.button_mật_khẩu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_mật_khẩu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_mật_khẩu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_mật_khẩu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_mật_khẩu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_mật_khẩu.Image = ((System.Drawing.Image)(resources.GetObject("button_mật_khẩu.Image")));
+            this.button_mật_khẩu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_mật_khẩu.Location = new System.Drawing.Point(0, 280);
+            this.button_mật_khẩu.Margin = new System.Windows.Forms.Padding(4);
+            this.button_mật_khẩu.Name = "button_mật_khẩu";
+            this.button_mật_khẩu.Size = new System.Drawing.Size(212, 70);
+            this.button_mật_khẩu.TabIndex = 5;
+            this.button_mật_khẩu.Text = "Mật khẩu";
+            this.button_mật_khẩu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_mật_khẩu.UseVisualStyleBackColor = true;
+            this.button_mật_khẩu.Click += new System.EventHandler(this.button_mật_khẩu_Click);
+            // 
+            // button_doanh_thu
+            // 
+            this.button_doanh_thu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button_doanh_thu.FlatAppearance.BorderSize = 0;
+            this.button_doanh_thu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button_doanh_thu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.button_doanh_thu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_doanh_thu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_doanh_thu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_doanh_thu.Image = ((System.Drawing.Image)(resources.GetObject("button_doanh_thu.Image")));
+            this.button_doanh_thu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_doanh_thu.Location = new System.Drawing.Point(0, 210);
+            this.button_doanh_thu.Margin = new System.Windows.Forms.Padding(4);
+            this.button_doanh_thu.Name = "button_doanh_thu";
+            this.button_doanh_thu.Size = new System.Drawing.Size(212, 70);
+            this.button_doanh_thu.TabIndex = 4;
+            this.button_doanh_thu.Text = "Doanh thu";
+            this.button_doanh_thu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button_doanh_thu.UseVisualStyleBackColor = true;
+            this.button_doanh_thu.Click += new System.EventHandler(this.button_doanh_thu_Click);
             // 
             // button_đơn_hàng
             // 
@@ -270,6 +314,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.nvqlMonAn1);
             this.panel3.Controls.Add(this.nvqlMatKhau1);
             this.panel3.Controls.Add(this.nvqlDonHang1);
             this.panel3.Controls.Add(this.nvqlQuanLyTaiKhoan1);
@@ -282,26 +327,26 @@
             this.panel3.Size = new System.Drawing.Size(961, 541);
             this.panel3.TabIndex = 4;
             // 
-            // button_mật_khẩu
+            // nvqlMonAn1
             // 
-            this.button_mật_khẩu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button_mật_khẩu.FlatAppearance.BorderSize = 0;
-            this.button_mật_khẩu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button_mật_khẩu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button_mật_khẩu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_mật_khẩu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_mật_khẩu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button_mật_khẩu.Image = ((System.Drawing.Image)(resources.GetObject("button_mật_khẩu.Image")));
-            this.button_mật_khẩu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_mật_khẩu.Location = new System.Drawing.Point(0, 350);
-            this.button_mật_khẩu.Margin = new System.Windows.Forms.Padding(4);
-            this.button_mật_khẩu.Name = "button_mật_khẩu";
-            this.button_mật_khẩu.Size = new System.Drawing.Size(212, 70);
-            this.button_mật_khẩu.TabIndex = 6;
-            this.button_mật_khẩu.Text = "Mật khẩu";
-            this.button_mật_khẩu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button_mật_khẩu.UseVisualStyleBackColor = true;
-            this.button_mật_khẩu.Click += new System.EventHandler(this.button_mật_khẩu_Click);
+            this.nvqlMonAn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvqlMonAn1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvqlMonAn1.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nvqlMonAn1.ForeColor = System.Drawing.Color.Black;
+            this.nvqlMonAn1.Location = new System.Drawing.Point(0, 0);
+            this.nvqlMonAn1.Margin = new System.Windows.Forms.Padding(4);
+            this.nvqlMonAn1.Name = "nvqlMonAn1";
+            this.nvqlMonAn1.Size = new System.Drawing.Size(961, 541);
+            this.nvqlMonAn1.TabIndex = 13;
+            // 
+            // nvqlMatKhau1
+            // 
+            this.nvqlMatKhau1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.nvqlMatKhau1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nvqlMatKhau1.Location = new System.Drawing.Point(0, 0);
+            this.nvqlMatKhau1.Name = "nvqlMatKhau1";
+            this.nvqlMatKhau1.Size = new System.Drawing.Size(961, 541);
+            this.nvqlMatKhau1.TabIndex = 11;
             // 
             // nvqlDonHang1
             // 
@@ -360,15 +405,6 @@
             this.hinhtrangchu1.TabIndex = 6;
             this.hinhtrangchu1.Load += new System.EventHandler(this.hinhtrangchu1_Load);
             // 
-            // nvqlMatKhau1
-            // 
-            this.nvqlMatKhau1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.nvqlMatKhau1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.nvqlMatKhau1.Location = new System.Drawing.Point(0, 0);
-            this.nvqlMatKhau1.Name = "nvqlMatKhau1";
-            this.nvqlMatKhau1.Size = new System.Drawing.Size(961, 541);
-            this.nvqlMatKhau1.TabIndex = 11;
-            // 
             // FormNVQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -420,5 +456,7 @@
         private System.Windows.Forms.Button button_đăng_xuất;
         private System.Windows.Forms.Button button_mật_khẩu;
         private NVQLMatKhau nvqlMatKhau1;
+        private System.Windows.Forms.Button button_món_ăn;
+        private NVQLMonAn nvqlMonAn1;
     }
 }

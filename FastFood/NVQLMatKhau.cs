@@ -42,7 +42,7 @@ namespace FastFood
             //    MessageBox.Show("Mời nhập lại mật khẩu mới!", "Thông báo", MessageBoxButtons.OK);
             //}
         }
-
+        //Đổi mật khẩu tài khoản nhân viên quản lý
         private void button_Luu_Click(object sender, EventArgs e)
         {
             string oldPass = textBox_mật_khẩu_cũ.Text;

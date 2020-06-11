@@ -41,9 +41,9 @@
             this.button_xác_nhận = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView_đơn_hàng = new System.Windows.Forms.DataGridView();
-            this.TENMONAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GIATIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label_chi_tiết_đơn_hàng = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -113,12 +113,12 @@
             // label_hình_thức_đặt
             // 
             this.label_hình_thức_đặt.AutoSize = true;
-            this.label_hình_thức_đặt.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_hình_thức_đặt.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_hình_thức_đặt.ForeColor = System.Drawing.Color.Maroon;
             this.label_hình_thức_đặt.Location = new System.Drawing.Point(20, 9);
             this.label_hình_thức_đặt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_hình_thức_đặt.Name = "label_hình_thức_đặt";
-            this.label_hình_thức_đặt.Size = new System.Drawing.Size(206, 28);
+            this.label_hình_thức_đặt.Size = new System.Drawing.Size(204, 26);
             this.label_hình_thức_đặt.TabIndex = 1;
             this.label_hình_thức_đặt.Text = "Hình thức đặt hàng";
             // 
@@ -134,20 +134,20 @@
             // label_địa_chỉ
             // 
             this.label_địa_chỉ.AutoSize = true;
-            this.label_địa_chỉ.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_địa_chỉ.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_địa_chỉ.ForeColor = System.Drawing.Color.Maroon;
             this.label_địa_chỉ.Location = new System.Drawing.Point(20, 7);
             this.label_địa_chỉ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_địa_chỉ.Name = "label_địa_chỉ";
-            this.label_địa_chỉ.Size = new System.Drawing.Size(83, 28);
+            this.label_địa_chỉ.Size = new System.Drawing.Size(184, 26);
             this.label_địa_chỉ.TabIndex = 1;
-            this.label_địa_chỉ.Text = "Địa chỉ";
+            this.label_địa_chỉ.Text = "Địa chỉ giao hàng";
             // 
             // textBox_địa_chỉ_giao_hàng
             // 
             this.textBox_địa_chỉ_giao_hàng.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox_địa_chỉ_giao_hàng.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_địa_chỉ_giao_hàng.Location = new System.Drawing.Point(200, 4);
+            this.textBox_địa_chỉ_giao_hàng.Location = new System.Drawing.Point(218, 6);
             this.textBox_địa_chỉ_giao_hàng.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_địa_chỉ_giao_hàng.Name = "textBox_địa_chỉ_giao_hàng";
             this.textBox_địa_chỉ_giao_hàng.Size = new System.Drawing.Size(334, 31);
@@ -167,7 +167,7 @@
             this.comboBox_chọn_cửa_hàng.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.comboBox_chọn_cửa_hàng.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_chọn_cửa_hàng.FormattingEnabled = true;
-            this.comboBox_chọn_cửa_hàng.Location = new System.Drawing.Point(200, 4);
+            this.comboBox_chọn_cửa_hàng.Location = new System.Drawing.Point(218, 4);
             this.comboBox_chọn_cửa_hàng.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_chọn_cửa_hàng.Name = "comboBox_chọn_cửa_hàng";
             this.comboBox_chọn_cửa_hàng.Size = new System.Drawing.Size(334, 31);
@@ -176,12 +176,12 @@
             // label_cửa_hàng
             // 
             this.label_cửa_hàng.AutoSize = true;
-            this.label_cửa_hàng.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cửa_hàng.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_cửa_hàng.ForeColor = System.Drawing.Color.Maroon;
             this.label_cửa_hàng.Location = new System.Drawing.Point(20, 7);
             this.label_cửa_hàng.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_cửa_hàng.Name = "label_cửa_hàng";
-            this.label_cửa_hàng.Size = new System.Drawing.Size(108, 28);
+            this.label_cửa_hàng.Size = new System.Drawing.Size(106, 26);
             this.label_cửa_hàng.TabIndex = 1;
             this.label_cửa_hàng.Text = "Cửa hàng";
             // 
@@ -189,9 +189,9 @@
             // 
             this.button_xác_nhận.BackColor = System.Drawing.Color.DarkRed;
             this.button_xác_nhận.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_xác_nhận.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_xác_nhận.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_xác_nhận.ForeColor = System.Drawing.Color.White;
-            this.button_xác_nhận.Location = new System.Drawing.Point(274, 708);
+            this.button_xác_nhận.Location = new System.Drawing.Point(288, 689);
             this.button_xác_nhận.Name = "button_xác_nhận";
             this.button_xác_nhận.Size = new System.Drawing.Size(183, 59);
             this.button_xác_nhận.TabIndex = 17;
@@ -204,7 +204,7 @@
             this.panel4.Controls.Add(this.dataGridView_đơn_hàng);
             this.panel4.Location = new System.Drawing.Point(97, 310);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(564, 253);
+            this.panel4.Size = new System.Drawing.Size(564, 209);
             this.panel4.TabIndex = 21;
             // 
             // dataGridView_đơn_hàng
@@ -215,33 +215,34 @@
             this.dataGridView_đơn_hàng.BackgroundColor = System.Drawing.Color.Coral;
             this.dataGridView_đơn_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_đơn_hàng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TENMONAN,
-            this.SOLUONG,
-            this.GIATIEN});
+            this.Column1,
+            this.Column3,
+            this.Column2});
             this.dataGridView_đơn_hàng.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_đơn_hàng.GridColor = System.Drawing.Color.Red;
             this.dataGridView_đơn_hàng.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_đơn_hàng.Name = "dataGridView_đơn_hàng";
             this.dataGridView_đơn_hàng.ReadOnly = true;
-            this.dataGridView_đơn_hàng.Size = new System.Drawing.Size(564, 253);
+            this.dataGridView_đơn_hàng.Size = new System.Drawing.Size(564, 209);
             this.dataGridView_đơn_hàng.TabIndex = 1;
             // 
-            // TENMONAN
+            // Column1
             // 
-            this.TENMONAN.HeaderText = "TÊN MÓN ĂN";
-            this.TENMONAN.Name = "TENMONAN";
-            this.TENMONAN.ReadOnly = true;
+            this.Column1.HeaderText = "TÊN MÓN ĂN";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // SOLUONG
+            // Column3
             // 
-            this.SOLUONG.HeaderText = "SỐ LƯỢNG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.ReadOnly = true;
+            this.Column3.HeaderText = "GIÁ TIỀN";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // GIATIEN
+            // Column2
             // 
-            this.GIATIEN.HeaderText = "GIÁ TIỀN";
-            this.GIATIEN.Name = "GIATIEN";
-            this.GIATIEN.ReadOnly = true;
+            this.Column2.HeaderText = "SỐ LƯỢNG";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // panel5
             // 
@@ -254,12 +255,12 @@
             // label_chi_tiết_đơn_hàng
             // 
             this.label_chi_tiết_đơn_hàng.AutoSize = true;
-            this.label_chi_tiết_đơn_hàng.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_chi_tiết_đơn_hàng.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_chi_tiết_đơn_hàng.ForeColor = System.Drawing.Color.Maroon;
             this.label_chi_tiết_đơn_hàng.Location = new System.Drawing.Point(20, 9);
             this.label_chi_tiết_đơn_hàng.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_chi_tiết_đơn_hàng.Name = "label_chi_tiết_đơn_hàng";
-            this.label_chi_tiết_đơn_hàng.Size = new System.Drawing.Size(192, 28);
+            this.label_chi_tiết_đơn_hàng.Size = new System.Drawing.Size(191, 26);
             this.label_chi_tiết_đơn_hàng.TabIndex = 1;
             this.label_chi_tiết_đơn_hàng.Text = "Chi tiết đơn hàng:";
             // 
@@ -275,12 +276,12 @@
             // label_số_điện_thoại
             // 
             this.label_số_điện_thoại.AutoSize = true;
-            this.label_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_số_điện_thoại.ForeColor = System.Drawing.Color.Maroon;
             this.label_số_điện_thoại.Location = new System.Drawing.Point(20, 7);
             this.label_số_điện_thoại.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_số_điện_thoại.Name = "label_số_điện_thoại";
-            this.label_số_điện_thoại.Size = new System.Drawing.Size(145, 28);
+            this.label_số_điện_thoại.Size = new System.Drawing.Size(144, 26);
             this.label_số_điện_thoại.TabIndex = 1;
             this.label_số_điện_thoại.Text = "Số điện thoại";
             // 
@@ -289,7 +290,7 @@
             this.textBox_số_điện_thoại.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox_số_điện_thoại.Enabled = false;
             this.textBox_số_điện_thoại.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_số_điện_thoại.Location = new System.Drawing.Point(200, 4);
+            this.textBox_số_điện_thoại.Location = new System.Drawing.Point(218, 7);
             this.textBox_số_điện_thoại.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_số_điện_thoại.Name = "textBox_số_điện_thoại";
             this.textBox_số_điện_thoại.Size = new System.Drawing.Size(334, 31);
@@ -298,11 +299,11 @@
             // label_tổng_tiền
             // 
             this.label_tổng_tiền.AutoSize = true;
-            this.label_tổng_tiền.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_tổng_tiền.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_tổng_tiền.ForeColor = System.Drawing.Color.Maroon;
             this.label_tổng_tiền.Location = new System.Drawing.Point(3, 10);
             this.label_tổng_tiền.Name = "label_tổng_tiền";
-            this.label_tổng_tiền.Size = new System.Drawing.Size(122, 28);
+            this.label_tổng_tiền.Size = new System.Drawing.Size(120, 26);
             this.label_tổng_tiền.TabIndex = 22;
             this.label_tổng_tiền.Text = "Tổng cộng:";
             // 
@@ -311,7 +312,7 @@
             this.panel7.Controls.Add(this.label_đồng);
             this.panel7.Controls.Add(this.textBox_tổng_tiền);
             this.panel7.Controls.Add(this.label_tổng_tiền);
-            this.panel7.Location = new System.Drawing.Point(369, 641);
+            this.panel7.Location = new System.Drawing.Point(369, 619);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(292, 45);
             this.panel7.TabIndex = 22;
@@ -344,7 +345,7 @@
             this.panel8.Controls.Add(this.label1);
             this.panel8.Controls.Add(this.textBox_phí);
             this.panel8.Controls.Add(this.label_phí);
-            this.panel8.Location = new System.Drawing.Point(324, 579);
+            this.panel8.Location = new System.Drawing.Point(324, 557);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(337, 45);
             this.panel8.TabIndex = 25;
@@ -375,11 +376,11 @@
             // label_phí
             // 
             this.label_phí.AutoSize = true;
-            this.label_phí.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_phí.Font = new System.Drawing.Font("Cambria", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_phí.ForeColor = System.Drawing.Color.Maroon;
             this.label_phí.Location = new System.Drawing.Point(3, 10);
             this.label_phí.Name = "label_phí";
-            this.label_phí.Size = new System.Drawing.Size(156, 28);
+            this.label_phí.Size = new System.Drawing.Size(154, 26);
             this.label_phí.TabIndex = 22;
             this.label_phí.Text = "Phí giao hàng:";
             // 
@@ -388,7 +389,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.SandyBrown;
-            this.ClientSize = new System.Drawing.Size(755, 788);
+            this.ClientSize = new System.Drawing.Size(755, 760);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -448,14 +449,14 @@
         private System.Windows.Forms.TextBox textBox_tổng_tiền;
         private System.Windows.Forms.Label label_đồng;
         public System.Windows.Forms.DataGridView dataGridView_đơn_hàng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENMONAN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIATIEN;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_phí;
         private System.Windows.Forms.Label label_phí;
         
         private System.Windows.Forms.TextBox textBox_số_điện_thoại;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

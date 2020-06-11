@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1_giỏ_hàng = new System.Windows.Forms.DataGridView();
             this.TENMONAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GIATIEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SOLUONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button_xóa = new System.Windows.Forms.Button();
             this.button_thanh_toán = new System.Windows.Forms.Button();
@@ -63,16 +63,18 @@
             // dataGridView1_giỏ_hàng
             // 
             this.dataGridView1_giỏ_hàng.AllowUserToAddRows = false;
+            this.dataGridView1_giỏ_hàng.AllowUserToDeleteRows = false;
             this.dataGridView1_giỏ_hàng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1_giỏ_hàng.BackgroundColor = System.Drawing.Color.Coral;
             this.dataGridView1_giỏ_hàng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1_giỏ_hàng.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TENMONAN,
-            this.SOLUONG,
-            this.GIATIEN});
+            this.GIATIEN,
+            this.SOLUONG});
             this.dataGridView1_giỏ_hàng.Location = new System.Drawing.Point(291, 106);
             this.dataGridView1_giỏ_hàng.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1_giỏ_hàng.Name = "dataGridView1_giỏ_hàng";
+            this.dataGridView1_giỏ_hàng.ReadOnly = true;
             this.dataGridView1_giỏ_hàng.Size = new System.Drawing.Size(609, 326);
             this.dataGridView1_giỏ_hàng.TabIndex = 0;
             this.dataGridView1_giỏ_hàng.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_giỏ_hàng_CellClick);
@@ -83,17 +85,17 @@
             this.TENMONAN.Name = "TENMONAN";
             this.TENMONAN.ReadOnly = true;
             // 
-            // SOLUONG
-            // 
-            this.SOLUONG.HeaderText = "SỐ LƯỢNG";
-            this.SOLUONG.Name = "SOLUONG";
-            this.SOLUONG.ReadOnly = true;
-            // 
             // GIATIEN
             // 
             this.GIATIEN.HeaderText = "GIÁ TIỀN";
             this.GIATIEN.Name = "GIATIEN";
             this.GIATIEN.ReadOnly = true;
+            // 
+            // SOLUONG
+            // 
+            this.SOLUONG.HeaderText = "SỐ LƯỢNG";
+            this.SOLUONG.Name = "SOLUONG";
+            this.SOLUONG.ReadOnly = true;
             // 
             // button_xóa
             // 
@@ -173,11 +175,6 @@
             // 
             this.numericUpDown_số_lượng.Font = new System.Drawing.Font("Cambria", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown_số_lượng.Location = new System.Drawing.Point(1092, 184);
-            this.numericUpDown_số_lượng.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
             this.numericUpDown_số_lượng.Name = "numericUpDown_số_lượng";
             this.numericUpDown_số_lượng.Size = new System.Drawing.Size(96, 39);
             this.numericUpDown_số_lượng.TabIndex = 4;
@@ -211,7 +208,7 @@
             this.Controls.Add(this.button_thanh_toán);
             this.Controls.Add(this.button_xóa);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Red;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Giohang";
@@ -229,9 +226,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TENMONAN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GIATIEN;
         private System.Windows.Forms.Button button_xóa;
         private System.Windows.Forms.Button button_thanh_toán;
         private System.Windows.Forms.Panel panel7;
@@ -241,5 +235,8 @@
         private System.Windows.Forms.DataGridView dataGridView1_giỏ_hàng;
         private System.Windows.Forms.NumericUpDown numericUpDown_số_lượng;
         private System.Windows.Forms.Button button_điều_chỉnh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TENMONAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GIATIEN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SOLUONG;
     }
 }

@@ -66,6 +66,7 @@ namespace FastFood
             // lay cua hang hien tai dang dang nhap qua usercontrol danhsachmonan
             nvchDanhSachMonAn1.layCuaHangHienTai = taiKhoan.Substring(0, 3);
             nvchDanhSachMonAn1.hienDanhSachMonAn(taiKhoan.Substring(0, 3));
+            nvchDonHang1.layMaNhanVien = taiKhoan;
             nvchDanhSachMonAn1.BringToFront();
 
             // xoa don hang chua thanh toan khi bam sang muc khac 
@@ -77,6 +78,7 @@ namespace FastFood
             panel_chọn.Height = button_đơn_hàng.Height;
             panel_chọn.Top = button_đơn_hàng.Top;
             nvchDonHang1.layCuaHangHienTai = taiKhoan.Substring(0, 3);
+            nvchDonHang1.layMaNhanVien = taiKhoan;
             nvchDonHang1.Show();
             nvchDonHang1.BringToFront();
 

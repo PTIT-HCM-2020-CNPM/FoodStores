@@ -48,7 +48,7 @@ namespace FastFood
             itemSelectedCBDoanhThu = comboBox_doanh_thu.SelectedItem.ToString();
 
         }
-
+        //XUẤT BẢNG DOANH THU
         private void button_thống_kê_Click(object sender, EventArgs e)
         {
             DateTime dateTo = dateTimePicker_bắt_đầu.Value;
@@ -75,7 +75,7 @@ namespace FastFood
                 dataGridView_doanh_thu.DataSource = BillDAO.Instance.GetTotalMoneyOnlineBill(dateTo, dateFrom);
             }
         }
-
+        //XUẤT BẢNG DOANH THU RA EXCEL
         private void button_xuất_excel_Click(object sender, EventArgs e)
         {
             if (dataGridView_doanh_thu.Rows.Count > 0)

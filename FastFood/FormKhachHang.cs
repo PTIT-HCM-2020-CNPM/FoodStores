@@ -13,6 +13,8 @@ namespace FastFood
     public partial class FormKhachHang : System.Windows.Forms.Form
     {
         private string numCus;
+        public int stoSelectedIndex;
+        private string storeID;
         public static List<DataRow> GioHang = new List<DataRow>();
         public FormKhachHang(string numberPCustomer)
         {
@@ -20,37 +22,44 @@ namespace FastFood
             hinhtrangchu1.BringToFront();
             //Chuyển sđt kh từ formkh -> giohang
             giohang1.numberPhone = numberPCustomer;
+            //chuyển index selected store ->giỏ hàng
+            giohang1.storeIndex = stoSelectedIndex;
             //Chuyển sđt kh từ formkh -> lich su dat hang
             lichsudathang1.customerNumber =numberPCustomer;
             //Chuyển sđt kh từ formkh -> đổi mật khẩu
             khMatKhau1.userName = numberPCustomer;
             // Chuyển sđt kh từ formkh -> đánh giá
             khBaiDanhGia1.customerNumber = numberPCustomer;
-
-            numCus = numberPCustomer;
-
-
+            numCus = numberPCustomer;          
         }
         private void FormKhachHang_Load(object sender, EventArgs e)
         {
             pnlDropFood.Height = 55;
             pnlDropDrink.Height = 55;
             panelDrpReview.Height = 55;
+            FormChoncuahang formChoncuahang = new FormChoncuahang();
+            formChoncuahang.ShowDialog();
+            textBox_địa_chỉ_cửa_hàng.Text = formChoncuahang.storeAddress;
+            stoSelectedIndex=formChoncuahang.storeIndex;
+            storeID = formChoncuahang.storeID;
+            
+            giohang1.storeID = formChoncuahang.storeID;
         }
         //Hiển thị nút con đồ ăn
         private void button_đồ_uống_Click(object sender, EventArgs e)
         {
-            if (pnlDropDrink.Height == 170)
+            if (pnlDropDrink.Height == 190)
             {
                 pnlDropDrink.Height = 60;
             }
-            else { pnlDropDrink.Height = 170; }
+            else { pnlDropDrink.Height = 190; }
         }       
         //CÀ PHÊ
         private void button_cà_phê_Click(object sender, EventArgs e)
         {
             MonAn monan = new MonAn("CF");
             panel3.Controls.Add(monan);
+            monan.storeNum = storeID;
             monan.BringToFront();
         }
         //NƯỚC NGỌT
@@ -58,22 +67,24 @@ namespace FastFood
         {
             MonAn monan = new MonAn("DU");
             panel3.Controls.Add(monan);
+            monan.storeNum = storeID;
             monan.BringToFront();
         }
         //Hiển thị nút con đồ ăn
         private void button_đồ_ăn_Click(object sender, EventArgs e)
         {
-            if (pnlDropFood.Height == 150)
+            if (pnlDropFood.Height == 180)
             {
                 pnlDropFood.Height = 60;
             }
-            else { pnlDropFood.Height = 150; }
+            else { pnlDropFood.Height = 180; }
         }
         //MÓN CHÍNH
         private void button_món_chính_Click(object sender, EventArgs e)
         {
             MonAn monan = new MonAn("MC");
             panel3.Controls.Add(monan);
+            monan.storeNum = storeID;
             monan.BringToFront();
         }
         //ĐỒ ĂN NHANH
@@ -81,6 +92,7 @@ namespace FastFood
         {
             MonAn monan = new MonAn("AV");
             panel3.Controls.Add(monan);
+            monan.storeNum = storeID;
             monan.BringToFront();
         }
         //TRANG CHỦ
@@ -90,10 +102,10 @@ namespace FastFood
         }
         //GIỎ HÀNG
         private void button_giỏ_hàng_Click(object sender, EventArgs e)
-        {
-            
+        {           
             giohang1.BringToFront();
-            giohang1.Giohang_Load(null, EventArgs.Empty);           
+            giohang1.Giohang_Load(null, EventArgs.Empty);
+            giohang1.storeIndex = stoSelectedIndex;
         }
         //THOÁT VÀ HIỆN LẠI TRANG CHỦ
         private void button1_Click(object sender, EventArgs e)
@@ -114,16 +126,14 @@ namespace FastFood
 
             khMatKhau1.BringToFront();
         }
-
-
         //Bài đánh giá
         private void button_bài_đánh_giá_Click(object sender, EventArgs e)
         {
-            if (panelDrpReview.Height == 170)
+            if (panelDrpReview.Height == 190)
             {
                 panelDrpReview.Height = 60;
             }
-            else { panelDrpReview.Height = 170; }
+            else { panelDrpReview.Height = 190; }
         }
         private void button_Vđánh_giá_Click(object sender, EventArgs e)
         {
@@ -137,6 +147,22 @@ namespace FastFood
             khBaiDanhGia1.BringToFront();
         }
 
-       
+        private void button_kt_trạng_thái_Click(object sender, EventArgs e)
+        {
+            FormKHKiemtradonhang formKHKiemtradonhang = new FormKHKiemtradonhang();
+            formKHKiemtradonhang.numCus = numCus;
+            formKHKiemtradonhang.ShowDialog();
+        }
+        //Thay đổi giá trị địa chỉ cửa hàng
+        private void button_thay_đổi_Click(object sender, EventArgs e)
+        {
+            FormChoncuahang formChoncuahang = new FormChoncuahang();
+            formChoncuahang.ShowDialog();
+            textBox_địa_chỉ_cửa_hàng.Text = formChoncuahang.storeAddress;
+            giohang1.storeIndex = formChoncuahang.storeIndex;
+            storeID= formChoncuahang.storeID;
+            
+            giohang1.storeID = formChoncuahang.storeID;
+        }
     }
 }

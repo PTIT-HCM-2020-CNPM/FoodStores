@@ -33,8 +33,6 @@
             this.button_XoaOTimKiem = new System.Windows.Forms.Button();
             this.button_TimMonAn = new System.Windows.Forms.Button();
             this.textBox_TimMonAn = new System.Windows.Forms.TextBox();
-            this.button_XoaMonAn = new System.Windows.Forms.Button();
-            this.button_ThemMonAn = new System.Windows.Forms.Button();
             this.label_hienCuaHangUC = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView_DanhSachMonAn = new System.Windows.Forms.DataGridView();
@@ -113,40 +111,6 @@
             this.textBox_TimMonAn.Size = new System.Drawing.Size(256, 51);
             this.textBox_TimMonAn.TabIndex = 1;
             // 
-            // button_XoaMonAn
-            // 
-            this.button_XoaMonAn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_XoaMonAn.FlatAppearance.BorderSize = 0;
-            this.button_XoaMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_XoaMonAn.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_XoaMonAn.ForeColor = System.Drawing.Color.White;
-            this.button_XoaMonAn.Image = ((System.Drawing.Image)(resources.GetObject("button_XoaMonAn.Image")));
-            this.button_XoaMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_XoaMonAn.Location = new System.Drawing.Point(197, 505);
-            this.button_XoaMonAn.Name = "button_XoaMonAn";
-            this.button_XoaMonAn.Size = new System.Drawing.Size(147, 42);
-            this.button_XoaMonAn.TabIndex = 12;
-            this.button_XoaMonAn.Text = "Xóa";
-            this.button_XoaMonAn.UseVisualStyleBackColor = true;
-            this.button_XoaMonAn.Click += new System.EventHandler(this.Button_XoaMonAn_Click);
-            // 
-            // button_ThemMonAn
-            // 
-            this.button_ThemMonAn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_ThemMonAn.FlatAppearance.BorderSize = 0;
-            this.button_ThemMonAn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button_ThemMonAn.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_ThemMonAn.ForeColor = System.Drawing.Color.White;
-            this.button_ThemMonAn.Image = ((System.Drawing.Image)(resources.GetObject("button_ThemMonAn.Image")));
-            this.button_ThemMonAn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_ThemMonAn.Location = new System.Drawing.Point(31, 505);
-            this.button_ThemMonAn.Name = "button_ThemMonAn";
-            this.button_ThemMonAn.Size = new System.Drawing.Size(147, 42);
-            this.button_ThemMonAn.TabIndex = 6;
-            this.button_ThemMonAn.Text = "Thêm";
-            this.button_ThemMonAn.UseVisualStyleBackColor = true;
-            this.button_ThemMonAn.Click += new System.EventHandler(this.Button_ThemMonAn_Click);
-            // 
             // label_hienCuaHangUC
             // 
             this.label_hienCuaHangUC.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -187,8 +151,6 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.button_ThemMonAn);
-            this.panel2.Controls.Add(this.button_XoaMonAn);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.button_CapNhatMonAn);
             this.panel2.Controls.Add(this.panel5);
@@ -240,6 +202,7 @@
             // 
             // textBox_GiaTien
             // 
+            this.textBox_GiaTien.Enabled = false;
             this.textBox_GiaTien.Location = new System.Drawing.Point(167, 8);
             this.textBox_GiaTien.Multiline = true;
             this.textBox_GiaTien.Name = "textBox_GiaTien";
@@ -286,6 +249,7 @@
             // 
             // textBox_TenMonAn
             // 
+            this.textBox_TenMonAn.Enabled = false;
             this.textBox_TenMonAn.Location = new System.Drawing.Point(167, 8);
             this.textBox_TenMonAn.Multiline = true;
             this.textBox_TenMonAn.Name = "textBox_TenMonAn";
@@ -315,6 +279,7 @@
             // 
             // textBox_MaMonAn
             // 
+            this.textBox_MaMonAn.Enabled = false;
             this.textBox_MaMonAn.Location = new System.Drawing.Point(167, 8);
             this.textBox_MaMonAn.Multiline = true;
             this.textBox_MaMonAn.Name = "textBox_MaMonAn";
@@ -368,8 +333,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView_DanhSachMonAn;
         private System.Windows.Forms.Button button_TimMonAn;
-        private System.Windows.Forms.Button button_ThemMonAn;
-        private System.Windows.Forms.Button button_XoaMonAn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_CapNhatMonAn;
         private System.Windows.Forms.Panel panel5;

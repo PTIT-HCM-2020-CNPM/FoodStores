@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using FastFood.DAL_DataLayer;
 
 namespace FastFood
-{
-   
+{ 
     public partial class Giohang : UserControl
     {
         public string numberPhone;
         public int totalPayment;
         public int totalNumOfFood;
+        public int storeIndex;
+        public string storeID;
         public Giohang()
         {
             InitializeComponent();
@@ -60,14 +61,8 @@ namespace FastFood
                     }
                 }
                 if (f) continue;
-                {
-                    int cnt = 1;
-                    foreach(DataRow item2 in FormKhachHang.GioHang)
-                    {
-                        if (item["TÊN MÓN ĂN"].ToString().Equals(item["TÊN MÓN ĂN"].ToString())) cnt=1;
-                           
-                    }
-                    dataGridView1_giỏ_hàng.Rows.Add(item["TÊN MÓN ĂN"].ToString(), cnt, item["GIÁ TIỀN"].ToString());
+                {                                  
+                    dataGridView1_giỏ_hàng.Rows.Add(item["TÊN MÓN ĂN"].ToString(), item["GIÁ TIỀN"].ToString(),1);
                 }
             }
             if (totalPayment == 0)
@@ -78,7 +73,29 @@ namespace FastFood
             sumBillPay();
 
         }
-       //Chuyển bảng giỏ hàng -> xác nhận
+        //Check số lượng món ăn cửa hàng có nhỏ hơn số lượng khách đặt
+        private int CheckAmountFood(string storeNumber, string foodName)
+        {
+            DataRow rowAmount = FoodDAO.Instance.GetAmountFoodStore(storeNumber, foodName).Rows[0];
+            int amount = Convert.ToInt32(rowAmount["SỐ LƯỢNG"]);
+            return amount;
+        }
+        //public bool CanOrder(string storeNum, string foodName )
+        //{
+        //    int result = 0;
+        //    foreach (DataGridViewRow row in dataGridView1_giỏ_hàng.Rows)
+        //    {
+        //        int amount = Convert.ToInt32(row.Cells[3].Value);
+        //        result = CheckAmountFood(storeNum, row.Cells[1].Value.ToString()) - amount;              
+        //    }
+        //    return result > 0;
+        //}
+        //Check bill hiện tại của khách hàng
+        public bool CheckBillCurrent()
+        {
+            return BillDAO.Instance.GetBillCus(numberPhone).Rows.Count > 0;
+        }
+        //Chuyển bảng giỏ hàng -> xác nhận
         private void button_thanh_toán_Click(object sender, EventArgs e)
         {
             if (totalPayment == 0)
@@ -89,19 +106,43 @@ namespace FastFood
             {
                 MessageBox.Show("Tổng đơn hàng cần lớn hơn 30,000đ! Xin vui lòng chọn thêm món!");
             }
+            else if (CheckBillCurrent())//ràng buộc chỉ được đặt 1 bill
+            {
+                MessageBox.Show("Bạn đang đặt một đơn hàng không thể đặt đơn hàng khác!");
+            }
             else
             {
-                FormKHDiaChiGiaoHang formKHDiaChiGiao = new FormKHDiaChiGiaoHang(numberPhone);
-                formKHDiaChiGiao.totalPayment = totalPayment;
-                //Lấy giá trị datagridview giỏ hàng -> datagirdview xác nhận
+                int result=0;
                 foreach (DataGridViewRow row in dataGridView1_giỏ_hàng.Rows)
                 {
-                    int n = formKHDiaChiGiao.dataGridView_đơn_hàng.Rows.Add();
-                    foreach(DataGridViewColumn col in dataGridView1_giỏ_hàng.Columns) {
-                        formKHDiaChiGiao.dataGridView_đơn_hàng.Rows[n].Cells[col.Index].Value= dataGridView1_giỏ_hàng.Rows[row.Index].Cells[col.Index].Value.ToString();
+                    int amount = Convert.ToInt32(row.Cells[2].Value);
+                    int amountOld = CheckAmountFood(storeID, row.Cells[0].Value.ToString());
+                    result =  amountOld - amount;
+                    if (result < 0) {
+                        row.Cells[2].Value= amountOld.ToString();
+                        break;
                     }
                 }
-                formKHDiaChiGiao.ShowDialog();
+                if (!(result > 0))
+                {
+                    MessageBox.Show("Một trong các món ăn bạn đặt tại cửa hàng này không còn đủ số lượng! " +
+                        "Xin chọn một cửa hàng khác hoặc thay đổi món ăn!");
+                    
+                }
+                else{ 
+                    FormKHDiaChiGiaoHang formKHDiaChiGiao = new FormKHDiaChiGiaoHang(numberPhone);
+                    formKHDiaChiGiao.totalPayment = totalPayment;
+                    formKHDiaChiGiao.storeIndex = storeIndex;
+                    //Lấy giá trị datagridview giỏ hàng -> datagirdview xác nhận
+                    foreach (DataGridViewRow row in dataGridView1_giỏ_hàng.Rows)
+                    {
+                        int n = formKHDiaChiGiao.dataGridView_đơn_hàng.Rows.Add();
+                        foreach(DataGridViewColumn col in dataGridView1_giỏ_hàng.Columns) {
+                            formKHDiaChiGiao.dataGridView_đơn_hàng.Rows[n].Cells[col.Index].Value= dataGridView1_giỏ_hàng.Rows[row.Index].Cells[col.Index].Value.ToString();
+                        }
+                    }
+                    formKHDiaChiGiao.ShowDialog();
+                }
             }
         }
         //Xóa một vật phẩm trong giỏ hàng datagridview
@@ -135,21 +176,28 @@ namespace FastFood
         private int indexRow;
         private void dataGridView1_giỏ_hàng_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            indexRow = e.RowIndex;
-            
+            indexRow = e.RowIndex;           
         }
 
         private void button_điều_chỉnh_Click(object sender, EventArgs e)
         {
             DataGridViewRow row= dataGridView1_giỏ_hàng.Rows[indexRow];
-            if (numericUpDown_số_lượng.Value.Equals(0))
+            try
             {
-                dataGridView1_giỏ_hàng.Rows.RemoveAt(indexRow);
-                subBillPay();
+                if (numericUpDown_số_lượng.Value.Equals(0))
+                {
+                    dataGridView1_giỏ_hàng.Rows.RemoveAt(indexRow);
+                    subBillPay();
+                }
+                else
+                {
+                    row.Cells[2].Value = numericUpDown_số_lượng.Value.ToString();
+                    subBillPay();
+                }
             }
-            else { 
-                row.Cells[1].Value = numericUpDown_số_lượng.Value.ToString();
-                subBillPay();
+            catch
+            {
+                MessageBox.Show("Vui lòng chọn và cập nhật số lượng theo từng dòng!");
             }
         }
 

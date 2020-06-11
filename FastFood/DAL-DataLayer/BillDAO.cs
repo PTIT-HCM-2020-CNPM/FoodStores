@@ -50,6 +50,14 @@ namespace FastFood.DAL_DataLayer
 
             return result.Rows.Count > 0;
         }
+        public DataTable SelectBillInfo(string billNumber)
+        {
+            string query = "USP_SelectBill @madonhang";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { billNumber });
+
+            return result;
+        }
         //TỔNG TIỀN ALL BILL
         public DataTable GetTotalMoneyBill(DateTime dateTo, DateTime dateFrom)
         {
@@ -118,9 +126,9 @@ namespace FastFood.DAL_DataLayer
         }
         //
         //THÊM CHI TIẾT ĐƠN ĐẶT HÀNG BỞI KHÁCH HÀNG
-        public bool InsertBillIfByCus(string billNum, string foodNam, int foodMount)
+        public bool InsertBillIfByCus(string billNum,string foodID, string foodNam, int foodMount)
         {
-            string query = String.Format("insert dbo.CHI_TIET_DON_DAT_HANG([MÃ ĐƠN HÀNG], [TÊN MÓN ĂN], [SỐ LƯỢNG]) values('{0}', '{1}', {2})", billNum, foodNam, foodMount);
+            string query = String.Format("insert dbo.CHI_TIET_DON_DAT_HANG ([MÃ ĐƠN HÀNG], [MÃ MÓN ĂN], [TÊN MÓN ĂN], [SỐ LƯỢNG]) values( '{0}','{1}', N'{2}', {3})", billNum, foodID, foodNam, foodMount);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -143,6 +151,17 @@ namespace FastFood.DAL_DataLayer
         public DataTable GetNumBillCustomer(string customerNumber)
         {
             string query = String.Format("select [MÃ ĐƠN HÀNG] from DON_DAT_HANG where [MÃ KHÁCH HÀNG(SĐT)] = '{0}'", customerNumber);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+        //LẤY ĐƠN HÀNG KHÁCH HÀNG ĐẶT
+        public DataTable GetBillCus(string cusNum)
+        {
+            string query = String.Format("select [MÃ ĐƠN HÀNG], d.[MÃ CỬA HÀNG], c.[ĐỊA CHỈ] as [ĐỊA CHỈ CỬA HÀNG], d.[ĐỊA CHỈ], d.[TRẠNG THÁI ĐƠN HÀNG]" +
+                " from DON_DAT_HANG as d, CUA_HANG as c " +
+                "where [MÃ KHÁCH HÀNG(SĐT)] = '{0}' and ([TRẠNG THÁI ĐƠN HÀNG]=0 or [TRẠNG THÁI ĐƠN HÀNG]=1 or [TRẠNG THÁI ĐƠN HÀNG]=2)" +
+                " and d.[ĐỊA CHỈ] != '' " +
+                "and d.[MÃ CỬA HÀNG] = c.[MÃ CỬA HÀNG]", cusNum);
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
